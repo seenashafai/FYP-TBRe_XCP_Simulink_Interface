@@ -1,0 +1,81 @@
+%implements s16_b0_zmynf_1_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+int32_T i;
+%closefile localVarDecl
+%<SLibCGIRDumpSystemUserCode(15, "Initialize", "Header")>\
+%<SLibCGIRDumpSystemUserCode(15, "Initialize", "Body")>\
+/* InitializeConditions for S-Function (sfix_udelay): '<S39>/Tapped Delay' */
+for (i = 0; i < 10; i++) {
+    TBRe_Mod_DW.TappedDelay_X[i] = false;
+}
+/* End of InitializeConditions for S-Function (sfix_udelay): '<S39>/Tapped Delay' */
+
+/* InitializeConditions for Delay: '<S38>/prv_APPS_BP1' */
+TBRe_Mod_DW.prv_APPS_BP1_DSTATE = false;
+/* InitializeConditions for S-Function (sfix_udelay): '<S33>/Debouncing2' */
+for (i = 0; i < 5; i++) {
+    TBRe_Mod_DW.Debouncing2_X[i] = false;
+}
+/* End of InitializeConditions for S-Function (sfix_udelay): '<S33>/Debouncing2' */
+
+/* InitializeConditions for S-Function (sfix_udelay): '<S40>/Tapped Delay' */
+for (i = 0; i < 10; i++) {
+    TBRe_Mod_DW.TappedDelay_X_m[i] = false;
+}
+/* End of InitializeConditions for S-Function (sfix_udelay): '<S40>/Tapped Delay' */
+
+/* SystemInitialize for Chart: '<S54>/TS Enable' */
+TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+TBRe_Mod_DW.is_active_c12_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+TBRe_Mod_B.TS_Enable = false;
+/* SystemInitialize for Chart: '<S54>/Operaton_Mode' */
+TBRe_Mod_DW.temporalCounter_i1_e = 0U;
+TBRe_Mod_DW.is_active_c2_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c2_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+TBRe_Mod_B.Control_Word = 0U;
+TBRe_Mod_B.State = 0U;
+/* SystemInitialize for Chart: '<S17>/Operation_Mode' */
+TBRe_Mod_DW.temporalCounter_i1 = 0U;
+TBRe_Mod_DW.is_active_c6_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c6_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+TBRe_Mod_B.Operating_State = false;
+/* SystemInitialize for Chart: '<S23>/Inverter_reset' */
+TBRe_Mod_DW.temporalCounter_i1_k = 0U;
+TBRe_Mod_DW.is_active_c8_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c8_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+TBRe_Mod_B.Ignition = false;
+/* SystemInitialize for Chart: '<S22>/Wake_Up' */
+TBRe_Mod_DW.temporalCounter_i1_n = 0U;
+TBRe_Mod_DW.is_active_c4_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c4_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+/* SystemInitialize for Chart: '<S22>/Flashy1' */
+TBRe_Mod_DW.temporalCounter_i1_fp = 0U;
+TBRe_Mod_DW.is_active_c7_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c7_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+/* SystemInitialize for Chart: '<S22>/Flashy' */
+TBRe_Mod_DW.temporalCounter_i1_k0 = 0U;
+TBRe_Mod_DW.is_active_c5_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c5_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+/* SystemInitialize for Chart: '<S22>/InitLight' */
+TBRe_Mod_DW.temporalCounter_i1_f = 0U;
+TBRe_Mod_DW.is_active_c3_TBRe_Mod = 0U;
+TBRe_Mod_DW.is_c3_TBRe_Mod = TBRe_Mod_IN_NO_ACTIVE_CHILD;
+%<SLibCGIRDumpSystemUserCode(15, "Initialize", "Trailer")>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MainTask_Init(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 2, fcnProtoType)>
+%endfunction

@@ -1,0 +1,70 @@
+%implements s16_b0_zmynf_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<SLibCGIRDumpSystemUserCode(16, "Initialize", "Header")>\
+%<SLibCGIRDumpSystemUserCode(16, "Initialize", "Body")>\
+%assign   SystemInitialize_open_MainTask_m_16_0 = ""
+%openfile SystemInitialize_open_MainTask_m_16_0
+
+/* SystemInitialize for Atomic SubSystem: '<Root>/MainTask' */
+%closefile SystemInitialize_open_MainTask_m_16_0
+
+%assign    SystemInitialize_body_MainTask_m_16_0 = ""
+%openfile  SystemInitialize_body_MainTask_m_16_0
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("MainTask_Init", [], 15, 0, 4, 0, 4, 16)>\
+
+
+%endif
+%closefile SystemInitialize_body_MainTask_m_16_0
+
+%assign    SystemInitialize_close_MainTask_m_16_0 = ""
+%openfile  SystemInitialize_close_MainTask_m_16_0
+
+/* End of SystemInitialize for SubSystem: '<Root>/MainTask' */
+%closefile SystemInitialize_close_MainTask_m_16_0
+%<SLibCG_DumpSSCode(SystemInitialize_open_MainTask_m_16_0, SystemInitialize_body_MainTask_m_16_0, SystemInitialize_close_MainTask_m_16_0)>
+
+
+%assign   SystemInitialize_open_DiagnosticsCAN_o_16_1 = ""
+%openfile SystemInitialize_open_DiagnosticsCAN_o_16_1
+
+/* SystemInitialize for Atomic SubSystem: '<Root>/DiagnosticsCAN' */
+%closefile SystemInitialize_open_DiagnosticsCAN_o_16_1
+
+%assign    SystemInitialize_body_DiagnosticsCAN_o_16_1 = ""
+%openfile  SystemInitialize_body_DiagnosticsCAN_o_16_1
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("DiagnosticsCAN_Init", [], 0, 0, 4, 0, 4, 16)>\
+
+
+%endif
+%closefile SystemInitialize_body_DiagnosticsCAN_o_16_1
+
+%assign    SystemInitialize_close_DiagnosticsCAN_o_16_1 = ""
+%openfile  SystemInitialize_close_DiagnosticsCAN_o_16_1
+
+/* End of SystemInitialize for SubSystem: '<Root>/DiagnosticsCAN' */
+%closefile SystemInitialize_close_DiagnosticsCAN_o_16_1
+%<SLibCG_DumpSSCode(SystemInitialize_open_DiagnosticsCAN_o_16_1, SystemInitialize_body_DiagnosticsCAN_o_16_1, SystemInitialize_close_DiagnosticsCAN_o_16_1)>
+
+%<SLibCGIRDumpSystemUserCode(16, "Initialize", "Trailer")>\
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 1, fcnProtoType)>
+%endfunction

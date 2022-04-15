@@ -1,0 +1,10 @@
+OS_Background           Periodic_Task_0
+USB_RX_EV_Task          EV_Task_0
+USB_TX_error_Task       EV_Task_1
+USB_TX_Variables_Task   EV_Task_2
+APP_DiagnosticsCAN       Periodic_Task_1
+APP_DiagnosticsCAN       EV_Task_2 
+APP_MainTask       Periodic_Task_2
+APP_MainTask       EV_Task_3 
+CCP_command_Task        EV_task_4 
+CCP_Callback_Task       EV_task_5 

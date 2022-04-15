@@ -1,0 +1,73 @@
+        # Version: 1.4
+32769;Throttle_Active_Threshold;3;1;0;none
+32770;Brake_Active_Threshold;3;1;0;none
+32771;Motor_To_Road_Speed_Ratio;1;1;0;none
+32772;Brk1_OOR_High;5;1;0;none
+32773;Brk1_OOR_Low;5;1;0;none
+32774;Brk2_OOR_High;5;1;0;none
+32775;Brk2_OOR_Low;5;1;0;none
+32776;Gearing_Ratio;3;1;0;none
+32777;Wheel_Size;3;1;0;none
+32778;Brake1_High;5;1;0;none
+32779;Brake1_Low;5;1;0;none
+32780;Brake2_High;5;1;0;none
+32781;Brake2_Low;5;1;0;none
+32782;Throttle1_High;5;1;0;none
+32783;Throttle1_Low;5;1;0;none
+32784;Throttle2_High;5;1;0;none
+32785;Throttle2_Low;5;1;0;none
+            18;Cooling_Enable;8;1.0;0.0;bool
+            19;IMD Freq;7;1.0;0.0;Hz
+            20;IMD Duty;0;1.0;0.0;%
+            21;IMD Resistance;0;1.0;0.0;kOhm
+32790;Green_TSAL1;5;1;0;none
+32791;Green_TSAL2;5;1;0;none
+32792;btn_accy_fan;8;1.0;0.0;km/h
+            25;Accy_Fan_Enable;8;1.0;0.0;bool
+32794;APPS_LED_ON;5;1.0;0.0;km/h
+32795;INV_Torque_limit;4;1;0;none
+            28;TorqueRequestACTScaled;5;1.0;0.0;Nm
+            29;TorqueRequestACT;4;1.0;0.0;Nm
+32798;INV_DC_Link_Target;4;1;0;none
+32799;INV_DC_Link_Regen_Imax;4;1;0;none
+32800;INV_DC_Link_Discharge_Imax;4;1;0;none
+32801;INV_Speed_limit_Rev;4;1;0;none
+32802;INV_Speed_Limit_Fwd;4;1;0;none
+32803;INV_Regen_Torque_Limit;4;1;0;none
+32804;INV_Id_Debug;4;1;0;none
+32805;INV_Iq_debug;4;1;0;none
+            38;BMS_Voltage;1;1.0;0.0;V
+            39;AIRLow;8;1.0;0.0;Bool
+            40;AIRHigh;8;1.0;0.0;Bool
+            41;rtd;8;1.0;0.0;km/h
+            42;x;8;1.0;0.0;km/h
+            43;y;8;1.0;0.0;km/h
+            44;z;8;1.0;0.0;km/h
+            45;PumpAndFan_swtich;8;1.0;0.0;bool
+            46;Accy_Fan_swtich;8;1.0;0.0;bool
+            47;T1V;5;1.0;0.0;km/h
+            48;T2V;5;1.0;0.0;km/h
+            49;B1V;5;1.0;0.0;km/h
+            50;B2V;5;1.0;0.0;km/h
+            51;MCU_V;1;1.0;0.0;V
+            52;Motor_Temp;5;1.0;0.0;Degrees
+            53;MCU_Temp;3;1.0;0.0;Degrees
+            54;MotorSpeed;4;1.0;0.0;RPM
+            55;MCU_FAULT_DATA;7;1.0;0.0;word
+            56;MCU_FAULT_CODE;5;1.0;0.0;word
+32825;LV_Low_Voltage_Warning;5;1;0;none
+32826;MCUMotor_Temp_Warning;5;1;0;none
+            59;Throttle1Pec;5;1.0;0.0;%
+            60;Throttle1V;5;1.0;0.0;mV
+            61;Throttle2Pec;5;1.0;0.0;%
+            62;Throttle2V;5;1.0;0.0;mV
+            63;Brake1Pec;5;1.0;0.0;%
+            64;Brake1V;5;1.0;0.0;mV
+32833;Brake1_Pressure_Scaling;2;1;0;none
+            66;Brake1PSI;0;1.0;0.0;PSI
+            67;Brake1mBar;0;1.0;0.0;mBar
+            68;Brake2V;5;1.0;0.0;mV
+            69;Brake2Pec;5;1.0;0.0;%
+32838;Brake2_Pressure_Scaling;2;1;0;none
+            71;Brake2PSI;0;1.0;0.0;PSI
+            72;Brake2mBar;0;1.0;0.0;mBar

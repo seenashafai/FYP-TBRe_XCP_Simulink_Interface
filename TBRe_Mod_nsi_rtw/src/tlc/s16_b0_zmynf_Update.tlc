@@ -1,0 +1,42 @@
+%implements s16_b0_zmynf_Update "C"
+
+%function Update(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+if (%<(SLibCGIRIsSampleHit(1, 16))>) {
+%assign   Update_open_MainTask_m_16_0 = ""
+%openfile Update_open_MainTask_m_16_0
+
+    /* Update for Atomic SubSystem: '<Root>/MainTask' */
+%closefile Update_open_MainTask_m_16_0
+
+%assign    Update_body_MainTask_m_16_0 = ""
+%openfile  Update_body_MainTask_m_16_0
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "Update",0)
+%<SLibCGIRGenReusableSysCall("MainTask_Update", [], 15, 0, 8, 0, 8, 16)>\
+
+
+%endif
+%closefile Update_body_MainTask_m_16_0
+
+%assign    Update_close_MainTask_m_16_0 = ""
+%openfile  Update_close_MainTask_m_16_0
+
+    /* End of Update for SubSystem: '<Root>/MainTask' */
+%closefile Update_close_MainTask_m_16_0
+%<SLibCG_DumpSSCode(Update_open_MainTask_m_16_0, Update_body_MainTask_m_16_0, Update_close_MainTask_m_16_0)>
+
+}
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function UpdateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 3, fcnProtoType)>
+%endfunction

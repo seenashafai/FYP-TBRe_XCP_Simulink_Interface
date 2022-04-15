@@ -1,0 +1,144 @@
+%implements s16_b0_zmynf_0_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcOutputsFcnOfS0B0 = OpaqueTLCBlockFcn("Outputs", 0, 0, 0, 2)
+%assign tlcOutputsFcnOfS0B1 = OpaqueTLCBlockFcn("Outputs", 0, 1, 0, 2)
+%assign tlcOutputsFcnOfS0B2 = OpaqueTLCBlockFcn("Outputs", 0, 2, 0, 2)
+%assign tlcOutputsFcnOfS0B3 = OpaqueTLCBlockFcn("Outputs", 0, 3, 0, 2)
+%assign tlcOutputsFcnOfS0B4 = OpaqueTLCBlockFcn("Outputs", 0, 4, 0, 2)
+%assign tlcOutputsFcnOfS0B5 = OpaqueTLCBlockFcn("Outputs", 0, 5, 0, 2)
+%assign tlcOutputsFcnOfS0B6 = OpaqueTLCBlockFcn("Outputs", 0, 6, 0, 2)
+%assign tlcOutputsFcnOfS0B7 = OpaqueTLCBlockFcn("Outputs", 0, 7, 0, 2)
+%assign tlcOutputsFcnOfS0B8 = OpaqueTLCBlockFcn("Outputs", 0, 8, 0, 2)
+%assign tlcOutputsFcnOfS0B9 = OpaqueTLCBlockFcn("Outputs", 0, 9, 0, 2)
+/* DataTypeConversion: '<S1>/Data Type Conversion1' */
+TBRe_Mod_B.DataTypeConversion1_e = (uint8_T)TBRe_Mod_B.Switch2;
+/* DataTypeConversion: '<S1>/Data Type Conversion' */
+TBRe_Mod_B.DataTypeConversion = TBRe_Mod_B.Torque_MCU_Req;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B0)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx1' */
+%<tlcOutputsFcnOfS0B0>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion25' */
+TBRe_Mod_B.DataTypeConversion25 = (uint8_T)TBRe_Mod_B.ECU_Ok;
+/* DataTypeConversion: '<S1>/Data Type Conversion28' */
+TBRe_Mod_B.DataTypeConversion28 = (uint8_T)TBRe_Mod_B.ProductofElements_n;
+/* DataTypeConversion: '<S1>/Data Type Conversion11' */
+TBRe_Mod_B.DataTypeConversion11 = (TBRe_Mod_B.Pedal_Sensor_Fail != 0);
+/* DataTypeConversion: '<S1>/Data Type Conversion29' */
+TBRe_Mod_B.DataTypeConversion29 = (TBRe_Mod_B.ProductofElements != 0);
+/* DataTypeConversion: '<S1>/Data Type Conversion30' */
+TBRe_Mod_B.DataTypeConversion30 = TBRe_Mod_B.LogicalOperator2;
+/* DataTypeConversion: '<S1>/Data Type Conversion31' */
+TBRe_Mod_B.DataTypeConversion31 = TBRe_Mod_B.Shutdown_Error;
+/* DataTypeConversion: '<S1>/Data Type Conversion32' */
+TBRe_Mod_B.DataTypeConversion32 = TBRe_Mod_B.LV_Warning;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B1)
+/* S-Function (NsiMem_Read): '<S1>/Memory read1' */
+%<tlcOutputsFcnOfS0B1>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion24' */
+TBRe_Mod_B.DataTypeConversion24 = (TBRe_Mod_B.Memoryread1_a != 0);
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B2)
+/* S-Function (NsiMem_Read): '<S1>/Memory read' */
+%<tlcOutputsFcnOfS0B2>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion23' */
+TBRe_Mod_B.DataTypeConversion23 = (TBRe_Mod_B.Memoryread_ij != 0);
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B3)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx2' */
+%<tlcOutputsFcnOfS0B3>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion38' */
+TBRe_Mod_B.DataTypeConversion38 = (uint16_T)TBRe_Mod_B.IMD_Freq;
+/* DataTypeConversion: '<S1>/Data Type Conversion39' */
+TBRe_Mod_B.DataTypeConversion39 = (uint16_T)TBRe_Mod_B.IMD_Duty;
+/* DataTypeConversion: '<S1>/Data Type Conversion40' */
+TBRe_Mod_B.DataTypeConversion40 = (uint16_T)TBRe_Mod_B.IMD_Resistance;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B4)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx3' */
+%<tlcOutputsFcnOfS0B4>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion7' */
+TBRe_Mod_B.DataTypeConversion7_b = (uint8_T)TBRe_Mod_B.MinMax_d;
+/* DataTypeConversion: '<S1>/Data Type Conversion8' */
+TBRe_Mod_B.DataTypeConversion8_j = (uint8_T)TBRe_Mod_B.MinMax_e;
+/* DataTypeConversion: '<S1>/Data Type Conversion10' */
+TBRe_Mod_B.DataTypeConversion10_k = (uint8_T)TBRe_Mod_B.MinMax_dv;
+/* DataTypeConversion: '<S1>/Data Type Conversion9' */
+TBRe_Mod_B.DataTypeConversion9_h = (uint8_T)TBRe_Mod_B.MinMax_b;
+/* DataTypeConversion: '<S1>/Data Type Conversion5' */
+TBRe_Mod_B.DataTypeConversion5 = TBRe_Mod_B.Product;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B5)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx6' */
+%<tlcOutputsFcnOfS0B5>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion12' */
+TBRe_Mod_B.DataTypeConversion12_o = (uint8_T)TBRe_Mod_B.Fan_Freq;
+/* DataTypeConversion: '<S1>/Data Type Conversion13' */
+TBRe_Mod_B.DataTypeConversion13 = TBRe_Mod_B.btnAccyFan_Input;
+/* DataTypeConversion: '<S1>/Data Type Conversion15' */
+TBRe_Mod_B.DataTypeConversion15 = TBRe_Mod_B.btnZ_Input;
+/* DataTypeConversion: '<S1>/Data Type Conversion16' */
+TBRe_Mod_B.DataTypeConversion16 = TBRe_Mod_B.btnY_Input;
+/* DataTypeConversion: '<S1>/Data Type Conversion17' */
+TBRe_Mod_B.DataTypeConversion17 = TBRe_Mod_B.btnPumpFan_Input;
+/* DataTypeConversion: '<S1>/Data Type Conversion18' */
+TBRe_Mod_B.DataTypeConversion18 = TBRe_Mod_B.Compare;
+/* DataTypeConversion: '<S1>/Data Type Conversion19' */
+TBRe_Mod_B.DataTypeConversion19 = (uint8_T)TBRe_Mod_B.LV_SOC;
+/* DataTypeConversion: '<S1>/Data Type Conversion20' */
+TBRe_Mod_B.DataTypeConversion20_j = TBRe_Mod_B.LV_Battery_Voltage_n;
+/* DataTypeConversion: '<S1>/Data Type Conversion21' */
+TBRe_Mod_B.DataTypeConversion21_f = TBRe_Mod_B.btnRTD_Input;
+/* DataTypeConversion: '<S1>/Data Type Conversion22' */
+TBRe_Mod_B.DataTypeConversion22_p = TBRe_Mod_B.btnPreCharge_Input;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B6)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx7' */
+%<tlcOutputsFcnOfS0B6>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion33' */
+TBRe_Mod_B.DataTypeConversion33 = TBRe_Mod_B.TSS_f;
+/* DataTypeConversion: '<S1>/Data Type Conversion34' */
+TBRe_Mod_B.DataTypeConversion34 = TBRe_Mod_B.Throttle_Bool;
+/* DataTypeConversion: '<S1>/Data Type Conversion35' */
+TBRe_Mod_B.DataTypeConversion35 = TBRe_Mod_B.Control_Word;
+/* DataTypeConversion: '<S1>/Data Type Conversion36' */
+TBRe_Mod_B.DataTypeConversion36 = TBRe_Mod_B.State;
+/* DataTypeConversion: '<S1>/Data Type Conversion37' */
+TBRe_Mod_B.DataTypeConversion37 = TBRe_Mod_B.Brake_Bool;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B7)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx8' */
+%<tlcOutputsFcnOfS0B7>\
+%endif
+/* DataTypeConversion: '<S1>/Data Type Conversion4' */
+TBRe_Mod_B.DataTypeConversion4 = TBRe_Mod_B.Brake2_Pressure;
+/* DataTypeConversion: '<S1>/Data Type Conversion2' */
+TBRe_Mod_B.DataTypeConversion2 = TBRe_Mod_B.Brake1_Pressure;
+/* DataTypeConversion: '<S1>/Data Type Conversion3' */
+TBRe_Mod_B.DataTypeConversion3_a = TBRe_Mod_B.Throttle2_Voltage;
+/* DataTypeConversion: '<S1>/Data Type Conversion6' */
+TBRe_Mod_B.DataTypeConversion6_k = TBRe_Mod_B.Throttle1_Voltage;
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B8)
+/* S-Function (NsiCan_Tx_Ext): '<S1>/CanTx9' */
+%<tlcOutputsFcnOfS0B8>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS0B9)
+/* S-Function (NsiSys_TaskREF): '<S1>/Task' */
+%<tlcOutputsFcnOfS0B9>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DiagnosticsCAN(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%endfunction

@@ -1,0 +1,1478 @@
+%implements s16_b0_zmynf_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+real_T rtb_LowerLinit;
+uint16_T localProduct;
+int32_T rtb_Gain6;
+boolean_T rtb_LogicalOperator2;
+uint8_T rtb_State;
+int16_T rtb_Throttle_Req;
+boolean_T X;
+boolean_T Y;
+boolean_T Z;
+boolean_T Light_e;
+boolean_T guard1 = false;
+boolean_T guard2 = false;
+%closefile localVarDecl
+%assign tlcOutputsFcnOfS15B1 = OpaqueTLCBlockFcn("Outputs", 15, 1, 1, 3)
+%assign tlcOutputsFcnOfS15B2 = OpaqueTLCBlockFcn("Outputs", 15, 2, 1, 3)
+%assign tlcOutputsFcnOfS15B3 = OpaqueTLCBlockFcn("Outputs", 15, 3, 1, 3)
+%assign tlcOutputsFcnOfS15B4 = OpaqueTLCBlockFcn("Outputs", 15, 4, 1, 3)
+%assign tlcOutputsFcnOfS15B5 = OpaqueTLCBlockFcn("Outputs", 15, 5, 1, 3)
+%assign tlcOutputsFcnOfS15B6 = OpaqueTLCBlockFcn("Outputs", 15, 6, 1, 3)
+%assign tlcOutputsFcnOfS15B9 = OpaqueTLCBlockFcn("Outputs", 15, 9, 1, 3)
+%assign tlcOutputsFcnOfS15B10 = OpaqueTLCBlockFcn("Outputs", 15, 10, 1, 3)
+%assign tlcOutputsFcnOfS15B13 = OpaqueTLCBlockFcn("Outputs", 15, 13, 1, 3)
+%assign tlcOutputsFcnOfS15B14 = OpaqueTLCBlockFcn("Outputs", 15, 14, 1, 3)
+%assign tlcOutputsFcnOfS15B16 = OpaqueTLCBlockFcn("Outputs", 15, 16, 1, 3)
+%assign tlcOutputsFcnOfS15B17 = OpaqueTLCBlockFcn("Outputs", 15, 17, 1, 3)
+%assign tlcOutputsFcnOfS15B20 = OpaqueTLCBlockFcn("Outputs", 15, 20, 1, 3)
+%assign tlcOutputsFcnOfS15B21 = OpaqueTLCBlockFcn("Outputs", 15, 21, 1, 3)
+%assign tlcOutputsFcnOfS15B24 = OpaqueTLCBlockFcn("Outputs", 15, 24, 1, 3)
+%assign tlcOutputsFcnOfS15B27 = OpaqueTLCBlockFcn("Outputs", 15, 27, 1, 3)
+%assign tlcOutputsFcnOfS15B28 = OpaqueTLCBlockFcn("Outputs", 15, 28, 1, 3)
+%assign tlcOutputsFcnOfS15B29 = OpaqueTLCBlockFcn("Outputs", 15, 29, 1, 3)
+%assign tlcOutputsFcnOfS15B35 = OpaqueTLCBlockFcn("Outputs", 15, 35, 1, 3)
+%assign tlcOutputsFcnOfS15B38 = OpaqueTLCBlockFcn("Outputs", 15, 38, 1, 3)
+%assign tlcOutputsFcnOfS15B40 = OpaqueTLCBlockFcn("Outputs", 15, 40, 1, 3)
+%assign tlcOutputsFcnOfS15B41 = OpaqueTLCBlockFcn("Outputs", 15, 41, 1, 3)
+%assign tlcOutputsFcnOfS15B43 = OpaqueTLCBlockFcn("Outputs", 15, 43, 1, 3)
+%assign tlcOutputsFcnOfS15B44 = OpaqueTLCBlockFcn("Outputs", 15, 44, 1, 3)
+%assign tlcOutputsFcnOfS15B46 = OpaqueTLCBlockFcn("Outputs", 15, 46, 1, 3)
+%assign tlcOutputsFcnOfS15B47 = OpaqueTLCBlockFcn("Outputs", 15, 47, 1, 3)
+%assign tlcOutputsFcnOfS15B50 = OpaqueTLCBlockFcn("Outputs", 15, 50, 1, 3)
+%assign tlcOutputsFcnOfS15B51 = OpaqueTLCBlockFcn("Outputs", 15, 51, 1, 3)
+%assign tlcOutputsFcnOfS15B52 = OpaqueTLCBlockFcn("Outputs", 15, 52, 1, 3)
+%assign tlcOutputsFcnOfS15B53 = OpaqueTLCBlockFcn("Outputs", 15, 53, 1, 3)
+%assign tlcOutputsFcnOfS15B54 = OpaqueTLCBlockFcn("Outputs", 15, 54, 1, 3)
+%assign tlcOutputsFcnOfS15B57 = OpaqueTLCBlockFcn("Outputs", 15, 57, 1, 3)
+%assign tlcOutputsFcnOfS15B61 = OpaqueTLCBlockFcn("Outputs", 15, 61, 1, 3)
+%assign tlcOutputsFcnOfS15B62 = OpaqueTLCBlockFcn("Outputs", 15, 62, 1, 3)
+%assign tlcOutputsFcnOfS15B63 = OpaqueTLCBlockFcn("Outputs", 15, 63, 1, 3)
+%assign tlcOutputsFcnOfS15B64 = OpaqueTLCBlockFcn("Outputs", 15, 64, 1, 3)
+%assign tlcOutputsFcnOfS15B65 = OpaqueTLCBlockFcn("Outputs", 15, 65, 1, 3)
+%assign tlcOutputsFcnOfS15B66 = OpaqueTLCBlockFcn("Outputs", 15, 66, 1, 3)
+%assign tlcOutputsFcnOfS15B67 = OpaqueTLCBlockFcn("Outputs", 15, 67, 1, 3)
+%assign tlcOutputsFcnOfS15B68 = OpaqueTLCBlockFcn("Outputs", 15, 68, 1, 3)
+%assign tlcOutputsFcnOfS15B72 = OpaqueTLCBlockFcn("Outputs", 15, 72, 1, 3)
+%assign tlcOutputsFcnOfS15B73 = OpaqueTLCBlockFcn("Outputs", 15, 73, 1, 3)
+%assign tlcOutputsFcnOfS15B74 = OpaqueTLCBlockFcn("Outputs", 15, 74, 1, 3)
+%assign tlcOutputsFcnOfS15B76 = OpaqueTLCBlockFcn("Outputs", 15, 76, 1, 3)
+%assign tlcOutputsFcnOfS15B79 = OpaqueTLCBlockFcn("Outputs", 15, 79, 1, 3)
+%assign tlcOutputsFcnOfS15B80 = OpaqueTLCBlockFcn("Outputs", 15, 80, 1, 3)
+%assign tlcOutputsFcnOfS15B83 = OpaqueTLCBlockFcn("Outputs", 15, 83, 1, 3)
+%assign tlcOutputsFcnOfS15B84 = OpaqueTLCBlockFcn("Outputs", 15, 84, 1, 3)
+%assign tlcOutputsFcnOfS15B85 = OpaqueTLCBlockFcn("Outputs", 15, 85, 1, 3)
+%assign tlcOutputsFcnOfS15B86 = OpaqueTLCBlockFcn("Outputs", 15, 86, 1, 3)
+%assign tlcOutputsFcnOfS15B87 = OpaqueTLCBlockFcn("Outputs", 15, 87, 1, 3)
+%assign tlcOutputsFcnOfS15B88 = OpaqueTLCBlockFcn("Outputs", 15, 88, 1, 3)
+%assign tlcOutputsFcnOfS15B89 = OpaqueTLCBlockFcn("Outputs", 15, 89, 1, 3)
+%assign tlcOutputsFcnOfS15B90 = OpaqueTLCBlockFcn("Outputs", 15, 90, 1, 3)
+%assign tlcOutputsFcnOfS15B91 = OpaqueTLCBlockFcn("Outputs", 15, 91, 1, 3)
+%assign tlcOutputsFcnOfS15B92 = OpaqueTLCBlockFcn("Outputs", 15, 92, 1, 3)
+%assign tlcOutputsFcnOfS15B93 = OpaqueTLCBlockFcn("Outputs", 15, 93, 1, 3)
+%assign tlcOutputsFcnOfS15B94 = OpaqueTLCBlockFcn("Outputs", 15, 94, 1, 3)
+%assign tlcOutputsFcnOfS15B95 = OpaqueTLCBlockFcn("Outputs", 15, 95, 1, 3)
+%assign tlcOutputsFcnOfS15B96 = OpaqueTLCBlockFcn("Outputs", 15, 96, 1, 3)
+%assign tlcOutputsFcnOfS15B97 = OpaqueTLCBlockFcn("Outputs", 15, 97, 1, 3)
+%assign tlcOutputsFcnOfS15B98 = OpaqueTLCBlockFcn("Outputs", 15, 98, 1, 3)
+%assign tlcOutputsFcnOfS15B99 = OpaqueTLCBlockFcn("Outputs", 15, 99, 1, 3)
+%assign tlcOutputsFcnOfS15B100 = OpaqueTLCBlockFcn("Outputs", 15, 100, 1, 3)
+%assign tlcOutputsFcnOfS15B101 = OpaqueTLCBlockFcn("Outputs", 15, 101, 1, 3)
+%assign tlcOutputsFcnOfS15B102 = OpaqueTLCBlockFcn("Outputs", 15, 102, 1, 3)
+%assign tlcOutputsFcnOfS15B103 = OpaqueTLCBlockFcn("Outputs", 15, 103, 1, 3)
+%assign tlcOutputsFcnOfS15B104 = OpaqueTLCBlockFcn("Outputs", 15, 104, 1, 3)
+%assign tlcOutputsFcnOfS15B105 = OpaqueTLCBlockFcn("Outputs", 15, 105, 1, 3)
+%assign tlcOutputsFcnOfS15B106 = OpaqueTLCBlockFcn("Outputs", 15, 106, 1, 3)
+%assign tlcOutputsFcnOfS15B107 = OpaqueTLCBlockFcn("Outputs", 15, 107, 1, 3)
+%assign tlcOutputsFcnOfS15B108 = OpaqueTLCBlockFcn("Outputs", 15, 108, 1, 3)
+%assign tlcOutputsFcnOfS15B109 = OpaqueTLCBlockFcn("Outputs", 15, 109, 1, 3)
+%assign tlcOutputsFcnOfS15B110 = OpaqueTLCBlockFcn("Outputs", 15, 110, 1, 3)
+%assign tlcOutputsFcnOfS15B111 = OpaqueTLCBlockFcn("Outputs", 15, 111, 1, 3)
+%assign tlcOutputsFcnOfS15B112 = OpaqueTLCBlockFcn("Outputs", 15, 112, 1, 3)
+%assign tlcOutputsFcnOfS15B113 = OpaqueTLCBlockFcn("Outputs", 15, 113, 1, 3)
+%assign tlcOutputsFcnOfS15B114 = OpaqueTLCBlockFcn("Outputs", 15, 114, 1, 3)
+%assign tlcOutputsFcnOfS15B115 = OpaqueTLCBlockFcn("Outputs", 15, 115, 1, 3)
+%assign tlcOutputsFcnOfS15B116 = OpaqueTLCBlockFcn("Outputs", 15, 116, 1, 3)
+%assign tlcOutputsFcnOfS15B117 = OpaqueTLCBlockFcn("Outputs", 15, 117, 1, 3)
+%assign tlcOutputsFcnOfS15B118 = OpaqueTLCBlockFcn("Outputs", 15, 118, 1, 3)
+%assign tlcOutputsFcnOfS15B119 = OpaqueTLCBlockFcn("Outputs", 15, 119, 1, 3)
+%assign tlcOutputsFcnOfS15B120 = OpaqueTLCBlockFcn("Outputs", 15, 120, 1, 3)
+%assign tlcOutputsFcnOfS15B121 = OpaqueTLCBlockFcn("Outputs", 15, 121, 1, 3)
+%assign tlcOutputsFcnOfS15B122 = OpaqueTLCBlockFcn("Outputs", 15, 122, 1, 3)
+%assign tlcOutputsFcnOfS15B123 = OpaqueTLCBlockFcn("Outputs", 15, 123, 1, 3)
+%assign tlcOutputsFcnOfS15B124 = OpaqueTLCBlockFcn("Outputs", 15, 124, 1, 3)
+%assign tlcOutputsFcnOfS15B125 = OpaqueTLCBlockFcn("Outputs", 15, 125, 1, 3)
+%assign tlcOutputsFcnOfS15B126 = OpaqueTLCBlockFcn("Outputs", 15, 126, 1, 3)
+%assign tlcOutputsFcnOfS15B127 = OpaqueTLCBlockFcn("Outputs", 15, 127, 1, 3)
+%assign tlcOutputsFcnOfS15B128 = OpaqueTLCBlockFcn("Outputs", 15, 128, 1, 3)
+%assign tlcOutputsFcnOfS15B129 = OpaqueTLCBlockFcn("Outputs", 15, 129, 1, 3)
+%assign tlcOutputsFcnOfS15B130 = OpaqueTLCBlockFcn("Outputs", 15, 130, 1, 3)
+%assign tlcOutputsFcnOfS15B131 = OpaqueTLCBlockFcn("Outputs", 15, 131, 1, 3)
+%assign tlcOutputsFcnOfS15B132 = OpaqueTLCBlockFcn("Outputs", 15, 132, 1, 3)
+%assign tlcOutputsFcnOfS15B133 = OpaqueTLCBlockFcn("Outputs", 15, 133, 1, 3)
+%assign tlcOutputsFcnOfS15B134 = OpaqueTLCBlockFcn("Outputs", 15, 134, 1, 3)
+%assign tlcOutputsFcnOfS15B135 = OpaqueTLCBlockFcn("Outputs", 15, 135, 1, 3)
+%assign tlcOutputsFcnOfS15B136 = OpaqueTLCBlockFcn("Outputs", 15, 136, 1, 3)
+%assign tlcOutputsFcnOfS15B139 = OpaqueTLCBlockFcn("Outputs", 15, 139, 1, 3)
+%assign tlcOutputsFcnOfS15B140 = OpaqueTLCBlockFcn("Outputs", 15, 140, 1, 3)
+%assign tlcOutputsFcnOfS15B141 = OpaqueTLCBlockFcn("Outputs", 15, 141, 1, 3)
+%assign tlcOutputsFcnOfS15B142 = OpaqueTLCBlockFcn("Outputs", 15, 142, 1, 3)
+%assign tlcOutputsFcnOfS15B143 = OpaqueTLCBlockFcn("Outputs", 15, 143, 1, 3)
+%assign tlcOutputsFcnOfS15B144 = OpaqueTLCBlockFcn("Outputs", 15, 144, 1, 3)
+%assign tlcOutputsFcnOfS15B145 = OpaqueTLCBlockFcn("Outputs", 15, 145, 1, 3)
+%assign tlcOutputsFcnOfS15B146 = OpaqueTLCBlockFcn("Outputs", 15, 146, 1, 3)
+%assign tlcOutputsFcnOfS15B147 = OpaqueTLCBlockFcn("Outputs", 15, 147, 1, 3)
+%assign tlcOutputsFcnOfS15B148 = OpaqueTLCBlockFcn("Outputs", 15, 148, 1, 3)
+%assign tlcOutputsFcnOfS15B149 = OpaqueTLCBlockFcn("Outputs", 15, 149, 1, 3)
+%assign tlcOutputsFcnOfS15B150 = OpaqueTLCBlockFcn("Outputs", 15, 150, 1, 3)
+%assign tlcOutputsFcnOfS15B151 = OpaqueTLCBlockFcn("Outputs", 15, 151, 1, 3)
+%assign tlcOutputsFcnOfS15B152 = OpaqueTLCBlockFcn("Outputs", 15, 152, 1, 3)
+%assign tlcOutputsFcnOfS15B154 = OpaqueTLCBlockFcn("Outputs", 15, 154, 1, 3)
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B1)
+/* S-Function (NsiMem_Read): '<S43>/Memory read4' */
+%<tlcOutputsFcnOfS15B1>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B2)
+/* S-Function (NsiMem_Read): '<S43>/Memory read5' */
+%<tlcOutputsFcnOfS15B2>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B3)
+/* S-Function (NsiIo_AnalogInput): '<S16>/AnalogInput1' */
+%<tlcOutputsFcnOfS15B3>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B4)
+/* S-Function (NsiIo_AnalogInput): '<S16>/AnalogInput6' */
+%<tlcOutputsFcnOfS15B4>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B5)
+/* S-Function (NsiIo_AnalogInput): '<S16>/AnalogInput2' */
+%<tlcOutputsFcnOfS15B5>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B6)
+/* S-Function (NsiIo_AnalogInput): '<S16>/AnalogInput3' */
+%<tlcOutputsFcnOfS15B6>\
+%endif
+/* MATLAB Function: '<S42>/Sensor_Diag' */
+/* MATLAB Function 'MainTask/Pre_Processing_Layer/Pedal_Box/Sensor Plausibility/Sensor_Diag': '<S48>:1' */
+/* '<S48>:1:5' */
+TBRe_Mod_B.TV1_Out = 0U;
+/* '<S48>:1:6' */
+TBRe_Mod_B.TV2_Out = 0U;
+/* '<S48>:1:7' */
+TBRe_Mod_B.BV1_Out = 0U;
+/* '<S48>:1:8' */
+TBRe_Mod_B.BV2_Out = 0U;
+/* '<S48>:1:10' */
+rtb_State = 0U;
+if (TBRe_Mod_B.Throttle1_Voltage > 5000) {
+    /* '<S48>:1:12' */
+    /* '<S48>:1:13' */
+    rtb_State = 1U;
+}
+if (TBRe_Mod_B.Throttle2_Voltage > 5000) {
+    /* '<S48>:1:17' */
+    /* '<S48>:1:18' */
+    rtb_State = (uint8_T)(rtb_State + 2);
+}
+if (TBRe_Mod_B.Brake1_Pressure > 5000) {
+    /* '<S48>:1:22' */
+    /* '<S48>:1:23' */
+    rtb_State = (uint8_T)(rtb_State + 8);
+}
+if (TBRe_Mod_B.Brake2_Pressure > 5000) {
+    /* '<S48>:1:27' */
+    /* '<S48>:1:28' */
+    rtb_State = (uint8_T)(rtb_State + 16);
+}
+if (rtb_State == 0) {
+    /* '<S48>:1:32' */
+    /* '<S48>:1:33' */
+    TBRe_Mod_B.TV1_Out = TBRe_Mod_B.Throttle1_Voltage;
+    /* '<S48>:1:34' */
+    TBRe_Mod_B.TV2_Out = TBRe_Mod_B.Throttle2_Voltage;
+    /* '<S48>:1:35' */
+    TBRe_Mod_B.BV1_Out = TBRe_Mod_B.Brake1_Pressure;
+    /* '<S48>:1:36' */
+    TBRe_Mod_B.BV2_Out = TBRe_Mod_B.Brake2_Pressure;
+}
+TBRe_Mod_B.Pedal_Sensor_Fail = rtb_State;
+/* End of MATLAB Function: '<S42>/Sensor_Diag' */
+
+/* MinMax: '<S51>/MinMax5' */
+if (TBRe_Mod_B.Memoryread5_e > TBRe_Mod_B.BV1_Out) {
+    localProduct = TBRe_Mod_B.Memoryread5_e;
+} else {
+    localProduct = TBRe_Mod_B.BV1_Out;
+}
+/* End of MinMax: '<S51>/MinMax5' */
+
+/* Product: '<S51>/Divide' incorporates:
+ *  Constant: '<S51>/Constant'
+ *  DataTypeConversion: '<S51>/Data Type Conversion3'
+ *  DataTypeConversion: '<S51>/Data Type Conversion4'
+ *  Sum: '<S51>/Add'
+ *  Sum: '<S51>/Add1'
+ */
+rtb_LowerLinit = 100.0 / (real_T)(uint16_T)(TBRe_Mod_B.Memoryread4_f - TBRe_Mod_B.Memoryread5_e) * (real_T)(uint16_T)(localProduct - TBRe_Mod_B.Memoryread5_e);
+/* MinMax: '<S51>/MinMax' */
+if ((100.0 < rtb_LowerLinit) || rtIsNaN(rtb_LowerLinit)) {
+    TBRe_Mod_B.MinMax = 100U;
+} else {
+    TBRe_Mod_B.MinMax = (uint16_T)rtb_LowerLinit;
+}
+/* End of MinMax: '<S51>/MinMax' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B9)
+
+/* S-Function (NsiMem_Read): '<S43>/Memory read6' */
+%<tlcOutputsFcnOfS15B9>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B10)
+/* S-Function (NsiMem_Read): '<S43>/Memory read7' */
+%<tlcOutputsFcnOfS15B10>\
+%endif
+/* MinMax: '<S52>/MinMax5' */
+if (TBRe_Mod_B.Memoryread7_d > TBRe_Mod_B.BV2_Out) {
+    localProduct = TBRe_Mod_B.Memoryread7_d;
+} else {
+    localProduct = TBRe_Mod_B.BV2_Out;
+}
+/* End of MinMax: '<S52>/MinMax5' */
+
+/* Product: '<S52>/Divide' incorporates:
+ *  Constant: '<S52>/Constant'
+ *  DataTypeConversion: '<S52>/Data Type Conversion3'
+ *  DataTypeConversion: '<S52>/Data Type Conversion4'
+ *  Sum: '<S52>/Add'
+ *  Sum: '<S52>/Add1'
+ */
+rtb_LowerLinit = 100.0 / (real_T)(uint16_T)(TBRe_Mod_B.Memoryread6_b - TBRe_Mod_B.Memoryread7_d) * (real_T)(uint16_T)(localProduct - TBRe_Mod_B.Memoryread7_d);
+/* MinMax: '<S52>/MinMax' */
+if ((100.0 < rtb_LowerLinit) || rtIsNaN(rtb_LowerLinit)) {
+    TBRe_Mod_B.MinMax_d = 100U;
+} else {
+    TBRe_Mod_B.MinMax_d = (uint16_T)rtb_LowerLinit;
+}
+/* End of MinMax: '<S52>/MinMax' */
+
+/* MinMax: '<S40>/MinMax' */
+if (TBRe_Mod_B.MinMax > TBRe_Mod_B.MinMax_d) {
+    TBRe_Mod_B.MinMax_e = TBRe_Mod_B.MinMax;
+} else {
+    TBRe_Mod_B.MinMax_e = TBRe_Mod_B.MinMax_d;
+}
+/* End of MinMax: '<S40>/MinMax' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B13)
+
+/* S-Function (NsiMem_Read): '<S43>/Memory read' */
+%<tlcOutputsFcnOfS15B13>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B14)
+/* S-Function (NsiMem_Read): '<S43>/Memory read1' */
+%<tlcOutputsFcnOfS15B14>\
+%endif
+/* MinMax: '<S49>/MinMax5' */
+if (TBRe_Mod_B.Memoryread1_e > TBRe_Mod_B.TV1_Out) {
+    localProduct = TBRe_Mod_B.Memoryread1_e;
+} else {
+    localProduct = TBRe_Mod_B.TV1_Out;
+}
+/* End of MinMax: '<S49>/MinMax5' */
+
+/* Product: '<S49>/Divide' incorporates:
+ *  Constant: '<S49>/Constant'
+ *  DataTypeConversion: '<S49>/Data Type Conversion3'
+ *  DataTypeConversion: '<S49>/Data Type Conversion4'
+ *  Sum: '<S49>/Add'
+ *  Sum: '<S49>/Add1'
+ */
+rtb_LowerLinit = 100.0 / (real_T)(uint16_T)(TBRe_Mod_B.Memoryread_i - TBRe_Mod_B.Memoryread1_e) * (real_T)(uint16_T)(localProduct - TBRe_Mod_B.Memoryread1_e);
+/* MinMax: '<S49>/MinMax' */
+if ((100.0 < rtb_LowerLinit) || rtIsNaN(rtb_LowerLinit)) {
+    TBRe_Mod_B.MinMax_dv = 100U;
+} else {
+    TBRe_Mod_B.MinMax_dv = (uint16_T)rtb_LowerLinit;
+}
+/* End of MinMax: '<S49>/MinMax' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B16)
+
+/* S-Function (NsiMem_Read): '<S43>/Memory read2' */
+%<tlcOutputsFcnOfS15B16>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B17)
+/* S-Function (NsiMem_Read): '<S43>/Memory read3' */
+%<tlcOutputsFcnOfS15B17>\
+%endif
+/* MinMax: '<S50>/MinMax5' */
+if (TBRe_Mod_B.Memoryread3_f > TBRe_Mod_B.TV2_Out) {
+    localProduct = TBRe_Mod_B.Memoryread3_f;
+} else {
+    localProduct = TBRe_Mod_B.TV2_Out;
+}
+/* End of MinMax: '<S50>/MinMax5' */
+
+/* Product: '<S50>/Divide' incorporates:
+ *  Constant: '<S50>/Constant'
+ *  DataTypeConversion: '<S50>/Data Type Conversion3'
+ *  DataTypeConversion: '<S50>/Data Type Conversion4'
+ *  Sum: '<S50>/Add'
+ *  Sum: '<S50>/Add1'
+ */
+rtb_LowerLinit = 100.0 / (real_T)(uint16_T)(TBRe_Mod_B.Memoryread2_h - TBRe_Mod_B.Memoryread3_f) * (real_T)(uint16_T)(localProduct - TBRe_Mod_B.Memoryread3_f);
+/* MinMax: '<S50>/MinMax' */
+if ((100.0 < rtb_LowerLinit) || rtIsNaN(rtb_LowerLinit)) {
+    TBRe_Mod_B.MinMax_b = 100U;
+} else {
+    TBRe_Mod_B.MinMax_b = (uint16_T)rtb_LowerLinit;
+}
+/* End of MinMax: '<S50>/MinMax' */
+
+/* Product: '<S39>/Product of Elements' incorporates:
+ *  S-Function (sfix_udelay): '<S39>/Tapped Delay'
+ */
+localProduct = (uint16_T)(TBRe_Mod_DW.TappedDelay_X[0] ? (int32_T)TBRe_Mod_DW.TappedDelay_X[1] : 0);
+for (rtb_Gain6 = 0; rtb_Gain6 < 8; rtb_Gain6++) {
+    localProduct = (uint16_T)(TBRe_Mod_DW.TappedDelay_X[rtb_Gain6 + 2] ? (int32_T)localProduct : 0);
+}
+TBRe_Mod_B.ProductofElements = localProduct;
+/* End of Product: '<S39>/Product of Elements' */
+
+/* MinMax: '<S39>/MinMax' */
+if (TBRe_Mod_B.MinMax_dv < TBRe_Mod_B.MinMax_b) {
+    localProduct = TBRe_Mod_B.MinMax_dv;
+} else {
+    localProduct = TBRe_Mod_B.MinMax_b;
+}
+/* End of MinMax: '<S39>/MinMax' */
+
+/* Product: '<S39>/Product' incorporates:
+ *  Logic: '<S39>/Logical Operator3'
+ */
+rtb_Gain6 = !(TBRe_Mod_B.ProductofElements != 0) * localProduct;
+/* Logic: '<S38>/Logical Operator2' incorporates:
+ *  Delay: '<S38>/prv_APPS_BP1'
+ *  Logic: '<S38>/Logical Operator'
+ *  Logic: '<S38>/Logical Operator1'
+ *  RelationalOperator: '<S38>/Relational Operator'
+ *  RelationalOperator: '<S38>/Relational Operator1'
+ *  RelationalOperator: '<S38>/Relational Operator2'
+ */
+TBRe_Mod_B.LogicalOperator2 = (((TBRe_Mod_B.MinMax_e >= 5) && (rtb_Gain6 > 25)) || ((rtb_Gain6 > 5) && TBRe_Mod_DW.prv_APPS_BP1_DSTATE));
+/* Product: '<S38>/Product' incorporates:
+ *  Logic: '<S38>/Logical Operator3'
+ */
+TBRe_Mod_B.Product = (uint8_T)(!TBRe_Mod_B.LogicalOperator2 ? (int32_T)(uint8_T)rtb_Gain6 : 0);
+/* Relay: '<S37>/Throttle Bool Hysteresis' */
+if (TBRe_Mod_B.Product >= Throttle_Active_Threshold) {
+    TBRe_Mod_DW.ThrottleBoolHysteresis_Mode = true;
+} else {
+    if (TBRe_Mod_B.Product <= (int32_T)%<(SLibCGCallSubFcn("rt_roundd_snf", ["(real_T)Throttle_Active_Threshold / 2.0"], 1, 3, 0))>) {
+        TBRe_Mod_DW.ThrottleBoolHysteresis_Mode = false;
+    }
+}
+TBRe_Mod_B.Throttle_Bool = TBRe_Mod_DW.ThrottleBoolHysteresis_Mode;
+/* End of Relay: '<S37>/Throttle Bool Hysteresis' */
+
+/* Relay: '<S37>/Brake Bool Hysteresis' */
+if (TBRe_Mod_B.MinMax_e >= Brake_Active_Threshold) {
+    TBRe_Mod_DW.BrakeBoolHysteresis_Mode = true;
+} else {
+    if (TBRe_Mod_B.MinMax_e <= 5) {
+        TBRe_Mod_DW.BrakeBoolHysteresis_Mode = false;
+    }
+}
+TBRe_Mod_B.Brake_Bool = TBRe_Mod_DW.BrakeBoolHysteresis_Mode;
+/* End of Relay: '<S37>/Brake Bool Hysteresis' */
+
+/* Product: '<S33>/Product of Elements' incorporates:
+ *  S-Function (sfix_udelay): '<S33>/Debouncing2'
+ */
+localProduct = (uint16_T)(TBRe_Mod_DW.Debouncing2_X[4] ? (int32_T)(uint16_T)(TBRe_Mod_DW.Debouncing2_X[3] ? (int32_T)(uint16_T)(TBRe_Mod_DW.Debouncing2_X[2] ? (int32_T)(uint16_T)(TBRe_Mod_DW.Debouncing2_X[0] ? (int32_T)TBRe_Mod_DW.Debouncing2_X[1] : 0) : 0) : 0) : 0);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B20)
+/* S-Function (NsiIo_DigitalInput): '<S12>/DigitalInput5' */
+%<tlcOutputsFcnOfS15B20>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B21)
+/* S-Function (NsiCan_Rx_Ext): '<S8>/CanRx6' */
+%<tlcOutputsFcnOfS15B21>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B24)
+/* S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx1' */
+%<tlcOutputsFcnOfS15B24>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B27)
+/* S-Function (NsiIo_DigitalInput): '<S12>/DigitalInput' */
+%<tlcOutputsFcnOfS15B27>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B28)
+/* S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput3' */
+%<tlcOutputsFcnOfS15B28>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B29)
+/* S-Function (NsiIo_DigitalInput): '<S9>/DigitalInput1' */
+%<tlcOutputsFcnOfS15B29>\
+%endif
+/* Chart: '<S54>/TS Enable' */
+if (TBRe_Mod_DW.temporalCounter_i1_o < 127U) {
+    TBRe_Mod_DW.temporalCounter_i1_o++;
+}
+/* Gateway: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/TS Enable */
+TBRe_Mod_DW.btnPreCharge_prev = TBRe_Mod_DW.btnPreCharge_start;
+TBRe_Mod_DW.btnPreCharge_start = TBRe_Mod_B.btnPreCharge_Input;
+/* During: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/TS Enable */
+if (TBRe_Mod_DW.is_active_c12_TBRe_Mod == 0U) {
+    TBRe_Mod_DW.btnPreCharge_prev = TBRe_Mod_B.btnPreCharge_Input;
+    /* Entry: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/TS Enable */
+    TBRe_Mod_DW.is_active_c12_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/TS Enable */
+    /* Transition: '<S68>:3' */
+    TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_Default_State;
+    TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+    /* Entry 'Default_State': '<S68>:61' */
+    TBRe_Mod_B.TS_Enable = false;
+    rtb_State = 0U;
+} else {
+    guard1 = false;
+    guard2 = false;
+    switch (TBRe_Mod_DW.is_c12_TBRe_Mod) {
+      case TBRe_Mod_IN_Default_State:
+        rtb_State = 0U;
+        /* During 'Default_State': '<S68>:61' */
+        if ((TBRe_Mod_DW.btnPreCharge_prev != TBRe_Mod_DW.btnPreCharge_start) && (!TBRe_Mod_DW.btnPreCharge_prev) && TBRe_Mod_B.btnPreCharge_Input && (TBRe_Mod_DW.temporalCounter_i1_o >= 100U)) {
+            /* Transition: '<S68>:67' */
+            TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_Precharge;
+            TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+            /* Entry 'Precharge': '<S68>:66' */
+            TBRe_Mod_B.TS_Enable = true;
+            rtb_State = 1U;
+        }
+        break;
+      case TBRe_Mod_IN_HV_System_Active:
+        rtb_State = 2U;
+        /* During 'HV_System_Active': '<S68>:70' */
+        if (!TBRe_Mod_B.AIRLow) {
+            /* Transition: '<S68>:85' */
+            /* Transition: '<S68>:89' */
+            TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_Default_State;
+            TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+            /* Entry 'Default_State': '<S68>:61' */
+            TBRe_Mod_B.TS_Enable = false;
+            rtb_State = 0U;
+        } else {
+            if ((TBRe_Mod_DW.btnPreCharge_prev != TBRe_Mod_DW.btnPreCharge_start) && (!TBRe_Mod_DW.btnPreCharge_prev) && TBRe_Mod_B.btnPreCharge_Input && (TBRe_Mod_DW.temporalCounter_i1_o >= 50U)) {
+                /* Transition: '<S68>:82' */
+                TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe__IN_HV_System_Deactivating;
+                TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+                /* Entry 'HV_System_Deactivating': '<S68>:81' */
+                TBRe_Mod_B.TS_Enable = false;
+                rtb_State = 3U;
+            }
+        }
+        break;
+      case TBRe__IN_HV_System_Deactivating:
+        rtb_State = 3U;
+        /* During 'HV_System_Deactivating': '<S68>:81' */
+        if (TBRe_Mod_DW.temporalCounter_i1_o >= 50U) {
+            /* Transition: '<S68>:83' */
+            /* Transition: '<S68>:88' */
+            /* Transition: '<S68>:89' */
+            TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_Default_State;
+            TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+            /* Entry 'Default_State': '<S68>:61' */
+            TBRe_Mod_B.TS_Enable = false;
+            rtb_State = 0U;
+        }
+        break;
+      default:
+        rtb_State = 1U;
+        /* During 'Precharge': '<S68>:66' */
+        if (TBRe_Mod_B.AIRLow) {
+            /* Transition: '<S68>:71' */
+            if (TBRe_Mod_DW.temporalCounter_i1_o >= 50U) {
+                /* Transition: '<S68>:96' */
+                TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_HV_System_Active;
+                TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+                /* Entry 'HV_System_Active': '<S68>:70' */
+                TBRe_Mod_B.TS_Enable = true;
+                rtb_State = 2U;
+            } else if (!TBRe_Mod_B.AIRLow) {
+                /* Transition: '<S68>:97' */
+                /* Transition: '<S68>:89' */
+                guard1 = true;
+            } else {
+                guard2 = true;
+            }
+        } else {
+            guard2 = true;
+        }
+        break;
+    }
+    if (guard2) {
+        if (TBRe_Mod_DW.temporalCounter_i1_o >= 50U) {
+            /* Transition: '<S68>:92' */
+            guard1 = true;
+        }
+    }
+    if (guard1) {
+        TBRe_Mod_DW.is_c12_TBRe_Mod = TBRe_Mod_IN_Default_State;
+        TBRe_Mod_DW.temporalCounter_i1_o = 0U;
+        /* Entry 'Default_State': '<S68>:61' */
+        TBRe_Mod_B.TS_Enable = false;
+        rtb_State = 0U;
+    }
+}
+/* End of Chart: '<S54>/TS Enable' */
+
+/* Logic: '<S69>/StartUp' incorporates:
+ *  Constant: '<S69>/Threshold_Level'
+ *  Constant: '<S70>/Constant'
+ *  Constant: '<S71>/Constant'
+ *  Constant: '<S72>/Constant'
+ *  Product: '<S69>/Product'
+ *  RelationalOperator: '<S70>/Compare'
+ *  RelationalOperator: '<S71>/Compare'
+ *  RelationalOperator: '<S72>/Compare'
+ *  Sum: '<S69>/Add'
+ */
+TBRe_Mod_B.TSS_f = ((TBRe_Mod_B.Instant_Pack_Voltage >= 150.0F) && ((int16_T)(real32_T)floor(TBRe_Mod_B.MCU_Voltage - (real32_T)(uint16_T)(TBRe_Mod_B.Instant_Pack_Voltage * 0.9)) > 0) && (TBRe_Mod_B.MCU_Voltage >= 150.0F) && TBRe_Mod_B.AIRLow && TBRe_Mod_B.TS_Enable);
+/* Logic: '<S54>/Logical Operator2' */
+rtb_LogicalOperator2 = (TBRe_Mod_B.AIRHigh && TBRe_Mod_B.TSS_f);
+/* Chart: '<S54>/Operaton_Mode' incorporates:
+ *  DataTypeConversion: '<S33>/Data Type Conversion'
+ */
+if (TBRe_Mod_DW.temporalCounter_i1_e < 255U) {
+    TBRe_Mod_DW.temporalCounter_i1_e++;
+}
+/* Gateway: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/Operaton_Mode */
+TBRe_Mod_DW.btnRTD_prev = TBRe_Mod_DW.btnRTD_start;
+TBRe_Mod_DW.btnRTD_start = (localProduct != 0);
+/* During: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/Operaton_Mode */
+if (TBRe_Mod_DW.is_active_c2_TBRe_Mod == 0U) {
+    TBRe_Mod_DW.btnRTD_prev = (localProduct != 0);
+    /* Entry: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/Operaton_Mode */
+    TBRe_Mod_DW.is_active_c2_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Vehicle_Functionality_Layer/Vehicle_Operation_Mode/Operaton_Mode */
+    /* Transition: '<S67>:3' */
+    TBRe_Mod_DW.is_c2_TBRe_Mod = TBRe_Mod_IN_Error_State;
+    /* Entry 'Error_State': '<S67>:1' */
+    TBRe_Mod_B.Control_Word = 6U;
+    /* Error */
+    TBRe_Mod_B.State = 0U;
+} else {
+    switch (TBRe_Mod_DW.is_c2_TBRe_Mod) {
+      case TBRe_Mod_IN_Buzzer_State:
+        TBRe_Mod_B.Control_Word = 3U;
+        TBRe_Mod_B.State = 2U;
+        /* During 'Buzzer_State': '<S67>:5' */
+        if (TBRe_Mod_DW.temporalCounter_i1_e >= 150U) {
+            /* Transition: '<S67>:11' */
+            TBRe_Mod_DW.is_c2_TBRe_Mod = TBRe_Mod_IN_RTD_State;
+            /* Entry 'RTD_State': '<S67>:6' */
+            TBRe_Mod_B.Control_Word = 5U;
+            /* ReadyToDrive	 */
+            TBRe_Mod_B.State = 3U;
+        }
+        break;
+      case TBRe_Mod_IN_Error_State:
+        /* During 'Error_State': '<S67>:1' */
+        /* Transition: '<S67>:61' */
+        TBRe_Mod_DW.is_c2_TBRe_Mod = TBRe_Mod_IN_Standby_State;
+        TBRe_Mod_DW.temporalCounter_i1_e = 0U;
+        /* Entry 'Standby_State': '<S67>:2' */
+        TBRe_Mod_B.Control_Word = 6U;
+        /* Off */
+        TBRe_Mod_B.State = 1U;
+        break;
+      case TBRe_Mod_IN_RTD_State:
+        TBRe_Mod_B.Control_Word = 5U;
+        TBRe_Mod_B.State = 3U;
+        /* During 'RTD_State': '<S67>:6' */
+        if ((localProduct != 0) || (!rtb_LogicalOperator2)) {
+            /* Transition: '<S67>:28' */
+            TBRe_Mod_DW.is_c2_TBRe_Mod = TBRe_Mod_IN_Standby_State;
+            TBRe_Mod_DW.temporalCounter_i1_e = 0U;
+            /* Entry 'Standby_State': '<S67>:2' */
+            TBRe_Mod_B.Control_Word = 6U;
+            /* Off */
+            TBRe_Mod_B.State = 1U;
+        }
+        break;
+      default:
+        TBRe_Mod_B.Control_Word = 6U;
+        TBRe_Mod_B.State = 1U;
+        /* During 'Standby_State': '<S67>:2' */
+        if ((TBRe_Mod_DW.btnRTD_prev != TBRe_Mod_DW.btnRTD_start) && (!TBRe_Mod_DW.btnRTD_prev) && (localProduct != 0) && TBRe_Mod_B.Brake_Bool && (!TBRe_Mod_B.Throttle_Bool) && rtb_LogicalOperator2 && (TBRe_Mod_DW.temporalCounter_i1_e >= 50U)) {
+            /* Transition: '<S67>:12' */
+            TBRe_Mod_DW.is_c2_TBRe_Mod = TBRe_Mod_IN_Buzzer_State;
+            TBRe_Mod_DW.temporalCounter_i1_e = 0U;
+            /* Entry 'Buzzer_State': '<S67>:5' */
+            TBRe_Mod_B.Control_Word = 3U;
+            /* Energise */
+            TBRe_Mod_B.State = 2U;
+        }
+        break;
+    }
+}
+/* End of Chart: '<S54>/Operaton_Mode' */
+
+/* Switch: '<S23>/Switch1' incorporates:
+ *  Constant: '<S23>/20V'
+ *  Constant: '<S23>/Ground1'
+ *  Constant: '<S66>/Constant'
+ *  Logic: '<S54>/Logical Operator1'
+ *  RelationalOperator: '<S66>/Compare'
+ */
+if ((TBRe_Mod_B.State != 0) && TBRe_Mod_B.TS_Enable) {
+    TBRe_Mod_B.ECU_Ok = 8000U;
+} else {
+    TBRe_Mod_B.ECU_Ok = 0U;
+}
+/* End of Switch: '<S23>/Switch1' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B35)
+
+/* S-Function (NsiIo_AnalogOutput): '<S17>/AnalogOutput1' */
+%<tlcOutputsFcnOfS15B35>\
+%endif
+/* Switch: '<S23>/Switch4' incorporates:
+ *  Constant: '<S23>/8V'
+ *  Constant: '<S23>/Ground'
+ */
+if (TBRe_Mod_B.TSS_f) {
+    TBRe_Mod_B.TSS = 8000U;
+} else {
+    TBRe_Mod_B.TSS = 0U;
+}
+/* End of Switch: '<S23>/Switch4' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B38)
+
+/* S-Function (NsiIo_AnalogOutput): '<S17>/AnalogOutput2' */
+%<tlcOutputsFcnOfS15B38>\
+%endif
+/* Chart: '<S17>/Operation_Mode' */
+if (TBRe_Mod_DW.temporalCounter_i1 < 511U) {
+    TBRe_Mod_DW.temporalCounter_i1++;
+}
+/* Gateway: MainTask/Comms_And_Data_Output_Layer/Hardwired_Ouputs/Operation_Mode */
+/* During: MainTask/Comms_And_Data_Output_Layer/Hardwired_Ouputs/Operation_Mode */
+if (TBRe_Mod_DW.is_active_c6_TBRe_Mod == 0U) {
+    /* Entry: MainTask/Comms_And_Data_Output_Layer/Hardwired_Ouputs/Operation_Mode */
+    TBRe_Mod_DW.is_active_c6_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Comms_And_Data_Output_Layer/Hardwired_Ouputs/Operation_Mode */
+    /* Transition: '<S21>:3' */
+    TBRe_Mod_DW.is_c6_TBRe_Mod = TBRe_Mod_IN_Startup_State;
+    TBRe_Mod_DW.temporalCounter_i1 = 0U;
+    /* Entry 'Startup_State': '<S21>:1' */
+    TBRe_Mod_B.Operating_State = true;
+    /* Reset */
+} else if ((TBRe_Mod_DW.is_c6_TBRe_Mod != TBRe_Mod_IN_Operating_State) && (TBRe_Mod_DW.temporalCounter_i1 >= 300U)) {
+    /* During 'Startup_State': '<S21>:1' */
+    /* Transition: '<S21>:41' */
+    TBRe_Mod_DW.is_c6_TBRe_Mod = TBRe_Mod_IN_Operating_State;
+    /* Entry 'Operating_State': '<S21>:5' */
+    TBRe_Mod_B.Operating_State = false;
+    /* Normal Operation */
+} else {
+    /* During 'Operating_State': '<S21>:5' */
+}
+/* End of Chart: '<S17>/Operation_Mode' */
+
+/* Logic: '<S17>/Logical Operator' */
+TBRe_Mod_B.LogicalOperator = TBRe_Mod_B.Operating_State;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B40)
+/* S-Function (NsiIo_DigitalOutput): '<S17>/DigitalOutput1' */
+%<tlcOutputsFcnOfS15B40>\
+%endif
+/* Logic: '<S23>/Logical Operator1' */
+TBRe_Mod_B.Brake_Light = TBRe_Mod_B.Brake_Bool;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B41)
+/* S-Function (NsiIo_DigitalOutput): '<S17>/DigitalOutput2' */
+%<tlcOutputsFcnOfS15B41>\
+%endif
+/* RelationalOperator: '<S32>/Compare' incorporates:
+ *  Constant: '<S32>/Constant'
+ */
+TBRe_Mod_B.Compare = (TBRe_Mod_B.State == 2);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B43)
+/* S-Function (NsiIo_DigitalOutput): '<S17>/DigitalOutput3' */
+%<tlcOutputsFcnOfS15B43>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B44)
+/* S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx3' */
+%<tlcOutputsFcnOfS15B44>\
+%endif
+/* DataTypeConversion: '<S10>/Data Type Conversion' */
+TBRe_Mod_B.Motor_Speed = (int16_T)TBRe_Mod_B.Motor_Speed_l;
+/* RelationalOperator: '<S20>/Compare' incorporates:
+ *  Constant: '<S20>/Constant'
+ */
+TBRe_Mod_B.Compare_c = (TBRe_Mod_B.Motor_Speed <= 5);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B46)
+/* S-Function (NsiIo_DigitalOutput): '<S17>/DigitalOutput6' */
+%<tlcOutputsFcnOfS15B46>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B47)
+/* S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx4' */
+%<tlcOutputsFcnOfS15B47>\
+%endif
+/* RelationalOperator: '<S30>/Compare' incorporates:
+ *  Constant: '<S30>/Constant'
+ */
+rtb_LogicalOperator2 = (TBRe_Mod_B.FaultCode == 21187);
+/* Chart: '<S23>/Inverter_reset' */
+if (TBRe_Mod_DW.temporalCounter_i1_k < 255U) {
+    TBRe_Mod_DW.temporalCounter_i1_k++;
+}
+/* Gateway: MainTask/Post_Processing_Layer/Hardwired_Peripherals/Inverter_reset */
+TBRe_Mod_DW.Ignition_Switch_prev = TBRe_Mod_DW.Ignition_Switch_start;
+TBRe_Mod_DW.Ignition_Switch_start = rtb_LogicalOperator2;
+/* During: MainTask/Post_Processing_Layer/Hardwired_Peripherals/Inverter_reset */
+if (TBRe_Mod_DW.is_active_c8_TBRe_Mod == 0U) {
+    TBRe_Mod_DW.Ignition_Switch_prev = rtb_LogicalOperator2;
+    /* Entry: MainTask/Post_Processing_Layer/Hardwired_Peripherals/Inverter_reset */
+    TBRe_Mod_DW.is_active_c8_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Post_Processing_Layer/Hardwired_Peripherals/Inverter_reset */
+    /* Transition: '<S31>:3' */
+    TBRe_Mod_DW.is_c8_TBRe_Mod = TBRe_Mod_IN_Startup_State;
+    /* Entry 'Startup_State': '<S31>:1' */
+    TBRe_Mod_B.Ignition = true;
+    /* Default */
+} else if (TBRe_Mod_DW.is_c8_TBRe_Mod == TBRe_Mod_IN_Operating_State) {
+    /* During 'Operating_State': '<S31>:5' */
+    if (TBRe_Mod_DW.temporalCounter_i1_k >= 150U) {
+        /* Transition: '<S31>:47' */
+        TBRe_Mod_DW.is_c8_TBRe_Mod = TBRe_Mod_IN_Startup_State;
+        /* Entry 'Startup_State': '<S31>:1' */
+        TBRe_Mod_B.Ignition = true;
+        /* Default */
+    }
+} else {
+    /* During 'Startup_State': '<S31>:1' */
+    if ((TBRe_Mod_DW.Ignition_Switch_prev != TBRe_Mod_DW.Ignition_Switch_start) && (!TBRe_Mod_DW.Ignition_Switch_prev) && rtb_LogicalOperator2) {
+        /* Transition: '<S31>:46' */
+        TBRe_Mod_DW.is_c8_TBRe_Mod = TBRe_Mod_IN_Operating_State;
+        TBRe_Mod_DW.temporalCounter_i1_k = 0U;
+        /* Entry 'Operating_State': '<S31>:5' */
+        TBRe_Mod_B.Ignition = false;
+        /* Off */
+    }
+}
+/* End of Chart: '<S23>/Inverter_reset' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B50)
+
+/* S-Function (NsiIo_DigitalOutput): '<S17>/DigitalOutput8' */
+%<tlcOutputsFcnOfS15B50>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B51)
+/* S-Function (NsiUsb_Tx): '<S17>/UsbTx1' */
+%<tlcOutputsFcnOfS15B51>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B52)
+/* S-Function (NsiIo_FrequencyInput): '<S15>/FrequentialInput2' */
+%<tlcOutputsFcnOfS15B52>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B53)
+/* S-Function (NsiUsb_Tx): '<S17>/UsbTx3' */
+%<tlcOutputsFcnOfS15B53>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B54)
+/* S-Function (NsiIo_FrequencyInput): '<S15>/FrequentialInput3' */
+%<tlcOutputsFcnOfS15B54>\
+%endif
+/* Sum: '<S15>/Add' incorporates:
+ *  Constant: '<S15>/Constant'
+ *  Constant: '<S15>/Constant1'
+ *  Product: '<S15>/Divide'
+ */
+TBRe_Mod_B.IMD_Duty = 100.0 - (real_T)TBRe_Mod_B.IMD_Duty_j / 1000.0;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B57)
+/* S-Function (NsiUsb_Tx): '<S17>/UsbTx4' */
+%<tlcOutputsFcnOfS15B57>\
+%endif
+/* Sum: '<S34>/Subtract1' incorporates:
+ *  Constant: '<S34>/Constant'
+ *  Constant: '<S34>/Constant1'
+ *  Constant: '<S34>/Constant2'
+ *  Gain: '<S34>/Gain'
+ *  Product: '<S34>/Divide'
+ *  Sum: '<S34>/Subtract'
+ */
+TBRe_Mod_B.IMD_Resistance = 1080.0 / (0.01 * TBRe_Mod_B.IMD_Duty - 0.05) - 1200.0;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B61)
+/* S-Function (NsiUsb_Tx): '<S17>/UsbTx5' */
+%<tlcOutputsFcnOfS15B61>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B62)
+/* S-Function (NsiMem_Read): '<S17>/Memory read' */
+%<tlcOutputsFcnOfS15B62>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B63)
+/* S-Function (NsiIo_AnalogOutput): '<S17>/AnalogOutput3' */
+%<tlcOutputsFcnOfS15B63>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B64)
+/* S-Function (NsiMem_Read): '<S17>/Memory read1' */
+%<tlcOutputsFcnOfS15B64>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B65)
+/* S-Function (NsiIo_AnalogOutput): '<S17>/AnalogOutput4' */
+%<tlcOutputsFcnOfS15B65>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B66)
+/* S-Function (NsiUsb_Rx): '<S17>/UsbRx' */
+%<tlcOutputsFcnOfS15B66>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B67)
+/* S-Function (NsiIo_DigitalOutput): '<S17>/DigitalOutput4' */
+%<tlcOutputsFcnOfS15B67>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B68)
+/* S-Function (NsiUsb_Tx): '<S17>/UsbTx2' */
+%<tlcOutputsFcnOfS15B68>\
+%endif
+/* Chart: '<S22>/Wake_Up' */
+if (TBRe_Mod_DW.temporalCounter_i1_n < 63U) {
+    TBRe_Mod_DW.temporalCounter_i1_n++;
+}
+/* Gateway: MainTask/Post_Processing_Layer/Dash_LEDs/Wake_Up */
+/* During: MainTask/Post_Processing_Layer/Dash_LEDs/Wake_Up */
+if (TBRe_Mod_DW.is_active_c4_TBRe_Mod == 0U) {
+    /* Entry: MainTask/Post_Processing_Layer/Dash_LEDs/Wake_Up */
+    TBRe_Mod_DW.is_active_c4_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Post_Processing_Layer/Dash_LEDs/Wake_Up */
+    /* Transition: '<S29>:2' */
+    TBRe_Mod_DW.is_c4_TBRe_Mod = TBRe_Mod_IN_Init;
+    TBRe_Mod_DW.temporalCounter_i1_n = 0U;
+    /* Entry 'Init': '<S29>:1' */
+    rtb_LogicalOperator2 = true;
+    X = false;
+    Y = false;
+    Z = false;
+} else {
+    switch (TBRe_Mod_DW.is_c4_TBRe_Mod) {
+      case TBRe_Mod_IN_Init:
+        rtb_LogicalOperator2 = true;
+        X = false;
+        Y = false;
+        Z = false;
+        /* During 'Init': '<S29>:1' */
+        if (TBRe_Mod_DW.temporalCounter_i1_n >= 50U) {
+            /* Transition: '<S29>:5' */
+            TBRe_Mod_DW.is_c4_TBRe_Mod = TBRe_Mod_IN_One;
+            TBRe_Mod_DW.temporalCounter_i1_n = 0U;
+            /* Entry 'One': '<S29>:3' */
+            rtb_LogicalOperator2 = false;
+            X = true;
+        }
+        break;
+      case TBRe_Mod_IN_Normal:
+        rtb_LogicalOperator2 = false;
+        X = false;
+        Y = false;
+        Z = false;
+        /* During 'Normal': '<S29>:14' */
+        break;
+      case TBRe_Mod_IN_One:
+        rtb_LogicalOperator2 = false;
+        X = true;
+        Y = false;
+        Z = false;
+        /* During 'One': '<S29>:3' */
+        if (TBRe_Mod_DW.temporalCounter_i1_n >= 50U) {
+            /* Transition: '<S29>:15' */
+            TBRe_Mod_DW.is_c4_TBRe_Mod = TBRe_Mod_IN_Two;
+            TBRe_Mod_DW.temporalCounter_i1_n = 0U;
+            /* Entry 'Two': '<S29>:12' */
+            X = false;
+            Y = true;
+        }
+        break;
+      case TBRe_Mod_IN_Three:
+        rtb_LogicalOperator2 = false;
+        X = false;
+        Y = false;
+        Z = true;
+        /* During 'Three': '<S29>:13' */
+        if (TBRe_Mod_DW.temporalCounter_i1_n >= 50U) {
+            /* Transition: '<S29>:17' */
+            TBRe_Mod_DW.is_c4_TBRe_Mod = TBRe_Mod_IN_Normal;
+            /* Entry 'Normal': '<S29>:14' */
+            Z = false;
+        }
+        break;
+      default:
+        rtb_LogicalOperator2 = false;
+        X = false;
+        Y = true;
+        Z = false;
+        /* During 'Two': '<S29>:12' */
+        if (TBRe_Mod_DW.temporalCounter_i1_n >= 50U) {
+            /* Transition: '<S29>:16' */
+            TBRe_Mod_DW.is_c4_TBRe_Mod = TBRe_Mod_IN_Three;
+            TBRe_Mod_DW.temporalCounter_i1_n = 0U;
+            /* Entry 'Three': '<S29>:13' */
+            Y = false;
+            Z = true;
+        }
+        break;
+    }
+}
+/* End of Chart: '<S22>/Wake_Up' */
+
+/* Chart: '<S22>/Flashy1' */
+if (TBRe_Mod_DW.temporalCounter_i1_fp < 31U) {
+    TBRe_Mod_DW.temporalCounter_i1_fp++;
+}
+/* Gateway: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy1 */
+/* During: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy1 */
+if (TBRe_Mod_DW.is_active_c7_TBRe_Mod == 0U) {
+    /* Entry: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy1 */
+    TBRe_Mod_DW.is_active_c7_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy1 */
+    /* Transition: '<S27>:2' */
+    TBRe_Mod_DW.is_c7_TBRe_Mod = TBRe_Mod_IN_Init;
+    TBRe_Mod_DW.temporalCounter_i1_fp = 0U;
+    /* Entry 'Init': '<S27>:1' */
+    Light_e = true;
+} else if (TBRe_Mod_DW.is_c7_TBRe_Mod == TBRe_Mod_IN_Init) {
+    Light_e = true;
+    /* During 'Init': '<S27>:1' */
+    if (TBRe_Mod_DW.temporalCounter_i1_fp >= 20U) {
+        /* Transition: '<S27>:5' */
+        TBRe_Mod_DW.is_c7_TBRe_Mod = TBRe_Mod_IN_Normal;
+        TBRe_Mod_DW.temporalCounter_i1_fp = 0U;
+        /* Entry 'Normal': '<S27>:3' */
+        Light_e = false;
+    }
+} else {
+    Light_e = false;
+    /* During 'Normal': '<S27>:3' */
+    if (TBRe_Mod_DW.temporalCounter_i1_fp >= 20U) {
+        /* Transition: '<S27>:8' */
+        TBRe_Mod_DW.is_c7_TBRe_Mod = TBRe_Mod_IN_Init;
+        TBRe_Mod_DW.temporalCounter_i1_fp = 0U;
+        /* Entry 'Init': '<S27>:1' */
+        Light_e = true;
+    }
+}
+/* End of Chart: '<S22>/Flashy1' */
+
+/* Logic: '<S22>/Logical Operator3' incorporates:
+ *  Constant: '<S25>/Constant'
+ *  Logic: '<S22>/Logical Operator6'
+ *  RelationalOperator: '<S25>/Compare'
+ */
+TBRe_Mod_B.X_LED = (X || (Light_e && (rtb_State == 2)) || TBRe_Mod_B.TSS_f);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B72)
+/* S-Function (NsiIo_DigitalOutput): '<S18>/DigitalOutput1' */
+%<tlcOutputsFcnOfS15B72>\
+%endif
+/* Logic: '<S22>/Logical Operator5' */
+TBRe_Mod_B.Z_LED = Z;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B73)
+/* S-Function (NsiIo_DigitalOutput): '<S18>/DigitalOutput2' */
+%<tlcOutputsFcnOfS15B73>\
+%endif
+/* Logic: '<S22>/Logical Operator4' */
+TBRe_Mod_B.Y_LED = Y;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B74)
+/* S-Function (NsiIo_DigitalOutput): '<S18>/DigitalOutput3' */
+%<tlcOutputsFcnOfS15B74>\
+%endif
+/* Logic: '<S22>/Logical Operator2' incorporates:
+ *  Constant: '<S24>/Constant'
+ *  RelationalOperator: '<S24>/Compare'
+ */
+TBRe_Mod_B.RTD_LED = (rtb_LogicalOperator2 || (TBRe_Mod_B.State == 3));
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B76)
+/* S-Function (NsiIo_DigitalOutput): '<S18>/DigitalOutput4' */
+%<tlcOutputsFcnOfS15B76>\
+%endif
+/* Chart: '<S22>/Flashy' */
+if (TBRe_Mod_DW.temporalCounter_i1_k0 < 63U) {
+    TBRe_Mod_DW.temporalCounter_i1_k0++;
+}
+/* Gateway: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy */
+/* During: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy */
+if (TBRe_Mod_DW.is_active_c5_TBRe_Mod == 0U) {
+    /* Entry: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy */
+    TBRe_Mod_DW.is_active_c5_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Post_Processing_Layer/Dash_LEDs/Flashy */
+    /* Transition: '<S26>:2' */
+    TBRe_Mod_DW.is_c5_TBRe_Mod = TBRe_Mod_IN_Init;
+    TBRe_Mod_DW.temporalCounter_i1_k0 = 0U;
+    /* Entry 'Init': '<S26>:1' */
+    rtb_LogicalOperator2 = true;
+} else if (TBRe_Mod_DW.is_c5_TBRe_Mod == TBRe_Mod_IN_Init) {
+    rtb_LogicalOperator2 = true;
+    /* During 'Init': '<S26>:1' */
+    if (TBRe_Mod_DW.temporalCounter_i1_k0 >= 50U) {
+        /* Transition: '<S26>:5' */
+        TBRe_Mod_DW.is_c5_TBRe_Mod = TBRe_Mod_IN_Normal;
+        TBRe_Mod_DW.temporalCounter_i1_k0 = 0U;
+        /* Entry 'Normal': '<S26>:3' */
+        rtb_LogicalOperator2 = false;
+    }
+} else {
+    rtb_LogicalOperator2 = false;
+    /* During 'Normal': '<S26>:3' */
+    if (TBRe_Mod_DW.temporalCounter_i1_k0 >= 50U) {
+        /* Transition: '<S26>:8' */
+        TBRe_Mod_DW.is_c5_TBRe_Mod = TBRe_Mod_IN_Init;
+        TBRe_Mod_DW.temporalCounter_i1_k0 = 0U;
+        /* Entry 'Init': '<S26>:1' */
+        rtb_LogicalOperator2 = true;
+    }
+}
+/* End of Chart: '<S22>/Flashy' */
+
+/* Chart: '<S22>/InitLight' */
+if (TBRe_Mod_DW.temporalCounter_i1_f < 255U) {
+    TBRe_Mod_DW.temporalCounter_i1_f++;
+}
+/* Gateway: MainTask/Post_Processing_Layer/Dash_LEDs/InitLight */
+/* During: MainTask/Post_Processing_Layer/Dash_LEDs/InitLight */
+if (TBRe_Mod_DW.is_active_c3_TBRe_Mod == 0U) {
+    /* Entry: MainTask/Post_Processing_Layer/Dash_LEDs/InitLight */
+    TBRe_Mod_DW.is_active_c3_TBRe_Mod = 1U;
+    /* Entry Internal: MainTask/Post_Processing_Layer/Dash_LEDs/InitLight */
+    /* Transition: '<S28>:2' */
+    TBRe_Mod_DW.is_c3_TBRe_Mod = TBRe_Mod_IN_Init;
+    TBRe_Mod_DW.temporalCounter_i1_f = 0U;
+    /* Entry 'Init': '<S28>:1' */
+    X = true;
+} else if (TBRe_Mod_DW.is_c3_TBRe_Mod == TBRe_Mod_IN_Init) {
+    X = true;
+    /* During 'Init': '<S28>:1' */
+    if (TBRe_Mod_DW.temporalCounter_i1_f >= 250U) {
+        /* Transition: '<S28>:5' */
+        TBRe_Mod_DW.is_c3_TBRe_Mod = TBRe_Mod_IN_Normal;
+        /* Entry 'Normal': '<S28>:3' */
+        X = false;
+    }
+} else {
+    X = false;
+    /* During 'Normal': '<S28>:3' */
+}
+/* End of Chart: '<S22>/InitLight' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B79)
+
+/* S-Function (NsiUsb_Rx): '<S22>/UsbRx' */
+%<tlcOutputsFcnOfS15B79>\
+%endif
+/* Logic: '<S22>/Logical Operator' incorporates:
+ *  Logic: '<S22>/Logical Operator1'
+ */
+TBRe_Mod_B.APPS_LED = ((TBRe_Mod_B.ProductofElements != 0) || (rtb_LogicalOperator2 && TBRe_Mod_B.LogicalOperator2) || X || (TBRe_Mod_B.UsbRx != 0));
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B80)
+/* S-Function (NsiIo_DigitalOutput): '<S18>/DigitalOutput5' */
+%<tlcOutputsFcnOfS15B80>\
+%endif
+/* Saturate: '<S53>/Saturation' */
+if (TBRe_Mod_B.Motor_Speed > 10000) {
+    rtb_Throttle_Req = 10000;
+} else if (TBRe_Mod_B.Motor_Speed < 1) {
+    rtb_Throttle_Req = 1;
+} else {
+    rtb_Throttle_Req = TBRe_Mod_B.Motor_Speed;
+}
+/* End of Saturate: '<S53>/Saturation' */
+
+/* Product: '<S53>/Divide' incorporates:
+ *  Constant: '<S53>/Constant'
+ *  Gain: '<S53>/Gain'
+ */
+rtb_LowerLinit = 30000.0 / (27452.0 * (real_T)rtb_Throttle_Req * 3.814697265625E-6);
+/* Lookup_n-D: '<S53>/Throttle_Torque_Map_%<"\%_240Nm\'"> */
+rtb_Throttle_Req = look1_iu8lu16n16ts16Ds_FbqVATJM(TBRe_Mod_B.Product, TBRe_Mod_ConstP.Throttle_Torque_Map__240Nm_bp01, TBRe_Mod_ConstP.Throttle_Torque_Map__240Nm_tabl, 2U);
+/* Switch: '<S60>/Switch2' incorporates:
+ *  RelationalOperator: '<S60>/LowerRelop1'
+ *  RelationalOperator: '<S60>/UpperRelop'
+ *  Switch: '<S60>/Switch'
+ */
+if (rtb_Throttle_Req > rtb_LowerLinit) {
+    TBRe_Mod_B.Switch2 = (int16_T)floor(rtb_LowerLinit);
+} else if (rtb_Throttle_Req < 0) {
+    /* Switch: '<S60>/Switch' incorporates:
+ *  Constant: '<S53>/Constant1'
+ */
+    TBRe_Mod_B.Switch2 = 0;
+} else {
+    TBRe_Mod_B.Switch2 = rtb_Throttle_Req;
+}
+/* End of Switch: '<S60>/Switch2' */
+
+/* DataTypeConversion: '<S19>/Data Type Conversion10' incorporates:
+ *  Gain: '<S19>/Gain1'
+ */
+TBRe_Mod_B.DataTypeConversion10 = (uint16_T)(TBRe_Mod_B.Switch2 << 4);
+/* DataTypeConversion: '<S19>/Data Type Conversion3' */
+TBRe_Mod_B.DataTypeConversion3 = TBRe_Mod_B.Control_Word;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B83)
+/* S-Function (NsiMem_Read): '<S19>/Memory read' */
+%<tlcOutputsFcnOfS15B83>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion1' incorporates:
+ *  Gain: '<S19>/Gain2'
+ */
+TBRe_Mod_B.DataTypeConversion1 = (uint16_T)(TBRe_Mod_B.Memoryread << 4);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B84)
+/* S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx2' */
+%<tlcOutputsFcnOfS15B84>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B85)
+/* S-Function (NsiUsb_Tx): '<S19>/UsbTx1' */
+%<tlcOutputsFcnOfS15B85>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B86)
+/* S-Function (NsiUsb_Tx): '<S19>/UsbTx2' */
+%<tlcOutputsFcnOfS15B86>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B87)
+/* S-Function (NsiMem_Read): '<S19>/Memory read4' */
+%<tlcOutputsFcnOfS15B87>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion8' incorporates:
+ *  Gain: '<S19>/Gain4'
+ */
+TBRe_Mod_B.DataTypeConversion8 = (uint16_T)(TBRe_Mod_B.Memoryread4 << 4);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B88)
+/* S-Function (NsiMem_Read): '<S19>/Memory read5' */
+%<tlcOutputsFcnOfS15B88>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion9' */
+TBRe_Mod_B.DataTypeConversion9 = (uint16_T)TBRe_Mod_B.Memoryread5;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B89)
+/* S-Function (NsiMem_Read): '<S19>/Memory read6' */
+%<tlcOutputsFcnOfS15B89>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion20' */
+TBRe_Mod_B.DataTypeConversion20 = (uint16_T)TBRe_Mod_B.Memoryread6;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B90)
+/* S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx4' */
+%<tlcOutputsFcnOfS15B90>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B91)
+/* S-Function (NsiMem_Read): '<S19>/Memory read1' */
+%<tlcOutputsFcnOfS15B91>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion12' */
+TBRe_Mod_B.DataTypeConversion12 = (uint16_T)TBRe_Mod_B.Memoryread1;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B92)
+/* S-Function (NsiMem_Read): '<S19>/Memory read2' */
+%<tlcOutputsFcnOfS15B92>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion6' */
+TBRe_Mod_B.DataTypeConversion6 = (uint16_T)TBRe_Mod_B.Memoryread2;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B93)
+/* S-Function (NsiMem_Read): '<S19>/Memory read3' */
+%<tlcOutputsFcnOfS15B93>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion7' incorporates:
+ *  Gain: '<S19>/Gain3'
+ */
+TBRe_Mod_B.DataTypeConversion7 = (uint16_T)(TBRe_Mod_B.Memoryread3 << 4);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B94)
+/* S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx6' */
+%<tlcOutputsFcnOfS15B94>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B95)
+/* S-Function (NsiMem_Read): '<S19>/Memory read7' */
+%<tlcOutputsFcnOfS15B95>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion21' incorporates:
+ *  Gain: '<S19>/Gain5'
+ */
+TBRe_Mod_B.DataTypeConversion21 = (uint16_T)(TBRe_Mod_B.Memoryread7 << 4);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B96)
+/* S-Function (NsiMem_Read): '<S19>/Memory read8' */
+%<tlcOutputsFcnOfS15B96>\
+%endif
+/* DataTypeConversion: '<S19>/Data Type Conversion22' incorporates:
+ *  Gain: '<S19>/Gain6'
+ */
+TBRe_Mod_B.DataTypeConversion22 = (uint16_T)(TBRe_Mod_B.Memoryread8 << 4);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B97)
+/* S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx7' */
+%<tlcOutputsFcnOfS15B97>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B98)
+/* S-Function (NsiUsb_Tx): '<S8>/UsbTx1' */
+%<tlcOutputsFcnOfS15B98>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B99)
+/* S-Function (NsiCan_Rx_Ext): '<S8>/CanRx1' */
+%<tlcOutputsFcnOfS15B99>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B100)
+/* S-Function (NsiCan_Rx_Ext): '<S8>/CanRx7' */
+%<tlcOutputsFcnOfS15B100>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B101)
+/* S-Function (NsiUsb_Tx): '<S12>/UsbTx1' */
+%<tlcOutputsFcnOfS15B101>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B102)
+/* S-Function (NsiUsb_Tx): '<S12>/UsbTx2' */
+%<tlcOutputsFcnOfS15B102>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B103)
+/* S-Function (NsiIo_DigitalInput): '<S13>/DigitalInput6' */
+%<tlcOutputsFcnOfS15B103>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B104)
+/* S-Function (NsiIo_DigitalInput): '<S13>/DigitalInput1' */
+%<tlcOutputsFcnOfS15B104>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B105)
+/* S-Function (NsiIo_DigitalInput): '<S13>/DigitalInput2' */
+%<tlcOutputsFcnOfS15B105>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B106)
+/* S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput2' */
+%<tlcOutputsFcnOfS15B106>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B107)
+/* S-Function (NsiUsb_Tx): '<S14>/UsbTx1' */
+%<tlcOutputsFcnOfS15B107>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B108)
+/* S-Function (NsiUsb_Tx): '<S14>/UsbTx2' */
+%<tlcOutputsFcnOfS15B108>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B109)
+/* S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput4' */
+%<tlcOutputsFcnOfS15B109>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B110)
+/* S-Function (NsiUsb_Tx): '<S14>/UsbTx3' */
+%<tlcOutputsFcnOfS15B110>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B111)
+/* S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput1' */
+%<tlcOutputsFcnOfS15B111>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B112)
+/* S-Function (NsiUsb_Tx): '<S14>/UsbTx4' */
+%<tlcOutputsFcnOfS15B112>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B113)
+/* S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput5' */
+%<tlcOutputsFcnOfS15B113>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B114)
+/* S-Function (NsiUsb_Tx): '<S14>/UsbTx6' */
+%<tlcOutputsFcnOfS15B114>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B115)
+/* S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput6' */
+%<tlcOutputsFcnOfS15B115>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B116)
+/* S-Function (NsiUsb_Tx): '<S14>/UsbTx5' */
+%<tlcOutputsFcnOfS15B116>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B117)
+/* S-Function (NsiIo_FrequencyInput): '<S9>/FrequentialInput1' */
+%<tlcOutputsFcnOfS15B117>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B118)
+/* S-Function (NsiUsb_Tx): '<S16>/UsbTx1' */
+%<tlcOutputsFcnOfS15B118>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B119)
+/* S-Function (NsiUsb_Tx): '<S16>/UsbTx3' */
+%<tlcOutputsFcnOfS15B119>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B120)
+/* S-Function (NsiUsb_Tx): '<S16>/UsbTx4' */
+%<tlcOutputsFcnOfS15B120>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B121)
+/* S-Function (NsiUsb_Tx): '<S16>/UsbTx2' */
+%<tlcOutputsFcnOfS15B121>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B122)
+/* S-Function (NsiIo_Vbat): '<S9>/VBat' */
+%<tlcOutputsFcnOfS15B122>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B123)
+/* S-Function (NsiUsb_Tx): '<S10>/UsbTx1' */
+%<tlcOutputsFcnOfS15B123>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B124)
+/* S-Function (NsiUsb_Tx): '<S10>/UsbTx2' */
+%<tlcOutputsFcnOfS15B124>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B125)
+/* S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx2' */
+%<tlcOutputsFcnOfS15B125>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B126)
+/* S-Function (NsiUsb_Tx): '<S10>/UsbTx3' */
+%<tlcOutputsFcnOfS15B126>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B127)
+/* S-Function (NsiUsb_Tx): '<S10>/UsbTx4' */
+%<tlcOutputsFcnOfS15B127>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B128)
+/* S-Function (NsiUsb_Tx): '<S10>/UsbTx5' */
+%<tlcOutputsFcnOfS15B128>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B129)
+/* S-Function (NsiUsb_Tx): '<S10>/UsbTx6' */
+%<tlcOutputsFcnOfS15B129>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B130)
+/* S-Function (NsiCan_Rx_Ext): '<S11>/CanRx1' */
+%<tlcOutputsFcnOfS15B130>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B131)
+/* S-Function (NsiCan_Rx_Ext): '<S11>/CanRx2' */
+%<tlcOutputsFcnOfS15B131>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B132)
+/* S-Function (NsiCan_Rx_Ext): '<S11>/CanRx5' */
+%<tlcOutputsFcnOfS15B132>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B133)
+/* S-Function (NsiCan_Rx_Ext): '<S11>/CanRx8' */
+%<tlcOutputsFcnOfS15B133>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B134)
+/* S-Function (NsiCan_Rx_Ext): '<S11>/CanRx9' */
+%<tlcOutputsFcnOfS15B134>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B135)
+/* S-Function (NsiMem_Read): '<S35>/Memory read' */
+%<tlcOutputsFcnOfS15B135>\
+%endif
+/* Lookup_n-D: '<S35>/Voltage_Act' */
+TBRe_Mod_B.LV_Battery_Voltage_n = look1_iu16tdIu16_binlca(TBRe_Mod_B.LV_Battery_Voltage, Voltage_Act_Breakpoint, Voltage_Act_Data, 1U);
+/* RelationalOperator: '<S35>/Relational Operator' */
+TBRe_Mod_B.LV_Warning = (TBRe_Mod_B.LV_Battery_Voltage_n <= TBRe_Mod_B.Memoryread_l);
+/* Lookup_n-D: '<S35>/SOC_Calc' */
+TBRe_Mod_B.LV_SOC = look1_iu16tdIu16_binlca(TBRe_Mod_B.LV_Battery_Voltage_n, SOC_Calc_Breakpoint, SOC_Calc_Data, 7U);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B136)
+/* S-Function (NsiMem_Read): '<S36>/Memory read' */
+%<tlcOutputsFcnOfS15B136>\
+%endif
+/* Logic: '<S39>/Logical Operator' incorporates:
+ *  Constant: '<S39>/Constant'
+ *  RelationalOperator: '<S39>/Relational Operator'
+ *  RelationalOperator: '<S39>/Relational Operator1'
+ *  Sum: '<S39>/LowerLinit'
+ *  Sum: '<S39>/UpperLinit'
+ */
+TBRe_Mod_B.APPS_Implausibility = ((TBRe_Mod_B.MinMax_b >= TBRe_Mod_B.MinMax_dv + 15) || (TBRe_Mod_B.MinMax_b <= TBRe_Mod_B.MinMax_dv - 15));
+/* Logic: '<S40>/Logical Operator' incorporates:
+ *  Constant: '<S40>/Constant'
+ *  RelationalOperator: '<S40>/Relational Operator'
+ *  RelationalOperator: '<S40>/Relational Operator1'
+ *  Sum: '<S40>/LowerLinit'
+ *  Sum: '<S40>/UpperLinit'
+ */
+TBRe_Mod_B.APPS_Implausibility_m = ((TBRe_Mod_B.MinMax_d >= TBRe_Mod_B.MinMax + 15) || (TBRe_Mod_B.MinMax_d <= TBRe_Mod_B.MinMax - 15));
+/* Product: '<S40>/Product of Elements' incorporates:
+ *  S-Function (sfix_udelay): '<S40>/Tapped Delay'
+ */
+localProduct = (uint16_T)(TBRe_Mod_DW.TappedDelay_X_m[0] ? (int32_T)TBRe_Mod_DW.TappedDelay_X_m[1] : 0);
+for (rtb_Gain6 = 0; rtb_Gain6 < 8; rtb_Gain6++) {
+    localProduct = (uint16_T)(TBRe_Mod_DW.TappedDelay_X_m[rtb_Gain6 + 2] ? (int32_T)localProduct : 0);
+}
+TBRe_Mod_B.ProductofElements_n = localProduct;
+/* End of Product: '<S40>/Product of Elements' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B139)
+
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx1' */
+%<tlcOutputsFcnOfS15B139>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B140)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx2' */
+%<tlcOutputsFcnOfS15B140>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B141)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx3' */
+%<tlcOutputsFcnOfS15B141>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B142)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx4' */
+%<tlcOutputsFcnOfS15B142>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B143)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx7' */
+%<tlcOutputsFcnOfS15B143>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B144)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx8' */
+%<tlcOutputsFcnOfS15B144>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B145)
+/* S-Function (NsiMem_Read): '<S51>/Memory read9' */
+%<tlcOutputsFcnOfS15B145>\
+%endif
+/* Product: '<S51>/Divide1' incorporates:
+ *  Sum: '<S51>/Add2'
+ */
+TBRe_Mod_B.Divide1 = (uint16_T)(TBRe_Mod_B.BV1_Out - TBRe_Mod_B.Memoryread5_e) * TBRe_Mod_B.Memoryread9;
+/* Gain: '<S51>/Gain' */
+TBRe_Mod_B.Gain = 0.0145038 * TBRe_Mod_B.Divide1;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B146)
+/* S-Function (NsiUsb_Tx): '<S51>/UsbTx1' */
+%<tlcOutputsFcnOfS15B146>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B147)
+/* S-Function (NsiUsb_Tx): '<S51>/UsbTx5' */
+%<tlcOutputsFcnOfS15B147>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B148)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx10' */
+%<tlcOutputsFcnOfS15B148>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B149)
+/* S-Function (NsiUsb_Tx): '<S43>/UsbTx9' */
+%<tlcOutputsFcnOfS15B149>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B150)
+/* S-Function (NsiMem_Read): '<S52>/Memory read8' */
+%<tlcOutputsFcnOfS15B150>\
+%endif
+/* Product: '<S52>/Divide1' incorporates:
+ *  Sum: '<S52>/Add2'
+ */
+TBRe_Mod_B.Divide1_l = (uint16_T)(TBRe_Mod_B.BV2_Out - TBRe_Mod_B.Memoryread7_d) * TBRe_Mod_B.Memoryread8_e;
+/* Gain: '<S52>/Gain' */
+TBRe_Mod_B.Gain_f = 0.0145038 * TBRe_Mod_B.Divide1_l;
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B151)
+/* S-Function (NsiUsb_Tx): '<S52>/UsbTx1' */
+%<tlcOutputsFcnOfS15B151>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B152)
+/* S-Function (NsiUsb_Tx): '<S52>/UsbTx6' */
+%<tlcOutputsFcnOfS15B152>\
+%endif
+/* Product: '<S53>/OnlyDriveWhenPWMOn' incorporates:
+ *  Constant: '<S57>/Constant'
+ *  RelationalOperator: '<S57>/Compare'
+ */
+TBRe_Mod_B.Torque_MCU_Req = (int16_T)((TBRe_Mod_B.State == 3) * TBRe_Mod_B.Switch2);
+%if !WHITE_SPACE(tlcOutputsFcnOfS15B154)
+/* S-Function (NsiSys_TaskREF): '<S2>/Task' */
+%<tlcOutputsFcnOfS15B154>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MainTask(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 3, fcnProtoType)>
+%endfunction

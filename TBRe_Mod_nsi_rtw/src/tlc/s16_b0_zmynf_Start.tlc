@@ -1,0 +1,64 @@
+%implements s16_b0_zmynf_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign   Start_open_MainTask_m_16_0 = ""
+%openfile Start_open_MainTask_m_16_0
+
+/* Start for Atomic SubSystem: '<Root>/MainTask' */
+%closefile Start_open_MainTask_m_16_0
+
+%assign    Start_body_MainTask_m_16_0 = ""
+%openfile  Start_body_MainTask_m_16_0
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "Start",0)
+%<SLibCGIRGenReusableSysCall("MainTask_Start", [], 15, 0, 0, 0, 0, 16)>\
+
+
+%endif
+%closefile Start_body_MainTask_m_16_0
+
+%assign    Start_close_MainTask_m_16_0 = ""
+%openfile  Start_close_MainTask_m_16_0
+
+/* End of Start for SubSystem: '<Root>/MainTask' */
+%closefile Start_close_MainTask_m_16_0
+%<SLibCG_DumpSSCode(Start_open_MainTask_m_16_0, Start_body_MainTask_m_16_0, Start_close_MainTask_m_16_0)>
+
+
+%assign   Start_open_DiagnosticsCAN_o_16_1 = ""
+%openfile Start_open_DiagnosticsCAN_o_16_1
+
+/* Start for Atomic SubSystem: '<Root>/DiagnosticsCAN' */
+%closefile Start_open_DiagnosticsCAN_o_16_1
+
+%assign    Start_body_DiagnosticsCAN_o_16_1 = ""
+%openfile  Start_body_DiagnosticsCAN_o_16_1
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Start",0)
+%<SLibCGIRGenReusableSysCall("DiagnosticsCAN_Start", [], 0, 0, 0, 0, 0, 16)>\
+
+
+%endif
+%closefile Start_body_DiagnosticsCAN_o_16_1
+
+%assign    Start_close_DiagnosticsCAN_o_16_1 = ""
+%openfile  Start_close_DiagnosticsCAN_o_16_1
+
+/* End of Start for SubSystem: '<Root>/DiagnosticsCAN' */
+%closefile Start_close_DiagnosticsCAN_o_16_1
+%<SLibCG_DumpSSCode(Start_open_DiagnosticsCAN_o_16_1, Start_body_DiagnosticsCAN_o_16_1, Start_close_DiagnosticsCAN_o_16_1)>
+
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%endfunction

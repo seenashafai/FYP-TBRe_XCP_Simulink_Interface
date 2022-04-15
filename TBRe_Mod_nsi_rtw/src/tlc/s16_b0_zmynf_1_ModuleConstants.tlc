@@ -1,0 +1,31 @@
+%implements s16_b0_zmynf_1_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S17>/Operation_Mode' */
+#define TBRe_Mod_IN_NO_ACTIVE_CHILD ((uint8_T)0U)
+#define TBRe_Mod_IN_Operating_State ((uint8_T)1U)
+#define TBRe_Mod_IN_Startup_State ((uint8_T)2U)
+
+/* Named constants for Chart: '<S22>/Flashy' */
+#define TBRe_Mod_IN_Init ((uint8_T)1U)
+#define TBRe_Mod_IN_Normal ((uint8_T)2U)
+
+/* Named constants for Chart: '<S22>/Wake_Up' */
+#define TBRe_Mod_IN_One ((uint8_T)3U)
+#define TBRe_Mod_IN_Three ((uint8_T)4U)
+#define TBRe_Mod_IN_Two ((uint8_T)5U)
+
+/* Named constants for Chart: '<S54>/Operaton_Mode' */
+#define TBRe_Mod_IN_Buzzer_State ((uint8_T)1U)
+#define TBRe_Mod_IN_Error_State ((uint8_T)2U)
+#define TBRe_Mod_IN_RTD_State ((uint8_T)3U)
+#define TBRe_Mod_IN_Standby_State ((uint8_T)4U)
+
+/* Named constants for Chart: '<S54>/TS Enable' */
+#define TBRe_Mod_IN_Default_State ((uint8_T)1U)
+#define TBRe_Mod_IN_HV_System_Active ((uint8_T)2U)
+#define TBRe_Mod_IN_Precharge ((uint8_T)4U)
+#define TBRe__IN_HV_System_Deactivating ((uint8_T)3U)
+%endfunction

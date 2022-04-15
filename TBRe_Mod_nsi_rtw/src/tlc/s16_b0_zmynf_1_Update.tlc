@@ -1,0 +1,39 @@
+%implements s16_b0_zmynf_1_Update "C"
+
+%function Update(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+int_T i;
+%closefile localVarDecl
+for (i = 0; i < 9; i++) {
+    /* Update for S-Function (sfix_udelay): '<S39>/Tapped Delay' */
+    TBRe_Mod_DW.TappedDelay_X[i] = TBRe_Mod_DW.TappedDelay_X[i + 1];
+    /* Update for S-Function (sfix_udelay): '<S40>/Tapped Delay' */
+    TBRe_Mod_DW.TappedDelay_X_m[i] = TBRe_Mod_DW.TappedDelay_X_m[i + 1];
+}
+/* Update for S-Function (sfix_udelay): '<S39>/Tapped Delay' */
+TBRe_Mod_DW.TappedDelay_X[9] = TBRe_Mod_B.APPS_Implausibility;
+/* Update for Delay: '<S38>/prv_APPS_BP1' */
+TBRe_Mod_DW.prv_APPS_BP1_DSTATE = TBRe_Mod_B.LogicalOperator2;
+/* Update for S-Function (sfix_udelay): '<S33>/Debouncing2' */
+TBRe_Mod_DW.Debouncing2_X[0] = TBRe_Mod_DW.Debouncing2_X[1];
+TBRe_Mod_DW.Debouncing2_X[1] = TBRe_Mod_DW.Debouncing2_X[2];
+TBRe_Mod_DW.Debouncing2_X[2] = TBRe_Mod_DW.Debouncing2_X[3];
+TBRe_Mod_DW.Debouncing2_X[3] = TBRe_Mod_DW.Debouncing2_X[4];
+TBRe_Mod_DW.Debouncing2_X[4] = TBRe_Mod_B.btnRTD_Input;
+/* Update for S-Function (sfix_udelay): '<S40>/Tapped Delay' */
+TBRe_Mod_DW.TappedDelay_X_m[9] = TBRe_Mod_B.APPS_Implausibility_m;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedUpdateLocalVars", localVarDecl)>
+%endfunction
+%function UpdateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MainTask_Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 4, fcnProtoType)>
+%endfunction

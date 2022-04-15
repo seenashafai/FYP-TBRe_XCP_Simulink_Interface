@@ -1,0 +1,2992 @@
+%implements s16_b0_zmynf_1_TLCInterface "C"
+
+%function getOutputAddr_15_20_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getOutput_15_20_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getOutputAddr_15_21_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getOutput_15_21_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getOutputAddr_15_21_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Pack_SOC"
+%endfunction
+
+%function getOutput_15_21_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Pack_SOC"
+%endfunction
+
+%function getOutputAddr_15_21_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Pack_Current"
+%endfunction
+
+%function getOutput_15_21_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Pack_Current"
+%endfunction
+
+%function getOutputAddr_15_21_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Acc_Fan_Speed"
+%endfunction
+
+%function getOutput_15_21_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Acc_Fan_Speed"
+%endfunction
+
+%function getOutputAddr_15_21_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx6_o5"
+%endfunction
+
+%function getOutput_15_21_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx6_o5"
+%endfunction
+
+%function getOutputAddr_15_24_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getOutput_15_24_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getOutputAddr_15_24_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getOutput_15_24_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getOutputAddr_15_24_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Temp_m"
+%endfunction
+
+%function getOutput_15_24_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Temp_m"
+%endfunction
+
+%function getOutputAddr_15_27_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getOutput_15_27_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getOutputAddr_15_28_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getOutput_15_28_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getOutputAddr_15_29_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Latch_Status"
+%endfunction
+
+%function getOutput_15_29_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Latch_Status"
+%endfunction
+
+%function getOutputAddr_15_44_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Speed_l"
+%endfunction
+
+%function getOutput_15_44_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Speed_l"
+%endfunction
+
+%function getOutputAddr_15_44_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx3_o2"
+%endfunction
+
+%function getOutput_15_44_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx3_o2"
+%endfunction
+
+%function getOutputAddr_15_44_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx3_o3"
+%endfunction
+
+%function getOutput_15_44_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx3_o3"
+%endfunction
+
+%function getOutputAddr_15_47_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getOutput_15_47_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getOutputAddr_15_47_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getOutput_15_47_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getOutputAddr_15_47_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx4_o3"
+%endfunction
+
+%function getOutput_15_47_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx4_o3"
+%endfunction
+
+%function getInputAddr_15_51_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Compare_c"
+%endfunction
+
+%function getInput_15_51_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Compare_c"
+%endfunction
+
+%function getOutputAddr_15_52_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getOutput_15_52_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getInputAddr_15_53_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getInput_15_53_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getOutputAddr_15_54_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Duty_j"
+%endfunction
+
+%function getOutput_15_54_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Duty_j"
+%endfunction
+
+%function getInputAddr_15_57_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Duty"
+%endfunction
+
+%function getInput_15_57_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Duty"
+%endfunction
+
+%function getInputAddr_15_61_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Resistance"
+%endfunction
+
+%function getInput_15_61_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Resistance"
+%endfunction
+
+%function getOutputAddr_15_66_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getOutput_15_66_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInputAddr_15_68_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInput_15_68_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getOutputAddr_15_79_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx"
+%endfunction
+
+%function getOutput_15_79_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx"
+%endfunction
+
+%function getInputAddr_15_84_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInput_15_84_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInputAddr_15_84_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion3"
+%endfunction
+
+%function getInput_15_84_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion3"
+%endfunction
+
+%function getInputAddr_15_84_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion1"
+%endfunction
+
+%function getInput_15_84_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion1"
+%endfunction
+
+%function getInputAddr_15_85_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInput_15_85_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInputAddr_15_86_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Switch2"
+%endfunction
+
+%function getInput_15_86_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Switch2"
+%endfunction
+
+%function getInputAddr_15_90_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion8"
+%endfunction
+
+%function getInput_15_90_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion8"
+%endfunction
+
+%function getInputAddr_15_90_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion9"
+%endfunction
+
+%function getInput_15_90_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion9"
+%endfunction
+
+%function getInputAddr_15_90_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion20"
+%endfunction
+
+%function getInput_15_90_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion20"
+%endfunction
+
+%function getInputAddr_15_94_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion12"
+%endfunction
+
+%function getInput_15_94_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion12"
+%endfunction
+
+%function getInputAddr_15_94_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion6"
+%endfunction
+
+%function getInput_15_94_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion6"
+%endfunction
+
+%function getInputAddr_15_94_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion7"
+%endfunction
+
+%function getInput_15_94_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion7"
+%endfunction
+
+%function getInputAddr_15_97_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion21"
+%endfunction
+
+%function getInput_15_97_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion21"
+%endfunction
+
+%function getInputAddr_15_97_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion22"
+%endfunction
+
+%function getInput_15_97_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion22"
+%endfunction
+
+%function getInputAddr_15_98_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getInput_15_98_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Avg_Cell_Temp"
+%endfunction
+
+%function getOutput_15_99_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Avg_Cell_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Highest_Cell_Temp"
+%endfunction
+
+%function getOutput_15_99_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Highest_Cell_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Lowest_Cell_Temp"
+%endfunction
+
+%function getOutput_15_99_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Lowest_Cell_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Highest_Temp_ID"
+%endfunction
+
+%function getOutput_15_99_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Highest_Temp_ID"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Lowest_Temp_ID"
+%endfunction
+
+%function getOutput_15_99_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Lowest_Temp_ID"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_Heatsink_Temp"
+%endfunction
+
+%function getOutput_15_99_1_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_Heatsink_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_1_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx1_o7"
+%endfunction
+
+%function getOutput_15_99_1_1_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx1_o7"
+%endfunction
+
+%function getOutputAddr_15_100_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Abg_Cell_Voltage"
+%endfunction
+
+%function getOutput_15_100_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Abg_Cell_Voltage"
+%endfunction
+
+%function getOutputAddr_15_100_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.High_Cell_Voltage"
+%endfunction
+
+%function getOutput_15_100_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.High_Cell_Voltage"
+%endfunction
+
+%function getOutputAddr_15_100_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.High_Cell_ID"
+%endfunction
+
+%function getOutput_15_100_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.High_Cell_ID"
+%endfunction
+
+%function getOutputAddr_15_100_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Low_Cell_Voltage"
+%endfunction
+
+%function getOutput_15_100_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Low_Cell_Voltage"
+%endfunction
+
+%function getOutputAddr_15_100_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Low_Cell_ID"
+%endfunction
+
+%function getOutput_15_100_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Low_Cell_ID"
+%endfunction
+
+%function getOutputAddr_15_100_1_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx7_o6"
+%endfunction
+
+%function getOutput_15_100_1_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx7_o6"
+%endfunction
+
+%function getInputAddr_15_101_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getInput_15_101_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getInputAddr_15_102_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getInput_15_102_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getOutputAddr_15_103_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_Multi1"
+%endfunction
+
+%function getOutput_15_103_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_Multi1"
+%endfunction
+
+%function getOutputAddr_15_104_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_Multi2"
+%endfunction
+
+%function getOutput_15_104_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_Multi2"
+%endfunction
+
+%function getOutputAddr_15_105_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_ChargeEnable"
+%endfunction
+
+%function getOutput_15_105_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_ChargeEnable"
+%endfunction
+
+%function getOutputAddr_15_106_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getOutput_15_106_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getInputAddr_15_107_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getInput_15_107_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getInputAddr_15_108_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getInput_15_108_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getOutputAddr_15_109_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getOutput_15_109_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getInputAddr_15_110_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getInput_15_110_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getOutputAddr_15_111_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getOutput_15_111_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getInputAddr_15_112_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getInput_15_112_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getOutputAddr_15_113_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getOutput_15_113_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getInputAddr_15_114_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getInput_15_114_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getOutputAddr_15_115_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getOutput_15_115_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getInputAddr_15_116_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getInput_15_116_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getOutputAddr_15_117_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Fan_Freq"
+%endfunction
+
+%function getOutput_15_117_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Fan_Freq"
+%endfunction
+
+%function getInputAddr_15_118_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Throttle1_Voltage"
+%endfunction
+
+%function getInput_15_118_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Throttle1_Voltage"
+%endfunction
+
+%function getInputAddr_15_119_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Throttle2_Voltage"
+%endfunction
+
+%function getInput_15_119_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Throttle2_Voltage"
+%endfunction
+
+%function getInputAddr_15_120_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake1_Pressure"
+%endfunction
+
+%function getInput_15_120_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake1_Pressure"
+%endfunction
+
+%function getInputAddr_15_121_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake2_Pressure"
+%endfunction
+
+%function getInput_15_121_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake2_Pressure"
+%endfunction
+
+%function getInputAddr_15_123_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getInput_15_123_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getInputAddr_15_124_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getInput_15_124_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getOutputAddr_15_125_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getOutput_15_125_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getOutputAddr_15_125_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx2_o2"
+%endfunction
+
+%function getOutput_15_125_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx2_o2"
+%endfunction
+
+%function getInputAddr_15_126_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getInput_15_126_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getInputAddr_15_127_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Speed"
+%endfunction
+
+%function getInput_15_127_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Speed"
+%endfunction
+
+%function getInputAddr_15_128_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getInput_15_128_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getInputAddr_15_129_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getInput_15_129_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getOutputAddr_15_130_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FR_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_130_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FR_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_130_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FL_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_130_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FL_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_130_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Front_Vehicle_Speed"
+%endfunction
+
+%function getOutput_15_130_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Front_Vehicle_Speed"
+%endfunction
+
+%function getOutputAddr_15_130_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx1_o4"
+%endfunction
+
+%function getOutput_15_130_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx1_o4"
+%endfunction
+
+%function getOutputAddr_15_131_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.RR_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_131_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.RR_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_131_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.RL_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_131_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.RL_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_131_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Rear_Vehicle_Speed"
+%endfunction
+
+%function getOutput_15_131_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Rear_Vehicle_Speed"
+%endfunction
+
+%function getOutputAddr_15_131_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx2_o4"
+%endfunction
+
+%function getOutput_15_131_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx2_o4"
+%endfunction
+
+%function getOutputAddr_15_132_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Steering_Angle"
+%endfunction
+
+%function getOutput_15_132_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Steering_Angle"
+%endfunction
+
+%function getOutputAddr_15_132_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx5_o2"
+%endfunction
+
+%function getOutput_15_132_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx5_o2"
+%endfunction
+
+%function getOutputAddr_15_133_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Yaw"
+%endfunction
+
+%function getOutput_15_133_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Yaw"
+%endfunction
+
+%function getOutputAddr_15_133_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx8_o2"
+%endfunction
+
+%function getOutput_15_133_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx8_o2"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Shutdown_Error"
+%endfunction
+
+%function getOutput_15_134_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Shutdown_Error"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o2"
+%endfunction
+
+%function getOutput_15_134_1_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o2"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o3"
+%endfunction
+
+%function getOutput_15_134_1_1_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o3"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o4"
+%endfunction
+
+%function getOutput_15_134_1_1_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o4"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o5"
+%endfunction
+
+%function getOutput_15_134_1_1_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o5"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o6"
+%endfunction
+
+%function getOutput_15_134_1_1_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o6"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o7"
+%endfunction
+
+%function getOutput_15_134_1_1_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o7"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o8"
+%endfunction
+
+%function getOutput_15_134_1_1_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o8"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o9"
+%endfunction
+
+%function getOutput_15_134_1_1_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o9"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o10"
+%endfunction
+
+%function getOutput_15_134_1_1_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o10"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_10_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o11"
+%endfunction
+
+%function getOutput_15_134_1_1_10_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o11"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_11_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o12"
+%endfunction
+
+%function getOutput_15_134_1_1_11_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o12"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_12_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o13"
+%endfunction
+
+%function getOutput_15_134_1_1_12_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o13"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_13_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o14"
+%endfunction
+
+%function getOutput_15_134_1_1_13_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o14"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_14_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o15"
+%endfunction
+
+%function getOutput_15_134_1_1_14_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o15"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_15_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o16"
+%endfunction
+
+%function getOutput_15_134_1_1_15_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o16"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_16_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o17"
+%endfunction
+
+%function getOutput_15_134_1_1_16_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o17"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_17_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o18"
+%endfunction
+
+%function getOutput_15_134_1_1_17_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o18"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_18_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o19"
+%endfunction
+
+%function getOutput_15_134_1_1_18_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o19"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_19_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o20"
+%endfunction
+
+%function getOutput_15_134_1_1_19_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o20"
+%endfunction
+
+%function getOutputAddr_15_134_1_1_20_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o21"
+%endfunction
+
+%function getOutput_15_134_1_1_20_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o21"
+%endfunction
+
+%function getInputAddr_15_139_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax_dv"
+%endfunction
+
+%function getInput_15_139_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax_dv"
+%endfunction
+
+%function getInputAddr_15_140_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.TV1_Out"
+%endfunction
+
+%function getInput_15_140_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.TV1_Out"
+%endfunction
+
+%function getInputAddr_15_141_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax_b"
+%endfunction
+
+%function getInput_15_141_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax_b"
+%endfunction
+
+%function getInputAddr_15_142_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.TV2_Out"
+%endfunction
+
+%function getInput_15_142_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.TV2_Out"
+%endfunction
+
+%function getInputAddr_15_143_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax"
+%endfunction
+
+%function getInput_15_143_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax"
+%endfunction
+
+%function getInputAddr_15_144_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BV1_Out"
+%endfunction
+
+%function getInput_15_144_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BV1_Out"
+%endfunction
+
+%function getInputAddr_15_146_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Gain"
+%endfunction
+
+%function getInput_15_146_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Gain"
+%endfunction
+
+%function getInputAddr_15_147_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Divide1"
+%endfunction
+
+%function getInput_15_147_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Divide1"
+%endfunction
+
+%function getInputAddr_15_148_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BV2_Out"
+%endfunction
+
+%function getInput_15_148_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BV2_Out"
+%endfunction
+
+%function getInputAddr_15_149_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax_d"
+%endfunction
+
+%function getInput_15_149_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax_d"
+%endfunction
+
+%function getInputAddr_15_151_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Gain_f"
+%endfunction
+
+%function getInput_15_151_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Gain_f"
+%endfunction
+
+%function getInputAddr_15_152_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Divide1_l"
+%endfunction
+
+%function getInput_15_152_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Divide1_l"
+%endfunction
+
+%function getOutputAddr_15_1_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread4_f"
+%endfunction
+
+%function getOutput_15_1_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread4_f"
+%endfunction
+
+%function getOutputAddr_15_2_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread5_e"
+%endfunction
+
+%function getOutput_15_2_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread5_e"
+%endfunction
+
+%function getOutputAddr_15_3_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Throttle1_Voltage"
+%endfunction
+
+%function getOutput_15_3_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Throttle1_Voltage"
+%endfunction
+
+%function getOutputAddr_15_4_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Throttle2_Voltage"
+%endfunction
+
+%function getOutput_15_4_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Throttle2_Voltage"
+%endfunction
+
+%function getOutputAddr_15_5_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake1_Pressure"
+%endfunction
+
+%function getOutput_15_5_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake1_Pressure"
+%endfunction
+
+%function getOutputAddr_15_6_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake2_Pressure"
+%endfunction
+
+%function getOutput_15_6_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake2_Pressure"
+%endfunction
+
+%function getOutputAddr_15_9_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread6_b"
+%endfunction
+
+%function getOutput_15_9_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread6_b"
+%endfunction
+
+%function getOutputAddr_15_10_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread7_d"
+%endfunction
+
+%function getOutput_15_10_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread7_d"
+%endfunction
+
+%function getOutputAddr_15_13_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread_i"
+%endfunction
+
+%function getOutput_15_13_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread_i"
+%endfunction
+
+%function getOutputAddr_15_14_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread1_e"
+%endfunction
+
+%function getOutput_15_14_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread1_e"
+%endfunction
+
+%function getOutputAddr_15_16_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread2_h"
+%endfunction
+
+%function getOutput_15_16_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread2_h"
+%endfunction
+
+%function getOutputAddr_15_17_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread3_f"
+%endfunction
+
+%function getOutput_15_17_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread3_f"
+%endfunction
+
+%function getOutputAddr_15_20_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getOutput_15_20_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getOutputAddr_15_21_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getOutput_15_21_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getOutputAddr_15_21_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Pack_SOC"
+%endfunction
+
+%function getOutput_15_21_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Pack_SOC"
+%endfunction
+
+%function getOutputAddr_15_21_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Pack_Current"
+%endfunction
+
+%function getOutput_15_21_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Pack_Current"
+%endfunction
+
+%function getOutputAddr_15_21_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Acc_Fan_Speed"
+%endfunction
+
+%function getOutput_15_21_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Acc_Fan_Speed"
+%endfunction
+
+%function getOutputAddr_15_21_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx6_o5"
+%endfunction
+
+%function getOutput_15_21_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx6_o5"
+%endfunction
+
+%function getOutputAddr_15_24_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getOutput_15_24_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getOutputAddr_15_24_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getOutput_15_24_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getOutputAddr_15_24_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Temp_m"
+%endfunction
+
+%function getOutput_15_24_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Temp_m"
+%endfunction
+
+%function getOutputAddr_15_27_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getOutput_15_27_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getOutputAddr_15_28_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getOutput_15_28_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getOutputAddr_15_29_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Latch_Status"
+%endfunction
+
+%function getOutput_15_29_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Latch_Status"
+%endfunction
+
+%function getInputAddr_15_35_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.ECU_Ok"
+%endfunction
+
+%function getInput_15_35_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.ECU_Ok"
+%endfunction
+
+%function getInputAddr_15_38_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.TSS"
+%endfunction
+
+%function getInput_15_38_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.TSS"
+%endfunction
+
+%function getInputAddr_15_40_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.LogicalOperator"
+%endfunction
+
+%function getInput_15_40_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.LogicalOperator"
+%endfunction
+
+%function getInputAddr_15_41_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake_Light"
+%endfunction
+
+%function getInput_15_41_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake_Light"
+%endfunction
+
+%function getInputAddr_15_43_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Compare"
+%endfunction
+
+%function getInput_15_43_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Compare"
+%endfunction
+
+%function getOutputAddr_15_44_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Speed_l"
+%endfunction
+
+%function getOutput_15_44_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Speed_l"
+%endfunction
+
+%function getOutputAddr_15_44_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx3_o2"
+%endfunction
+
+%function getOutput_15_44_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx3_o2"
+%endfunction
+
+%function getOutputAddr_15_44_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx3_o3"
+%endfunction
+
+%function getOutput_15_44_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx3_o3"
+%endfunction
+
+%function getInputAddr_15_46_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Compare_c"
+%endfunction
+
+%function getInput_15_46_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Compare_c"
+%endfunction
+
+%function getOutputAddr_15_47_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getOutput_15_47_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getOutputAddr_15_47_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getOutput_15_47_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getOutputAddr_15_47_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx4_o3"
+%endfunction
+
+%function getOutput_15_47_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx4_o3"
+%endfunction
+
+%function getInputAddr_15_50_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Ignition"
+%endfunction
+
+%function getInput_15_50_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Ignition"
+%endfunction
+
+%function getInputAddr_15_51_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Compare_c"
+%endfunction
+
+%function getInput_15_51_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Compare_c"
+%endfunction
+
+%function getOutputAddr_15_52_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getOutput_15_52_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getInputAddr_15_53_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getInput_15_53_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Freq"
+%endfunction
+
+%function getOutputAddr_15_54_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Duty_j"
+%endfunction
+
+%function getOutput_15_54_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Duty_j"
+%endfunction
+
+%function getInputAddr_15_57_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Duty"
+%endfunction
+
+%function getInput_15_57_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Duty"
+%endfunction
+
+%function getInputAddr_15_61_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.IMD_Resistance"
+%endfunction
+
+%function getInput_15_61_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.IMD_Resistance"
+%endfunction
+
+%function getOutputAddr_15_62_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread_g"
+%endfunction
+
+%function getOutput_15_62_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread_g"
+%endfunction
+
+%function getInputAddr_15_63_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread_g"
+%endfunction
+
+%function getInput_15_63_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread_g"
+%endfunction
+
+%function getOutputAddr_15_64_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread1_n"
+%endfunction
+
+%function getOutput_15_64_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread1_n"
+%endfunction
+
+%function getInputAddr_15_65_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread1_n"
+%endfunction
+
+%function getInput_15_65_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread1_n"
+%endfunction
+
+%function getOutputAddr_15_66_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getOutput_15_66_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInputAddr_15_67_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInput_15_67_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInputAddr_15_68_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInput_15_68_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx_n"
+%endfunction
+
+%function getInputAddr_15_72_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.X_LED"
+%endfunction
+
+%function getInput_15_72_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.X_LED"
+%endfunction
+
+%function getInputAddr_15_73_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Z_LED"
+%endfunction
+
+%function getInput_15_73_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Z_LED"
+%endfunction
+
+%function getInputAddr_15_74_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Y_LED"
+%endfunction
+
+%function getInput_15_74_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Y_LED"
+%endfunction
+
+%function getInputAddr_15_76_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.RTD_LED"
+%endfunction
+
+%function getInput_15_76_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.RTD_LED"
+%endfunction
+
+%function getOutputAddr_15_79_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.UsbRx"
+%endfunction
+
+%function getOutput_15_79_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.UsbRx"
+%endfunction
+
+%function getInputAddr_15_80_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.APPS_LED"
+%endfunction
+
+%function getInput_15_80_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.APPS_LED"
+%endfunction
+
+%function getOutputAddr_15_83_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread"
+%endfunction
+
+%function getOutput_15_83_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread"
+%endfunction
+
+%function getInputAddr_15_84_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInput_15_84_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInputAddr_15_84_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion3"
+%endfunction
+
+%function getInput_15_84_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion3"
+%endfunction
+
+%function getInputAddr_15_84_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion1"
+%endfunction
+
+%function getInput_15_84_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion1"
+%endfunction
+
+%function getInputAddr_15_85_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInput_15_85_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion10"
+%endfunction
+
+%function getInputAddr_15_86_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Switch2"
+%endfunction
+
+%function getInput_15_86_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Switch2"
+%endfunction
+
+%function getOutputAddr_15_87_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread4"
+%endfunction
+
+%function getOutput_15_87_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread4"
+%endfunction
+
+%function getOutputAddr_15_88_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread5"
+%endfunction
+
+%function getOutput_15_88_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread5"
+%endfunction
+
+%function getOutputAddr_15_89_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread6"
+%endfunction
+
+%function getOutput_15_89_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread6"
+%endfunction
+
+%function getInputAddr_15_90_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion8"
+%endfunction
+
+%function getInput_15_90_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion8"
+%endfunction
+
+%function getInputAddr_15_90_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion9"
+%endfunction
+
+%function getInput_15_90_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion9"
+%endfunction
+
+%function getInputAddr_15_90_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion20"
+%endfunction
+
+%function getInput_15_90_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion20"
+%endfunction
+
+%function getOutputAddr_15_91_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread1"
+%endfunction
+
+%function getOutput_15_91_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread1"
+%endfunction
+
+%function getOutputAddr_15_92_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread2"
+%endfunction
+
+%function getOutput_15_92_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread2"
+%endfunction
+
+%function getOutputAddr_15_93_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread3"
+%endfunction
+
+%function getOutput_15_93_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread3"
+%endfunction
+
+%function getInputAddr_15_94_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion12"
+%endfunction
+
+%function getInput_15_94_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion12"
+%endfunction
+
+%function getInputAddr_15_94_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion6"
+%endfunction
+
+%function getInput_15_94_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion6"
+%endfunction
+
+%function getInputAddr_15_94_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion7"
+%endfunction
+
+%function getInput_15_94_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion7"
+%endfunction
+
+%function getOutputAddr_15_95_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread7"
+%endfunction
+
+%function getOutput_15_95_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread7"
+%endfunction
+
+%function getOutputAddr_15_96_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread8"
+%endfunction
+
+%function getOutput_15_96_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread8"
+%endfunction
+
+%function getInputAddr_15_97_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion21"
+%endfunction
+
+%function getInput_15_97_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion21"
+%endfunction
+
+%function getInputAddr_15_97_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.DataTypeConversion22"
+%endfunction
+
+%function getInput_15_97_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.DataTypeConversion22"
+%endfunction
+
+%function getInputAddr_15_98_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getInput_15_98_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Instant_Pack_Voltage"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Avg_Cell_Temp"
+%endfunction
+
+%function getOutput_15_99_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Avg_Cell_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Highest_Cell_Temp"
+%endfunction
+
+%function getOutput_15_99_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Highest_Cell_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Lowest_Cell_Temp"
+%endfunction
+
+%function getOutput_15_99_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Lowest_Cell_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Highest_Temp_ID"
+%endfunction
+
+%function getOutput_15_99_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Highest_Temp_ID"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Lowest_Temp_ID"
+%endfunction
+
+%function getOutput_15_99_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Lowest_Temp_ID"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_Heatsink_Temp"
+%endfunction
+
+%function getOutput_15_99_1_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_Heatsink_Temp"
+%endfunction
+
+%function getOutputAddr_15_99_1_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx1_o7"
+%endfunction
+
+%function getOutput_15_99_1_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx1_o7"
+%endfunction
+
+%function getOutputAddr_15_100_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Abg_Cell_Voltage"
+%endfunction
+
+%function getOutput_15_100_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Abg_Cell_Voltage"
+%endfunction
+
+%function getOutputAddr_15_100_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.High_Cell_Voltage"
+%endfunction
+
+%function getOutput_15_100_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.High_Cell_Voltage"
+%endfunction
+
+%function getOutputAddr_15_100_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.High_Cell_ID"
+%endfunction
+
+%function getOutput_15_100_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.High_Cell_ID"
+%endfunction
+
+%function getOutputAddr_15_100_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Low_Cell_Voltage"
+%endfunction
+
+%function getOutput_15_100_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Low_Cell_Voltage"
+%endfunction
+
+%function getOutputAddr_15_100_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Low_Cell_ID"
+%endfunction
+
+%function getOutput_15_100_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Low_Cell_ID"
+%endfunction
+
+%function getOutputAddr_15_100_1_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx7_o6"
+%endfunction
+
+%function getOutput_15_100_1_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx7_o6"
+%endfunction
+
+%function getInputAddr_15_101_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getInput_15_101_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRLow"
+%endfunction
+
+%function getInputAddr_15_102_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getInput_15_102_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.AIRHigh"
+%endfunction
+
+%function getOutputAddr_15_103_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_Multi1"
+%endfunction
+
+%function getOutput_15_103_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_Multi1"
+%endfunction
+
+%function getOutputAddr_15_104_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_Multi2"
+%endfunction
+
+%function getOutput_15_104_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_Multi2"
+%endfunction
+
+%function getOutputAddr_15_105_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BMS_ChargeEnable"
+%endfunction
+
+%function getOutput_15_105_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BMS_ChargeEnable"
+%endfunction
+
+%function getOutputAddr_15_106_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getOutput_15_106_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getInputAddr_15_107_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getInput_15_107_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnRTD_Input"
+%endfunction
+
+%function getInputAddr_15_108_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getInput_15_108_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPreCharge_Input"
+%endfunction
+
+%function getOutputAddr_15_109_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getOutput_15_109_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getInputAddr_15_110_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getInput_15_110_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnY_Input"
+%endfunction
+
+%function getOutputAddr_15_111_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getOutput_15_111_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getInputAddr_15_112_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getInput_15_112_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnZ_Input"
+%endfunction
+
+%function getOutputAddr_15_113_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getOutput_15_113_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getInputAddr_15_114_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getInput_15_114_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnPumpFan_Input"
+%endfunction
+
+%function getOutputAddr_15_115_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getOutput_15_115_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getInputAddr_15_116_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getInput_15_116_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.btnAccyFan_Input"
+%endfunction
+
+%function getOutputAddr_15_117_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Fan_Freq"
+%endfunction
+
+%function getOutput_15_117_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Fan_Freq"
+%endfunction
+
+%function getInputAddr_15_118_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Throttle1_Voltage"
+%endfunction
+
+%function getInput_15_118_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Throttle1_Voltage"
+%endfunction
+
+%function getInputAddr_15_119_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Throttle2_Voltage"
+%endfunction
+
+%function getInput_15_119_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Throttle2_Voltage"
+%endfunction
+
+%function getInputAddr_15_120_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake1_Pressure"
+%endfunction
+
+%function getInput_15_120_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake1_Pressure"
+%endfunction
+
+%function getInputAddr_15_121_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Brake2_Pressure"
+%endfunction
+
+%function getInput_15_121_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Brake2_Pressure"
+%endfunction
+
+%function getOutputAddr_15_122_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.LV_Battery_Voltage"
+%endfunction
+
+%function getOutput_15_122_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.LV_Battery_Voltage"
+%endfunction
+
+%function getInputAddr_15_123_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getInput_15_123_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Voltage"
+%endfunction
+
+%function getInputAddr_15_124_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getInput_15_124_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Temp"
+%endfunction
+
+%function getOutputAddr_15_125_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getOutput_15_125_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getOutputAddr_15_125_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx2_o2"
+%endfunction
+
+%function getOutput_15_125_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx2_o2"
+%endfunction
+
+%function getInputAddr_15_126_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getInput_15_126_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MCU_Temp"
+%endfunction
+
+%function getInputAddr_15_127_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Motor_Speed"
+%endfunction
+
+%function getInput_15_127_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Motor_Speed"
+%endfunction
+
+%function getInputAddr_15_128_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getInput_15_128_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx4_o1"
+%endfunction
+
+%function getInputAddr_15_129_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getInput_15_129_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FaultCode"
+%endfunction
+
+%function getOutputAddr_15_130_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FR_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_130_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FR_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_130_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.FL_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_130_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.FL_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_130_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Front_Vehicle_Speed"
+%endfunction
+
+%function getOutput_15_130_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Front_Vehicle_Speed"
+%endfunction
+
+%function getOutputAddr_15_130_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx1_o4"
+%endfunction
+
+%function getOutput_15_130_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx1_o4"
+%endfunction
+
+%function getOutputAddr_15_131_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.RR_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_131_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.RR_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_131_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.RL_Wheel_Speed"
+%endfunction
+
+%function getOutput_15_131_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.RL_Wheel_Speed"
+%endfunction
+
+%function getOutputAddr_15_131_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Rear_Vehicle_Speed"
+%endfunction
+
+%function getOutput_15_131_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Rear_Vehicle_Speed"
+%endfunction
+
+%function getOutputAddr_15_131_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx2_o4"
+%endfunction
+
+%function getOutput_15_131_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx2_o4"
+%endfunction
+
+%function getOutputAddr_15_132_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Steering_Angle"
+%endfunction
+
+%function getOutput_15_132_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Steering_Angle"
+%endfunction
+
+%function getOutputAddr_15_132_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx5_o2"
+%endfunction
+
+%function getOutput_15_132_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx5_o2"
+%endfunction
+
+%function getOutputAddr_15_133_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Yaw"
+%endfunction
+
+%function getOutput_15_133_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Yaw"
+%endfunction
+
+%function getOutputAddr_15_133_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx8_o2"
+%endfunction
+
+%function getOutput_15_133_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx8_o2"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Shutdown_Error"
+%endfunction
+
+%function getOutput_15_134_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Shutdown_Error"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o2"
+%endfunction
+
+%function getOutput_15_134_1_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o2"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o3"
+%endfunction
+
+%function getOutput_15_134_1_3_2_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o3"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o4"
+%endfunction
+
+%function getOutput_15_134_1_3_3_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o4"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o5"
+%endfunction
+
+%function getOutput_15_134_1_3_4_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o5"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o6"
+%endfunction
+
+%function getOutput_15_134_1_3_5_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o6"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o7"
+%endfunction
+
+%function getOutput_15_134_1_3_6_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o7"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o8"
+%endfunction
+
+%function getOutput_15_134_1_3_7_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o8"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o9"
+%endfunction
+
+%function getOutput_15_134_1_3_8_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o9"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o10"
+%endfunction
+
+%function getOutput_15_134_1_3_9_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o10"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_10_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o11"
+%endfunction
+
+%function getOutput_15_134_1_3_10_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o11"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_11_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o12"
+%endfunction
+
+%function getOutput_15_134_1_3_11_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o12"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_12_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o13"
+%endfunction
+
+%function getOutput_15_134_1_3_12_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o13"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_13_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o14"
+%endfunction
+
+%function getOutput_15_134_1_3_13_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o14"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_14_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o15"
+%endfunction
+
+%function getOutput_15_134_1_3_14_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o15"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_15_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o16"
+%endfunction
+
+%function getOutput_15_134_1_3_15_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o16"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_16_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o17"
+%endfunction
+
+%function getOutput_15_134_1_3_16_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o17"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_17_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o18"
+%endfunction
+
+%function getOutput_15_134_1_3_17_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o18"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_18_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o19"
+%endfunction
+
+%function getOutput_15_134_1_3_18_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o19"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_19_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o20"
+%endfunction
+
+%function getOutput_15_134_1_3_19_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o20"
+%endfunction
+
+%function getOutputAddr_15_134_1_3_20_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.CanRx9_o21"
+%endfunction
+
+%function getOutput_15_134_1_3_20_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.CanRx9_o21"
+%endfunction
+
+%function getOutputAddr_15_135_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread_l"
+%endfunction
+
+%function getOutput_15_135_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread_l"
+%endfunction
+
+%function getOutputAddr_15_136_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread_b"
+%endfunction
+
+%function getOutput_15_136_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread_b"
+%endfunction
+
+%function getInputAddr_15_139_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax_dv"
+%endfunction
+
+%function getInput_15_139_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax_dv"
+%endfunction
+
+%function getInputAddr_15_140_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.TV1_Out"
+%endfunction
+
+%function getInput_15_140_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.TV1_Out"
+%endfunction
+
+%function getInputAddr_15_141_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax_b"
+%endfunction
+
+%function getInput_15_141_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax_b"
+%endfunction
+
+%function getInputAddr_15_142_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.TV2_Out"
+%endfunction
+
+%function getInput_15_142_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.TV2_Out"
+%endfunction
+
+%function getInputAddr_15_143_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax"
+%endfunction
+
+%function getInput_15_143_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax"
+%endfunction
+
+%function getInputAddr_15_144_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BV1_Out"
+%endfunction
+
+%function getInput_15_144_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BV1_Out"
+%endfunction
+
+%function getOutputAddr_15_145_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread9"
+%endfunction
+
+%function getOutput_15_145_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread9"
+%endfunction
+
+%function getInputAddr_15_146_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Gain"
+%endfunction
+
+%function getInput_15_146_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Gain"
+%endfunction
+
+%function getInputAddr_15_147_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Divide1"
+%endfunction
+
+%function getInput_15_147_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Divide1"
+%endfunction
+
+%function getInputAddr_15_148_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.BV2_Out"
+%endfunction
+
+%function getInput_15_148_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.BV2_Out"
+%endfunction
+
+%function getInputAddr_15_149_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.MinMax_d"
+%endfunction
+
+%function getInput_15_149_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.MinMax_d"
+%endfunction
+
+%function getOutputAddr_15_150_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Memoryread8_e"
+%endfunction
+
+%function getOutput_15_150_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Memoryread8_e"
+%endfunction
+
+%function getInputAddr_15_151_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Gain_f"
+%endfunction
+
+%function getInput_15_151_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Gain_f"
+%endfunction
+
+%function getInputAddr_15_152_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TBRe_Mod_B.Divide1_l"
+%endfunction
+
+%function getInput_15_152_1_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TBRe_Mod_B.Divide1_l"
+%endfunction
+

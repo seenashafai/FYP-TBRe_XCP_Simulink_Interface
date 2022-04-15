@@ -1,0 +1,20 @@
+%implements s16_b0_zmynf_0_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibCGIRDumpSystemUserCode(0, "Initialize", "Header")>\
+%<SLibCGIRDumpSystemUserCode(0, "Initialize", "Body")>\
+%<SLibCGIRDumpSystemUserCode(0, "Initialize", "Trailer")>\
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DiagnosticsCAN_Init(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

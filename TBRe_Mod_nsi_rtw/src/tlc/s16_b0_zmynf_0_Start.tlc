@@ -1,0 +1,52 @@
+%implements s16_b0_zmynf_0_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS0B0 = OpaqueTLCBlockFcn("Start", 0, 0, 0, 0)
+%assign tlcStartFcnOfS0B3 = OpaqueTLCBlockFcn("Start", 0, 3, 0, 0)
+%assign tlcStartFcnOfS0B4 = OpaqueTLCBlockFcn("Start", 0, 4, 0, 0)
+%assign tlcStartFcnOfS0B5 = OpaqueTLCBlockFcn("Start", 0, 5, 0, 0)
+%assign tlcStartFcnOfS0B6 = OpaqueTLCBlockFcn("Start", 0, 6, 0, 0)
+%assign tlcStartFcnOfS0B7 = OpaqueTLCBlockFcn("Start", 0, 7, 0, 0)
+%assign tlcStartFcnOfS0B8 = OpaqueTLCBlockFcn("Start", 0, 8, 0, 0)
+%if !WHITE_SPACE(tlcStartFcnOfS0B0)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx1' */
+%<tlcStartFcnOfS0B0>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B3)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx2' */
+%<tlcStartFcnOfS0B3>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B4)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx3' */
+%<tlcStartFcnOfS0B4>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B5)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx6' */
+%<tlcStartFcnOfS0B5>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B6)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx7' */
+%<tlcStartFcnOfS0B6>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B7)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx8' */
+%<tlcStartFcnOfS0B7>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B8)
+/* Start for S-Function (NsiCan_Tx_Ext): '<S1>/CanTx9' */
+%<tlcStartFcnOfS0B8>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DiagnosticsCAN_Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction

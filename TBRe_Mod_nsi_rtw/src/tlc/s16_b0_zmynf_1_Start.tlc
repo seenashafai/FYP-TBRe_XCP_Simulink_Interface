@@ -1,0 +1,372 @@
+%implements s16_b0_zmynf_1_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS15B20 = OpaqueTLCBlockFcn("Start", 15, 20, 1, 1)
+%assign tlcStartFcnOfS15B21 = OpaqueTLCBlockFcn("Start", 15, 21, 1, 1)
+%assign tlcStartFcnOfS15B24 = OpaqueTLCBlockFcn("Start", 15, 24, 1, 1)
+%assign tlcStartFcnOfS15B27 = OpaqueTLCBlockFcn("Start", 15, 27, 1, 1)
+%assign tlcStartFcnOfS15B28 = OpaqueTLCBlockFcn("Start", 15, 28, 1, 1)
+%assign tlcStartFcnOfS15B29 = OpaqueTLCBlockFcn("Start", 15, 29, 1, 1)
+%assign tlcStartFcnOfS15B44 = OpaqueTLCBlockFcn("Start", 15, 44, 1, 1)
+%assign tlcStartFcnOfS15B47 = OpaqueTLCBlockFcn("Start", 15, 47, 1, 1)
+%assign tlcStartFcnOfS15B51 = OpaqueTLCBlockFcn("Start", 15, 51, 1, 1)
+%assign tlcStartFcnOfS15B52 = OpaqueTLCBlockFcn("Start", 15, 52, 1, 1)
+%assign tlcStartFcnOfS15B53 = OpaqueTLCBlockFcn("Start", 15, 53, 1, 1)
+%assign tlcStartFcnOfS15B54 = OpaqueTLCBlockFcn("Start", 15, 54, 1, 1)
+%assign tlcStartFcnOfS15B57 = OpaqueTLCBlockFcn("Start", 15, 57, 1, 1)
+%assign tlcStartFcnOfS15B61 = OpaqueTLCBlockFcn("Start", 15, 61, 1, 1)
+%assign tlcStartFcnOfS15B66 = OpaqueTLCBlockFcn("Start", 15, 66, 1, 1)
+%assign tlcStartFcnOfS15B68 = OpaqueTLCBlockFcn("Start", 15, 68, 1, 1)
+%assign tlcStartFcnOfS15B79 = OpaqueTLCBlockFcn("Start", 15, 79, 1, 1)
+%assign tlcStartFcnOfS15B84 = OpaqueTLCBlockFcn("Start", 15, 84, 1, 1)
+%assign tlcStartFcnOfS15B85 = OpaqueTLCBlockFcn("Start", 15, 85, 1, 1)
+%assign tlcStartFcnOfS15B86 = OpaqueTLCBlockFcn("Start", 15, 86, 1, 1)
+%assign tlcStartFcnOfS15B90 = OpaqueTLCBlockFcn("Start", 15, 90, 1, 1)
+%assign tlcStartFcnOfS15B94 = OpaqueTLCBlockFcn("Start", 15, 94, 1, 1)
+%assign tlcStartFcnOfS15B97 = OpaqueTLCBlockFcn("Start", 15, 97, 1, 1)
+%assign tlcStartFcnOfS15B98 = OpaqueTLCBlockFcn("Start", 15, 98, 1, 1)
+%assign tlcStartFcnOfS15B99 = OpaqueTLCBlockFcn("Start", 15, 99, 1, 1)
+%assign tlcStartFcnOfS15B100 = OpaqueTLCBlockFcn("Start", 15, 100, 1, 1)
+%assign tlcStartFcnOfS15B101 = OpaqueTLCBlockFcn("Start", 15, 101, 1, 1)
+%assign tlcStartFcnOfS15B102 = OpaqueTLCBlockFcn("Start", 15, 102, 1, 1)
+%assign tlcStartFcnOfS15B103 = OpaqueTLCBlockFcn("Start", 15, 103, 1, 1)
+%assign tlcStartFcnOfS15B104 = OpaqueTLCBlockFcn("Start", 15, 104, 1, 1)
+%assign tlcStartFcnOfS15B105 = OpaqueTLCBlockFcn("Start", 15, 105, 1, 1)
+%assign tlcStartFcnOfS15B106 = OpaqueTLCBlockFcn("Start", 15, 106, 1, 1)
+%assign tlcStartFcnOfS15B107 = OpaqueTLCBlockFcn("Start", 15, 107, 1, 1)
+%assign tlcStartFcnOfS15B108 = OpaqueTLCBlockFcn("Start", 15, 108, 1, 1)
+%assign tlcStartFcnOfS15B109 = OpaqueTLCBlockFcn("Start", 15, 109, 1, 1)
+%assign tlcStartFcnOfS15B110 = OpaqueTLCBlockFcn("Start", 15, 110, 1, 1)
+%assign tlcStartFcnOfS15B111 = OpaqueTLCBlockFcn("Start", 15, 111, 1, 1)
+%assign tlcStartFcnOfS15B112 = OpaqueTLCBlockFcn("Start", 15, 112, 1, 1)
+%assign tlcStartFcnOfS15B113 = OpaqueTLCBlockFcn("Start", 15, 113, 1, 1)
+%assign tlcStartFcnOfS15B114 = OpaqueTLCBlockFcn("Start", 15, 114, 1, 1)
+%assign tlcStartFcnOfS15B115 = OpaqueTLCBlockFcn("Start", 15, 115, 1, 1)
+%assign tlcStartFcnOfS15B116 = OpaqueTLCBlockFcn("Start", 15, 116, 1, 1)
+%assign tlcStartFcnOfS15B117 = OpaqueTLCBlockFcn("Start", 15, 117, 1, 1)
+%assign tlcStartFcnOfS15B118 = OpaqueTLCBlockFcn("Start", 15, 118, 1, 1)
+%assign tlcStartFcnOfS15B119 = OpaqueTLCBlockFcn("Start", 15, 119, 1, 1)
+%assign tlcStartFcnOfS15B120 = OpaqueTLCBlockFcn("Start", 15, 120, 1, 1)
+%assign tlcStartFcnOfS15B121 = OpaqueTLCBlockFcn("Start", 15, 121, 1, 1)
+%assign tlcStartFcnOfS15B123 = OpaqueTLCBlockFcn("Start", 15, 123, 1, 1)
+%assign tlcStartFcnOfS15B124 = OpaqueTLCBlockFcn("Start", 15, 124, 1, 1)
+%assign tlcStartFcnOfS15B125 = OpaqueTLCBlockFcn("Start", 15, 125, 1, 1)
+%assign tlcStartFcnOfS15B126 = OpaqueTLCBlockFcn("Start", 15, 126, 1, 1)
+%assign tlcStartFcnOfS15B127 = OpaqueTLCBlockFcn("Start", 15, 127, 1, 1)
+%assign tlcStartFcnOfS15B128 = OpaqueTLCBlockFcn("Start", 15, 128, 1, 1)
+%assign tlcStartFcnOfS15B129 = OpaqueTLCBlockFcn("Start", 15, 129, 1, 1)
+%assign tlcStartFcnOfS15B130 = OpaqueTLCBlockFcn("Start", 15, 130, 1, 1)
+%assign tlcStartFcnOfS15B131 = OpaqueTLCBlockFcn("Start", 15, 131, 1, 1)
+%assign tlcStartFcnOfS15B132 = OpaqueTLCBlockFcn("Start", 15, 132, 1, 1)
+%assign tlcStartFcnOfS15B133 = OpaqueTLCBlockFcn("Start", 15, 133, 1, 1)
+%assign tlcStartFcnOfS15B134 = OpaqueTLCBlockFcn("Start", 15, 134, 1, 1)
+%assign tlcStartFcnOfS15B139 = OpaqueTLCBlockFcn("Start", 15, 139, 1, 1)
+%assign tlcStartFcnOfS15B140 = OpaqueTLCBlockFcn("Start", 15, 140, 1, 1)
+%assign tlcStartFcnOfS15B141 = OpaqueTLCBlockFcn("Start", 15, 141, 1, 1)
+%assign tlcStartFcnOfS15B142 = OpaqueTLCBlockFcn("Start", 15, 142, 1, 1)
+%assign tlcStartFcnOfS15B143 = OpaqueTLCBlockFcn("Start", 15, 143, 1, 1)
+%assign tlcStartFcnOfS15B144 = OpaqueTLCBlockFcn("Start", 15, 144, 1, 1)
+%assign tlcStartFcnOfS15B146 = OpaqueTLCBlockFcn("Start", 15, 146, 1, 1)
+%assign tlcStartFcnOfS15B147 = OpaqueTLCBlockFcn("Start", 15, 147, 1, 1)
+%assign tlcStartFcnOfS15B148 = OpaqueTLCBlockFcn("Start", 15, 148, 1, 1)
+%assign tlcStartFcnOfS15B149 = OpaqueTLCBlockFcn("Start", 15, 149, 1, 1)
+%assign tlcStartFcnOfS15B151 = OpaqueTLCBlockFcn("Start", 15, 151, 1, 1)
+%assign tlcStartFcnOfS15B152 = OpaqueTLCBlockFcn("Start", 15, 152, 1, 1)
+%if !WHITE_SPACE(tlcStartFcnOfS15B20)
+/* Start for S-Function (NsiIo_DigitalInput): '<S12>/DigitalInput5' */
+%<tlcStartFcnOfS15B20>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B21)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S8>/CanRx6' */
+%<tlcStartFcnOfS15B21>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B24)
+/* Start for S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx1' */
+%<tlcStartFcnOfS15B24>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B27)
+/* Start for S-Function (NsiIo_DigitalInput): '<S12>/DigitalInput' */
+%<tlcStartFcnOfS15B27>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B28)
+/* Start for S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput3' */
+%<tlcStartFcnOfS15B28>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B29)
+/* Start for S-Function (NsiIo_DigitalInput): '<S9>/DigitalInput1' */
+%<tlcStartFcnOfS15B29>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B44)
+/* Start for S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx3' */
+%<tlcStartFcnOfS15B44>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B47)
+/* Start for S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx4' */
+%<tlcStartFcnOfS15B47>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B51)
+/* Start for S-Function (NsiUsb_Tx): '<S17>/UsbTx1' */
+%<tlcStartFcnOfS15B51>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B52)
+/* Start for S-Function (NsiIo_FrequencyInput): '<S15>/FrequentialInput2' */
+%<tlcStartFcnOfS15B52>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B53)
+/* Start for S-Function (NsiUsb_Tx): '<S17>/UsbTx3' */
+%<tlcStartFcnOfS15B53>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B54)
+/* Start for S-Function (NsiIo_FrequencyInput): '<S15>/FrequentialInput3' */
+%<tlcStartFcnOfS15B54>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B57)
+/* Start for S-Function (NsiUsb_Tx): '<S17>/UsbTx4' */
+%<tlcStartFcnOfS15B57>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B61)
+/* Start for S-Function (NsiUsb_Tx): '<S17>/UsbTx5' */
+%<tlcStartFcnOfS15B61>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B66)
+/* Start for S-Function (NsiUsb_Rx): '<S17>/UsbRx' */
+%<tlcStartFcnOfS15B66>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B68)
+/* Start for S-Function (NsiUsb_Tx): '<S17>/UsbTx2' */
+%<tlcStartFcnOfS15B68>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B79)
+/* Start for S-Function (NsiUsb_Rx): '<S22>/UsbRx' */
+%<tlcStartFcnOfS15B79>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B84)
+/* Start for S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx2' */
+%<tlcStartFcnOfS15B84>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B85)
+/* Start for S-Function (NsiUsb_Tx): '<S19>/UsbTx1' */
+%<tlcStartFcnOfS15B85>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B86)
+/* Start for S-Function (NsiUsb_Tx): '<S19>/UsbTx2' */
+%<tlcStartFcnOfS15B86>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B90)
+/* Start for S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx4' */
+%<tlcStartFcnOfS15B90>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B94)
+/* Start for S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx6' */
+%<tlcStartFcnOfS15B94>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B97)
+/* Start for S-Function (NsiCan_Tx_J1939_Ext): '<S19>/CanTx7' */
+%<tlcStartFcnOfS15B97>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B98)
+/* Start for S-Function (NsiUsb_Tx): '<S8>/UsbTx1' */
+%<tlcStartFcnOfS15B98>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B99)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S8>/CanRx1' */
+%<tlcStartFcnOfS15B99>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B100)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S8>/CanRx7' */
+%<tlcStartFcnOfS15B100>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B101)
+/* Start for S-Function (NsiUsb_Tx): '<S12>/UsbTx1' */
+%<tlcStartFcnOfS15B101>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B102)
+/* Start for S-Function (NsiUsb_Tx): '<S12>/UsbTx2' */
+%<tlcStartFcnOfS15B102>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B103)
+/* Start for S-Function (NsiIo_DigitalInput): '<S13>/DigitalInput6' */
+%<tlcStartFcnOfS15B103>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B104)
+/* Start for S-Function (NsiIo_DigitalInput): '<S13>/DigitalInput1' */
+%<tlcStartFcnOfS15B104>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B105)
+/* Start for S-Function (NsiIo_DigitalInput): '<S13>/DigitalInput2' */
+%<tlcStartFcnOfS15B105>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B106)
+/* Start for S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput2' */
+%<tlcStartFcnOfS15B106>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B107)
+/* Start for S-Function (NsiUsb_Tx): '<S14>/UsbTx1' */
+%<tlcStartFcnOfS15B107>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B108)
+/* Start for S-Function (NsiUsb_Tx): '<S14>/UsbTx2' */
+%<tlcStartFcnOfS15B108>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B109)
+/* Start for S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput4' */
+%<tlcStartFcnOfS15B109>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B110)
+/* Start for S-Function (NsiUsb_Tx): '<S14>/UsbTx3' */
+%<tlcStartFcnOfS15B110>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B111)
+/* Start for S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput1' */
+%<tlcStartFcnOfS15B111>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B112)
+/* Start for S-Function (NsiUsb_Tx): '<S14>/UsbTx4' */
+%<tlcStartFcnOfS15B112>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B113)
+/* Start for S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput5' */
+%<tlcStartFcnOfS15B113>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B114)
+/* Start for S-Function (NsiUsb_Tx): '<S14>/UsbTx6' */
+%<tlcStartFcnOfS15B114>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B115)
+/* Start for S-Function (NsiIo_DigitalInput): '<S14>/DigitalInput6' */
+%<tlcStartFcnOfS15B115>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B116)
+/* Start for S-Function (NsiUsb_Tx): '<S14>/UsbTx5' */
+%<tlcStartFcnOfS15B116>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B117)
+/* Start for S-Function (NsiIo_FrequencyInput): '<S9>/FrequentialInput1' */
+%<tlcStartFcnOfS15B117>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B118)
+/* Start for S-Function (NsiUsb_Tx): '<S16>/UsbTx1' */
+%<tlcStartFcnOfS15B118>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B119)
+/* Start for S-Function (NsiUsb_Tx): '<S16>/UsbTx3' */
+%<tlcStartFcnOfS15B119>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B120)
+/* Start for S-Function (NsiUsb_Tx): '<S16>/UsbTx4' */
+%<tlcStartFcnOfS15B120>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B121)
+/* Start for S-Function (NsiUsb_Tx): '<S16>/UsbTx2' */
+%<tlcStartFcnOfS15B121>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B123)
+/* Start for S-Function (NsiUsb_Tx): '<S10>/UsbTx1' */
+%<tlcStartFcnOfS15B123>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B124)
+/* Start for S-Function (NsiUsb_Tx): '<S10>/UsbTx2' */
+%<tlcStartFcnOfS15B124>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B125)
+/* Start for S-Function (NsiCan_Rx_J1939_Ext): '<S10>/CanRx2' */
+%<tlcStartFcnOfS15B125>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B126)
+/* Start for S-Function (NsiUsb_Tx): '<S10>/UsbTx3' */
+%<tlcStartFcnOfS15B126>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B127)
+/* Start for S-Function (NsiUsb_Tx): '<S10>/UsbTx4' */
+%<tlcStartFcnOfS15B127>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B128)
+/* Start for S-Function (NsiUsb_Tx): '<S10>/UsbTx5' */
+%<tlcStartFcnOfS15B128>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B129)
+/* Start for S-Function (NsiUsb_Tx): '<S10>/UsbTx6' */
+%<tlcStartFcnOfS15B129>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B130)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S11>/CanRx1' */
+%<tlcStartFcnOfS15B130>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B131)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S11>/CanRx2' */
+%<tlcStartFcnOfS15B131>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B132)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S11>/CanRx5' */
+%<tlcStartFcnOfS15B132>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B133)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S11>/CanRx8' */
+%<tlcStartFcnOfS15B133>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B134)
+/* Start for S-Function (NsiCan_Rx_Ext): '<S11>/CanRx9' */
+%<tlcStartFcnOfS15B134>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B139)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx1' */
+%<tlcStartFcnOfS15B139>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B140)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx2' */
+%<tlcStartFcnOfS15B140>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B141)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx3' */
+%<tlcStartFcnOfS15B141>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B142)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx4' */
+%<tlcStartFcnOfS15B142>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B143)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx7' */
+%<tlcStartFcnOfS15B143>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B144)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx8' */
+%<tlcStartFcnOfS15B144>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B146)
+/* Start for S-Function (NsiUsb_Tx): '<S51>/UsbTx1' */
+%<tlcStartFcnOfS15B146>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B147)
+/* Start for S-Function (NsiUsb_Tx): '<S51>/UsbTx5' */
+%<tlcStartFcnOfS15B147>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B148)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx10' */
+%<tlcStartFcnOfS15B148>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B149)
+/* Start for S-Function (NsiUsb_Tx): '<S43>/UsbTx9' */
+%<tlcStartFcnOfS15B149>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B151)
+/* Start for S-Function (NsiUsb_Tx): '<S52>/UsbTx1' */
+%<tlcStartFcnOfS15B151>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS15B152)
+/* Start for S-Function (NsiUsb_Tx): '<S52>/UsbTx6' */
+%<tlcStartFcnOfS15B152>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MainTask_Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 1, fcnProtoType)>
+%endfunction
