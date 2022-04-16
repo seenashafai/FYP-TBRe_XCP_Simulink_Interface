@@ -63,19 +63,16 @@ Hello
     %%"V_Name = Simulink.Parameter;
     %%"V_NAME.RTWInfo.StorageClass = 'ExportedGlobal';
 
-%%THEN cross-reference BlockHierarchyMap name with Parameter identifier & update Value
+%%THE
 
-%assign npar = "%<CompiledModel.ModelParameters.NumParameters>"
-%assign nblock = "%<CompiledModel.BlockHierarchyMap.Subsystem[21].NumBlocks>"
-
-%foreach j = nblock
+%foreach j = 4
     %assign n = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[j].SLName>"
     %assign t = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[j].Type>"
     
     %if ISEQUAL(t, "Lookup_n-D")
         %<n> = Simulink.Parameter;
         %<n>.RTWInfo.StorageClass = 'ExportedGlobal';
-        %foreach k = npar
+        %foreach k = 38
             %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
             %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
             %if ISEQUAL(i, "%"+n+"_tableData")

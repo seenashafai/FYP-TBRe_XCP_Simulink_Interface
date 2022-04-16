@@ -1,0 +1,45 @@
+
+
+  "Voltage_Act_tableData"
+  "SOC_Calc_tableData"
+
+  "[500.0, 33000.0]"
+  "[0.0, 0.0, 10.0, 20.0, 25.0, 50.0, 100.0, 100.0]"
+
+
+
+  "<S35>/SOC_Calc"
+ "Lookup_n-D"
+  "<S35>/Voltage_Act"
+ "Lookup_n-D"
+  "<S35>/Relational Operator"
+ "RelationalOperator"
+
+
+
+
+    "<S35>/Memory read"
+    "S-Function"
+
+Hello
+
+
+
+
+    
+        SOC_Calc = Simulink.Parameter;
+        SOC_Calc.RTWInfo.StorageClass = 'ExportedGlobal';
+        SOC_Calc.Value =  [0.0, 0.0, 10.0, 20.0, 25.0, 50.0, 100.0, 100.0];
+
+    
+        Voltage_Act = Simulink.Parameter;
+        Voltage_Act.RTWInfo.StorageClass = 'ExportedGlobal';
+        Voltage_Act.Value =  [500.0, 33000.0];
+
+    
+    
+
+
+
+
+
