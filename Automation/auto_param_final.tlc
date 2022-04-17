@@ -3,6 +3,63 @@
 %% To execute this file, type: tlc -r guide.rtw read-guide-file.tlc
 %% Set format for displaying real values (default is "EXPONENTIAL")
 %realformat "CONCISE"
+%%
+%% -> Direct the next output line to console (STDOUT):
+%%
+%%*** Output being directed to file: guidetext.txt
+%%
+%% -> Open output stream "guidetext" to file named "guidetext.txt" now:
+%%
+/%
+Using TLC you can:
+* Directly access any field's value, e.g.
+%assign td = "%" + "<CompiledModel.Name>"
+  %<td> -- evaluates to:
+
+
+%% Using dot syntax and array indexing, we can narrow down the blocks in any model
+
+
+%% Below is an example of the implicit parameters of the model 
+%% i.e. not already defined in the model workspace by the user
+  "%<CompiledModel.ModelParameters.Parameter[11].Identifier>"
+  "%<CompiledModel.ModelParameters.Parameter[12].Identifier>"
+
+  "%<CompiledModel.ModelParameters.Parameter[11].Value>"
+  "%<CompiledModel.ModelParameters.Parameter[12].Value>"
+
+%%Below is an example of block names in a subsystem, along with their type
+%%We can then filter blocks based on their type: If we only want to calibrate N-D Lookup tables & graphs
+
+
+  "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[0].Name>"
+ "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[0].Type>"
+  "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[1].Name>"
+ "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[1].Type>"
+  "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[2].Name>"
+ "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[2].Type>"
+
+%assign CompiledModel.BlockHierarchyMap.Subsystem[21].Block[0].Name = "burger"
+
+
+  "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[0].Name>"
+
+%%TODO: Filter by N-D Lookup tables
+%%TODO: Either: Programatically add in these parameters into the model workspace
+%%      OR:     Generate an m-script which could do this automatically
+%% The latter would be easier, and it is unclear whether the former is even possible
+%% Due to the ordering of the build process. 
+
+%%Below is an example of conditional operator use
+%%Will be used to determine if a block is of type: Lookup n-D
+
+%if ISEQUAL(1, 1)
+    "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[0].Name>"
+    "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[0].Type>"
+%endif
+
+%%Below is an example of a text output to the file
+Hello
 
 %%LOOP through every single block in a subsystem
 %%Check if TYPE ISEQUAL to "Lookup_n-D"
@@ -11,41 +68,42 @@
     %%"V_NAME.RTWInfo.StorageClass = 'ExportedGlobal';
 
 %%THEN cross-reference BlockHierarchyMap name with Parameter identifier & update Value
+%/
+%openfile streamid ="guidetext.txt" , "w"
 
 %assign npar = "%<CompiledModel.ModelParameters.NumParameters>"
 %assign nsub = "%<CompiledModel.BlockHierarchyMap.NumSubsystems>"
-
-
 %foreach h = nsub
     %assign nblock = "%<CompiledModel.BlockHierarchyMap.Subsystem[h].NumBlocks>"
     %foreach j = nblock
         %assign n = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[h].Block[j].SLName>"
         %assign t = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[h].Block[j].Type>"
+        %assign n = FEVAL("erase", n, "%") %%Remove pct. characters for formatting
         %if ISEQUAL(t, "Lookup_n-D") %% Identify lookup table blocks            
             %%Each lookup table has table data & breakpoints
             %foreach k = npar
                 %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
                 %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
-                %assign n = FEVAL("erase", "n", "%")
-                %if ISSUBSTRING(i,n)
-                    %if ISSUBSTRING(i, "tabl")
+                %assign sub = FEVAL("contains", i, n)
+                %assign tab = FEVAL("contains", i, "tabl")
+                %if sub
+                    %if tab
             %%TABLE DATA
             %<n>_Data = Simulink.Parameter;
             %<n>_Data.RTWInfo.StorageClass = 'ExportedGlobal';
             %<n>_Data.Value =  %<v>;
             %assign CompiledModel.ModelParameters.Parameter[k].Value = n
-
                     %endif
             %%BREAKPOINT
-                    %if ISSUBSTRING(i, "bp01")
+                    %assign bp01 = FEVAL("contains", i, "bp01")
+                    %if bp01
             %<n>_bPoint = Simulink.Parameter;
             %<n>_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
             %<n>_bPoint.Value =  %<v>;
             %assign CompiledModel.ModelParameters.Parameter[k].Value = n
 
                     %endif
-
-
+                    
                 %endif
             %endforeach
         %endif
