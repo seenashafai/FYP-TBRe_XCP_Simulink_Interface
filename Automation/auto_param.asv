@@ -63,24 +63,46 @@ Hello
     %%"V_Name = Simulink.Parameter;
     %%"V_NAME.RTWInfo.StorageClass = 'ExportedGlobal';
 
-%%THE
+%%THEN cross-reference BlockHierarchyMap name with Parameter identifier & update Value
 
-%foreach j = 4
-    %assign n = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[j].SLName>"
-    %assign t = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[21].Block[j].Type>"
-    
-    %if ISEQUAL(t, "Lookup_n-D")
-        %<n> = Simulink.Parameter;
-        %<n>.RTWInfo.StorageClass = 'ExportedGlobal';
-        %foreach k = 38
-            %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
-            %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
-            %if ISEQUAL(i, "%"+n+"_tableData")
-        %<n>.Value =  %<v>;
+%assign npar = "%<CompiledModel.ModelParameters.NumParameters>"
+%assign nsub = "%<CompiledModel.BlockHierarchyMap.NumSubsystems>"
+
+
+%foreach h = nsub
+    %assign nblock = "%<CompiledModel.BlockHierarchyMap.Subsystem[h].NumBlocks>"
+    %foreach j = nblock
+        %assign n = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[h].Block[j].SLName>"
+        %assign t = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[h].Block[j].Type>"
+        %if ISEQUAL(t, "Lookup_n-D") %% Identify lookup table blocks
+            %<n>
+            
+            %%Each lookup table has table data & breakpoints
+            %foreach k = npar
+                %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
+                %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
+                %if ISSUBSTRING(i,n)
+                    %if ISSUBSTRING(i, "tabl")
+            %%TABLE DATA
+            %<n>_Data = Simulink.Parameter;
+            %<n>_Data.RTWInfo.StorageClass = 'ExportedGlobal';
+            %<n>_Data.Value =  %<v>;
+                    %endif
+            %%BREAKPOINT
+                    %if ISSUBSTRING(i, "bp01")
+            %<n>_bPoint = Simulink.Parameter;
+            %<n>_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
+            %<n>_bPoint.Value =  %<v>;
+                    %endif
+                %endif
+            %endforeach
+            %if ISSUBSTRING(n, "%")
+                
+                
+                
             %endif
-        %endforeach
-
-    %endif
+        %endif
+    %endforeach
 %endforeach
 
 %%Retrieving stored values for parameters:

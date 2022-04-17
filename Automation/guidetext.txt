@@ -26,18 +26,23 @@ Hello
 
 
 
-    
-        SOC_Calc = Simulink.Parameter;
-        SOC_Calc.RTWInfo.StorageClass = 'ExportedGlobal';
-        SOC_Calc.Value =  [0.0, 0.0, 10.0, 20.0, 25.0, 50.0, 100.0, 100.0];
 
-    
-        Voltage_Act = Simulink.Parameter;
-        Voltage_Act.RTWInfo.StorageClass = 'ExportedGlobal';
-        Voltage_Act.Value =  [500.0, 33000.0];
-
-    
-    
+            SOC_Calc_Data = Simulink.Parameter;
+            SOC_Calc_Data.RTWInfo.StorageClass = 'ExportedGlobal';
+            SOC_Calc_Data.Value =  [0.0, 0.0, 10.0, 20.0, 25.0, 50.0, 100.0, 100.0];
+                    
+            SOC_Calc_bPoint = Simulink.Parameter;
+            SOC_Calc_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
+            SOC_Calc_bPoint.Value =  [0U, 16000U, 24000U, 24800U, 25800U, 26000U, 26400U, 33000U];
+                    
+            Voltage_Act_Data = Simulink.Parameter;
+            Voltage_Act_Data.RTWInfo.StorageClass = 'ExportedGlobal';
+            Voltage_Act_Data.Value =  [500.0, 33000.0];
+                    
+            Voltage_Act_bPoint = Simulink.Parameter;
+            Voltage_Act_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
+            Voltage_Act_bPoint.Value =  [0U, 20000U];
+                    
 
 
 
