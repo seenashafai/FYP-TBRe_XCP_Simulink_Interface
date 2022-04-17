@@ -78,30 +78,32 @@ Hello
     %foreach j = nblock
         %assign n = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[h].Block[j].SLName>"
         %assign t = "" + "%<CompiledModel.BlockHierarchyMap.Subsystem[h].Block[j].Type>"
+        %assign n = FEVAL("erase", n, "%") %%Remove pct. characters for formatting
         %if ISEQUAL(t, "Lookup_n-D") %% Identify lookup table blocks            
             %%Each lookup table has table data & breakpoints
             %foreach k = npar
                 %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
                 %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
-                %if ISSUBSTRING(i,n)
-                    %if ISSUBSTRING(i, "tabl")
+                %assign sub = FEVAL("contains", i, n)
+                %assign tab = FEVAL("contains", i, "tabl")
+                %if sub
+                    %if tab
             %%TABLE DATA
             %<n>_Data = Simulink.Parameter;
             %<n>_Data.RTWInfo.StorageClass = 'ExportedGlobal';
             %<n>_Data.Value =  %<v>;
             %assign CompiledModel.ModelParameters.Parameter[k].Value = n
-
                     %endif
             %%BREAKPOINT
-                    %if ISSUBSTRING(i, "bp01")
+                    %assign bp01 = FEVAL("contains", i, "bp01")
+                    %if bp01
             %<n>_bPoint = Simulink.Parameter;
             %<n>_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
             %<n>_bPoint.Value =  %<v>;
             %assign CompiledModel.ModelParameters.Parameter[k].Value = n
 
                     %endif
-
-
+                    
                 %endif
             %endforeach
         %endif

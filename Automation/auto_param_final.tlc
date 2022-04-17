@@ -26,6 +26,7 @@
             %foreach k = npar
                 %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
                 %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
+                %assign n = FEVAL("erase", "n", "%")
                 %if ISSUBSTRING(i,n)
                     %if ISSUBSTRING(i, "tabl")
             %%TABLE DATA
