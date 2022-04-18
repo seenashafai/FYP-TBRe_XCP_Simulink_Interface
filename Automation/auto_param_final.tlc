@@ -69,7 +69,7 @@ Hello
 
 %%THEN cross-reference BlockHierarchyMap name with Parameter identifier & update Value
 %/
-%openfile streamid ="guidetext.txt" , "w"
+%openfile streamid ="guidetext.m" , "w"
 
 %assign npar = "%<CompiledModel.ModelParameters.NumParameters>"
 %assign nsub = "%<CompiledModel.BlockHierarchyMap.NumSubsystems>"
@@ -84,6 +84,7 @@ Hello
             %foreach k = npar
                 %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
                 %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
+                %assign v = FEVAL("erase", v, "U")
                 %assign sub = FEVAL("contains", i, n)
                 %assign tab = FEVAL("contains", i, "tabl")
                 %if sub

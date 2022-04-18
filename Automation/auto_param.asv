@@ -17,7 +17,7 @@ Using TLC you can:
 
 
 %% Using dot syntax and array indexing, we can narrow down the blocks in any model
-%openfile streamid ="guidetext.m" , "w"
+%openfile streamid ="guidetext.txt" , "w"
 
 
 %% Below is an example of the implicit parameters of the model 
@@ -71,6 +71,8 @@ Hello
 
 %assign npar = "%<CompiledModel.ModelParameters.NumParameters>"
 %assign nsub = "%<CompiledModel.BlockHierarchyMap.NumSubsystems>"
+
+
 %foreach h = nsub
     %assign nblock = "%<CompiledModel.BlockHierarchyMap.Subsystem[h].NumBlocks>"
     %foreach j = nblock
@@ -99,7 +101,9 @@ Hello
             %<n>_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
             %<n>_bPoint.Value =  %<v>;
             %assign CompiledModel.ModelParameters.Parameter[k].Value = n
+
                     %endif
+                    
                 %endif
             %endforeach
         %endif
