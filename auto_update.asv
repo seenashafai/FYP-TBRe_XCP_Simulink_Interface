@@ -1,5 +1,6 @@
 %Identify all lookup tables
-bl = getfullname(Simulink.findBlocksOfType('TBRe_Mod','Lookup_n-D'));
+bl = getfullname(Simulink.findBlocksOfType('TBRe_Mod','Lookup_n-D'))
+
 
 %%Replace numerical parameter values with variable names
 for i = 1:length(bl)
@@ -8,26 +9,29 @@ for i = 1:length(bl)
     n = extractBefore(n, "/");
     n = reverse(n);
     
-    %Get data & breakpoint params
-    tableData = (get_param((bl(i)), 'Table'));
-    breakpoint = (get_param((bl(i)), 'BreakPointsForDimension1'));
+    tableData = get_param(char(bl(i)), 'Table');
+    breakpoint = get_param(char(bl(1)), 'BreakPointsForDimension1');
 
-     %Format data
     n_data = n + "_Data";
     n_bPoint = n + "_bPoint";
     an = [n_data n_bPoint];
-    data = [n_data n_bPoint; tableData breakpoint];
+   % data = [tableData breakpoint];
+    data = [n_data n_bPoint; tableData, breakpoint];
     
-    %Create format for file output
+    
     formatSpec1 = '%s = Simulink.Parameter\n';
     formatSpec2 = "%s.RTWInfo.StorageClass = 'ExportedGlobal'\n";
     formatSpec3 = '%s.Value = %s\n';
 
-    %output data to file
+
+    
     fprintf(formatSpec1, an);
     fprintf(formatSpec2, an);
-    fprintf(formatSpec3, data);
+    fprintf(formatSpec3, an);
     fprintf("\n")
+
+
+    
 
     %Set 'Data' parameter to 'Name_Data'
     set_param(char(bl(i)), 'Table', n+"_Data")
