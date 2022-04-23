@@ -9,7 +9,6 @@ rtwbuild(model)
 
 %Get path of a2l & elf files
 modelStr = convertCharsToStrings(model);
-path = modelStr + '_nsi_rtw/';
-
+path = 
 %populate ECU addresses
-rtw.asap2SetAddress(path + modelStr + '.a2l',path + modelStr + '_FLASH.elf')
+rtw.asap2SetAddress(modelStr + '.a2l',modelStr + '_FLASH.elf')
