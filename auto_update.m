@@ -12,9 +12,9 @@ for i = 1:length(bl)
     tableData = (get_param((bl(i)), 'Table'));
     breakpoint = (get_param((bl(i)), 'BreakPointsForDimension1'));
 
-     %Format data
-    n_data = n + "_Data";
-    n_bPoint = n + "_bPoint";
+     %Format data: remove pct symbols and add suffix
+    n_data = erase(n, "%") + "_Data";
+    n_bPoint = erase(n, "%") + "_bPoint";
     an = [n_data n_bPoint];
     data = [n_data n_bPoint; tableData breakpoint];
     
@@ -30,11 +30,11 @@ for i = 1:length(bl)
     fprintf("\n")
 
     %Set 'Data' parameter to 'Name_Data'
-    set_param(char(bl(i)), 'Table', n+"_Data")
+    set_param(char(bl(i)), 'Table', n_data)
     %Set 'Breakpoint 1' parameter to 'Name_bPoint'
-    set_param(char(bl(i)), 'BreakPointsForDimension1', n+"_bPoint")
-    
+    set_param(char(bl(i)), 'BreakPointsForDimension1', n_bPoint)
 end
+
 
 
 
