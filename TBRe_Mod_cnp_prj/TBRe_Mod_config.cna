@@ -1,0 +1,53 @@
+[FILE_INFO]
+Identification=CANape-Configuration-File
+FileName=TBRe_Mod_config.cna
+FileNameAbsolute=C:\Program Files\MUXlink\work\FYP-TBRe_XCP_Simulink_Interface\TBRe_Mod_cnp_prj\TBRe_Mod_config.cna
+WorkingDirectory=C:\Program Files\MUXlink\work\FYP-TBRe_XCP_Simulink_Interface\TBRe_Mod_cnp_prj
+FileVersion=702
+CreationTime=12:21
+CreationDate=4/22/2022 ; Month/Day/Year
+ModificationTime=12:21
+ModificationDate=4/22/2022 ; Month/Day/Year
+
+[MEASUREMENT_OPTIONS]
+UpdateCycleGraph=100
+TimeScrollSoft=1
+StopMeasurementOnEvent=1
+StopMeasurementEventsCount=1
+StopMeasurementEvents1=1,"SimulinkStopSimulation" "TBRe_Mod"
+StopMeasurementOnESC=1
+
+[SIGNSELWND]
+Enabled=1
+Docked=1
+DockedVisible=1
+DockedLocation=3
+DockedWidth=258
+DockedHeight=150
+FloatedLeft=205
+FloatedTop=281
+FloatedWidth=200
+FloatedHeight=300
+DockEnable=1
+DockSignalSelWnd=1
+DockSignalSelShowWnd=1
+DockLoc=3
+DockWidth=256
+PosLeft=205
+PosTop=281
+PosRight=413
+PosBottom=607
+FocusID=2002
+ActiveTab=0
+FilterNodeID=All
+TreeExpand_0=@All
+TreeExpand_1=All\Devices\TBRe_Mod
+TreeExpand_2=All\Devices\TBRe_Mod\TBRe_Mod.a2l
+TreeExpand_3=All\Devices
+TreeExpand_4=All\Devices\TBRe_Mod\nTreeExpand_2=All\Devices\TBRe_Mod\TBRe_Mod.a2l
+TreeExpand_5=$All\Devices
+TreeExpand_6=#All\Devices\TBRe_Mod\TBRe_Mod.a2l
+TreeExpand_7=@All\Devices
+TreeExpand_8=$
+TreeExpand_9=#
+

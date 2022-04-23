@@ -1,0 +1,1121 @@
+/****************************************************
+*
+* ASAP2 file: TBRe_Mod.a2l
+*
+* Model file: TBRe_Mod.mdl
+*
+* MATLAB version: 9.3.0.713579 (R2017b)
+*
+****************************************************/
+ASAP2_VERSION 1 60
+/begin PROJECT TBRe_Mod "Simulink XCP Server ASAP2 project"
+  /begin HEADER "Header Comments go here"
+  /end HEADER
+
+  /* Project modules: */
+  /begin MODULE TBRe_Mod "Simulink XCP Server ASAP2 module"
+
+    /* TBRe_Mod: ECU-specific management data */
+    /begin MOD_PAR "MOD PAR comment goes here"
+    /end MOD_PAR
+
+    /* TBRe_Mod: format specification */
+    /begin A2ML
+      block "IF_DATA" taggedunion if_data {
+
+
+        "CANAPE_EXT" struct {
+          int;             /* version number */
+          taggedstruct {
+            "LINK_MAP" struct {
+              char[256];   /* segment name */
+              long;        /* base address of the segment */
+              uint;        /* address extension of the segment */
+              uint;        /* flag: address is relative to DS */
+              long;        /* offset of the segment address */
+              uint;        /* datatypValid */
+              uint;        /* enum datatyp */
+              uint;        /* bit offset of the segment */
+            };
+            "DISPLAY" struct {
+              long;        /* display color */
+              double;      /* minimal display value (phys)*/
+              double;      /* maximal display value (phys)*/
+            };
+            "VIRTUAL_CONVERSION" struct {
+              char[256];   /* name of the conversion formula */
+            };
+          };
+        };
+        "CANAPE_MODULE" struct {
+          taggedstruct {
+            ("RECORD_LAYOUT_STEPSIZE" struct {
+              char[256];   /* name of record layout*/
+              uint;        /* stepsize for FNC_VALUES */
+              uint;        /* stepsize for AXIS_PTS_X */
+              uint;        /* stepsize for AXIS_PTS_Y */
+              uint;        /* stepsize for AXIS_PTS_Z */
+              uint;        /* stepsize for AXIS_PTS_4 */
+              uint;        /* stepsize for AXIS_PTS_5 */
+            })*;
+          };
+        };
+       };
+       struct Protocol_Layer {
+         uint;     /* XCP protocol layer version, current 0x100 */
+         uint;     /* T1 [ms] */
+         uint;     /* T2 [ms] */
+         uint;     /* T3 [ms] */
+         uint;     /* T4 [ms] */
+         uint;     /* T5 [ms] */
+         uint;     /* T6 [ms] */
+         uint;     /* T7 [ms] */
+         uchar;    /* MAX_CTO */
+         uint;     /* MAX_DTO */
+         enum {
+           "BYTE_ORDER_MSB_LAST" = 0,
+           "BYTE_ORDER_MSB_FIRST" = 1
+         };
+         enum {
+           "ADDRESS_GRANULARITY_BYTE" = 1,
+           "ADDRESS_GRANULARITY_WORD" = 2,
+           "ADDRESS_GRANULARITY_DWORD" = 4
+         };
+         taggedstruct {
+           ("OPTIONAL_CMD" enum {  /* XCP-Code of optional command supported by the slave */
+             "GET_COMM_MODE_INFO"      = 0xFB,
+             "GET_ID"                  = 0xFA,
+             "SET_REQUEST"             = 0xF9,
+             "GET_SEED"                = 0xF8,
+             "UNLOCK"                  = 0xF7,
+             "SET_MTA"                 = 0xF6,
+             "UPLOAD"                  = 0xF5,
+             "SHORT_UPLOAD"            = 0xF4,
+             "BUILD_CHECKSUM"          = 0xF3,
+             "TRANSPORT_LAYER_CMD"     = 0xF2,
+             "USER_CMD"                = 0xF1,
+             "DOWNLOAD"                = 0xF0,
+             "DOWNLOAD_NEXT"           = 0xEF,
+             "DOWNLOAD_MAX"            = 0xEE,
+             "SHORT_DOWNLOAD"          = 0xED,
+             "MODIFY_BITS"             = 0xEC,
+             "SET_CAL_PAGE"            = 0xEB,
+             "GET_CAL_PAGE"            = 0xEA,
+             "GET_PAG_PROCESSOR_INFO"  = 0xE9,
+             "GET_SEGMENT_INFO"        = 0xE8,
+             "GET_PAGE_INFO"           = 0xE7,
+             "SET_SEGMENT_MODE"        = 0xE6,
+             "GET_SEGMENT_MODE"        = 0xE5,
+             "COPY_CAL_PAGE"           = 0xE4,
+             "CLEAR_DAQ_LIST"          = 0xE3,
+             "SET_DAQ_PTR"             = 0xE2,
+             "WRITE_DAQ"               = 0xE1,
+             "SET_DAQ_LIST_MODE"       = 0xE0,
+             "GET_DAQ_LIST_MODE"       = 0xDF,
+             "START_STOP_DAQ_LIST"     = 0xDE,
+             "START_STOP_SYNCH"        = 0xDD,
+             "GET_DAQ_CLOCK"           = 0xDC,
+             "READ_DAQ"                = 0xDB,
+             "GET_DAQ_PROCESSOR_INFO"  = 0xDA,
+             "GET_DAQ_RESOLUTION_INFO" = 0xD9,
+             "GET_DAQ_LIST_INFO"       = 0xD8,
+             "GET_DAQ_EVENT_INFO"      = 0xD7,
+             "FREE_DAQ"                = 0xD6,
+             "ALLOC_DAQ"               = 0xD5,
+             "ALLOC_ODT"               = 0xD4,
+             "ALLOC_ODT_ENTRY"         = 0xD3,
+             "PROGRAM_START"           = 0xD2,
+             "PROGRAM_CLEAR"           = 0xD1,
+             "PROGRAM"                 = 0xD0,
+             "PROGRAM_RESET"           = 0xCF,
+             "GET_PGM_PROCESSOR_INFO"  = 0xCE,
+             "GET_SECTOR_INFO"         = 0xCD,
+             "PROGRAM_PREPARE"         = 0xCC,
+             "PROGRAM_FORMAT"          = 0xCB,
+             "PROGRAM_NEXT"            = 0xCA,
+             "PROGRAM_MAX"             = 0xC9,
+             "PROGRAM_VERIFY"          = 0xC8
+           })*;
+           "COMMUNICATION_MODE_SUPPORTED" taggedunion {
+             "BLOCK" taggedstruct {
+               "SLAVE";
+               "MASTER" struct {
+                 uchar; /* MAX_BS */
+                 uchar; /* MIN_ST */
+               };
+             };
+             "INTERLEAVED" uchar; /* QUEUE_SIZE */
+           };
+           "SEED_AND_KEY_EXTERNAL_FUNCTION" char[256]; /* Name of the Seed&Key function */
+         };
+       };
+       struct Daq {
+         enum { /* DAQ_CONFIG_TYPE */
+           "STATIC"  = 0,
+           "DYNAMIC" = 1
+         };
+         uint;  /* MAX_DAQ */
+         uint;  /* MAX_EVENT_CHANNEL */
+         uchar; /* MIN_DAQ */
+         enum {
+           "OPTIMISATION_TYPE_DEFAULT"            = 0,
+           "OPTIMISATION_TYPE_ODT_TYPE_16"        = 1,
+           "OPTIMISATION_TYPE_ODT_TYPE_32"        = 2,
+           "OPTIMISATION_TYPE_ODT_TYPE_64"        = 3,
+           "OPTIMISATION_TYPE_ODT_TYPE_ALIGNMENT" = 4,
+           "OPTIMISATION_TYPE_MAX_ENTRY_SIZE"     = 5
+         };
+         enum {
+           "ADDRESS_EXTENSION_FREE" = 0,
+           "ADDRESS_EXTENSION_ODT"  = 1,
+           "ADDRESS_EXTENSION_DAQ"  = 3
+         };
+         enum {
+           "IDENTIFICATION_FIELD_TYPE_ABSOLUTE"              = 0,
+           "IDENTIFICATION_FIELD_TYPE_RELATIVE_BYTE"         = 1,
+           "IDENTIFICATION_FIELD_TYPE_RELATIVE_WORD"         = 2,
+           "IDENTIFICATION_FIELD_TYPE_RELATIVE_WORD_ALIGNED" = 3
+         };
+         enum {
+           "GRANULARITY_ODT_ENTRY_SIZE_DAQ_BYTE"  = 1,
+           "GRANULARITY_ODT_ENTRY_SIZE_DAQ_WORD"  = 2,
+           "GRANULARITY_ODT_ENTRY_SIZE_DAQ_DWORD" = 4,
+           "GRANULARITY_ODT_ENTRY_SIZE_DAQ_DLONG" = 8
+         };
+         uchar;   /* MAX_ODT_ENTRY_SIZE_DAQ */
+         enum {
+           "NO_OVERLOAD_INDICATION"    = 0,
+           "OVERLOAD_INDICATION_PID"   = 1,
+           "OVERLOAD_INDICATION_EVENT" = 2
+         };
+         taggedstruct {
+           "PRESCALER_SUPPORTED";
+           "RESUME_SUPPORTED";
+           block "STIM" struct {
+             enum {
+               "GRANULARITY_ODT_ENTRY_SIZE_STIM_BYTE"  = 1,
+               "GRANULARITY_ODT_ENTRY_SIZE_STIM_WORD"  = 2,
+               "GRANULARITY_ODT_ENTRY_SIZE_STIM_DWORD" = 4,
+               "GRANULARITY_ODT_ENTRY_SIZE_STIM_DLONG" = 8
+             };
+             uchar;  /* MAX_ODT_ENTRY_SIZE_STIM */
+             taggedstruct {
+               "BIT_STIM_SUPPORTED";
+             };
+           };
+           block "TIMESTAMP_SUPPORTED" struct {
+             uint;   /* TIMESTAMP_TICKS */
+             enum {
+               "NO_TIME_STAMP" = 0,
+               "SIZE_BYTE"     = 1,
+               "SIZE_WORD"     = 2,
+               "SIZE_DWORD"    = 4
+             };
+             enum {
+               "UNIT_1NS"   = 0,
+               "UNIT_10NS"  = 1,
+               "UNIT_100NS" = 2,
+               "UNIT_1US"   = 3,
+               "UNIT_10US"  = 4,
+               "UNIT_100US" = 5,
+               "UNIT_1MS"   = 6,
+               "UNIT_10MS"  = 7,
+               "UNIT_100MS" = 8,
+               "UNIT_1S"    = 9
+             };
+             taggedstruct {
+               "TIMESTAMP_FIXED";
+             };
+           };
+           "PID_OFF_SUPPORTED";
+           (block "DAQ_LIST" struct {
+             uint;  /* DAQ_LIST_NUMBER */
+             taggedstruct {
+               "DAQ_LIST_TYPE" enum {
+                 "DAQ"      = 1,  /* DIRECTION = DAQ only */
+                 "STIM"     = 2,  /* DIRECTION = STIM only */
+                 "DAQ_STIM" = 3   /* both directions possible */
+               };
+               "MAX_ODT" uchar;
+               "MAX_ODT_ENTRIES" uchar;
+               "FIRST_PID" uchar;
+               "EVENT_FIXED" uint;
+               block "PREDEFINED" taggedstruct {
+                 (block "ODT" struct {
+                   uchar;   /* ODT number */
+                   taggedstruct {
+                     ("ODT_ENTRY" struct {
+                       uchar;   /* ODT_ENTRY number */
+                       ulong;   /* address of element */
+                       uchar;   /* address extension of element */
+                       uchar;   /* size of element [AG] */
+                       uchar;   /* BIT_OFFSET */
+                     })*;
+                   };
+                 })*;
+               };
+             };
+           })*;
+           (block "EVENT" struct {
+             char[101];  /* EVENT_CHANNEL_NAME       */
+             char[9];    /* EVENT_CHANNEL_SHORT_NAME */
+             uint;       /* EVENT_CHANNEL_NUMBER     */
+             enum {
+               "DAQ"      = 1, /* only DAQ_LISTs with DIRECTION = DAQ */
+               "STIM"     = 2, /* only DAQ_LISTs with DIRECTION = STIM  */
+               "DAQ_STIM" = 3  /* both kind of DAQ_LISTs */
+             };
+             uchar;  /* MAX_DAQ_LIST */
+             uchar;  /* TIME_CYCLE   */
+             uchar;  /* TIME_UNIT    */
+             uchar;  /* PRIORITY     */
+           })*;
+         }; 
+       };
+       taggedunion Daq_Event {       /* for MEASUREMENTs */
+         "FIXED_EVENT_LIST" taggedstruct {
+           ("EVENT" uint)*;
+         };
+         "VARIABLE" taggedstruct {
+           block "AVAILABLE_EVENT_LIST" taggedstruct {
+             ("EVENT" uint)*;
+           };
+           block "DEFAULT_EVENT_LIST" taggedstruct {
+             ("EVENT" uint)*;
+           };
+         };
+       };
+       struct Pag {
+         uchar;    /* MAX_SEGMENTS */
+         taggedstruct {
+           "FREEZE_SUPPORTED";
+         };
+       };
+       struct Pgm {
+         enum {
+           "PGM_MODE_ABSOLUTE"                = 1,
+           "PGM_MODE_FUNCTIONAL"              = 2,
+           "PGM_MODE_ABSOLUTE_AND_FUNCTIONAL" = 3
+         };
+         uchar;  /* MAX_SECTORS */
+         uchar;  /* MAX_CTO_PGM */
+         taggedstruct {
+           (block "SECTOR" struct {
+             char[101];   /* SECTOR_NAME */
+             uchar;       /* SECTOR_NUMBER */
+             ulong;       /* Address */
+             ulong;       /* Length  */
+             uchar;       /* CLEAR_SEQUENCE_NUMBER */
+             uchar;       /* PROGRAM_SEQUENCE_NUMBER */
+             uchar;       /* PROGRAM_METHOD */
+           })*;
+           "COMMUNICATION_MODE_SUPPORTED" taggedunion {
+             "BLOCK" taggedstruct {
+               "SLAVE";
+               "MASTER" struct {
+                 uchar; /* MAX_BS_PGM */
+                 uchar; /* MIN_ST_PGM */
+               };
+             };
+             "INTERLEAVED" uchar;  /* QUEUE_SIZE_PGM */
+           };
+         };
+       };
+       struct Segment {   /* for MEMORY_SEGMENT */
+         uchar;     /* SEGMENT_NUMBER */
+         uchar;     /* number of pages */
+         uchar;     /* ADDRESS_EXTENSION */
+         uchar;     /* COMPRESSION_METHOD */
+         uchar;     /* ENCRYPTION_METHOD */
+         taggedstruct {
+           block "CHECKSUM" struct {
+             enum {
+               "XCP_ADD_11"      =   1,
+               "XCP_ADD_12"      =   2,
+               "XCP_ADD_14"      =   3,
+               "XCP_ADD_22"      =   4,
+               "XCP_ADD_24"      =   5,
+               "XCP_ADD_44"      =   6,
+               "XCP_CRC_16"      =   7,
+               "XCP_CRC_16_CITT" =   8,
+               "XCP_CRC_32"      =   9,
+               "XCP_USER_DEFINED" = 255
+             };
+             taggedstruct {
+               "MAX_BLOCK_SIZE" ulong ;
+               "EXTERNAL_FUNCTION" char[256];   /* Name of the Checksum.DLL */
+             };
+           };
+           (block "PAGE" struct {  /* PAGES for this SEGMENT */
+             uchar;  /* PAGE_NUMBER */
+             enum {
+               "ECU_ACCESS_NOT_ALLOWED"      = 0,
+               "ECU_ACCESS_WITHOUT_XCP_ONLY" = 1,
+               "ECU_ACCESS_WITH_XCP_ONLY"    = 2,
+               "ECU_ACCESS_DONT_CARE"        = 3
+             };
+             enum {
+               "XCP_READ_ACCESS_NOT_ALLOWED"      = 0,
+               "XCP_READ_ACCESS_WITHOUT_ECU_ONLY" = 1,
+               "XCP_READ_ACCESS_WITH_ECU_ONLY"    = 2,
+               "XCP_READ_ACCESS_DONT_CARE"        = 3
+             };
+             enum {
+               "XCP_WRITE_ACCESS_NOT_ALLOWED"      = 0,
+               "XCP_WRITE_ACCESS_WITHOUT_ECU_ONLY" = 1,
+               "XCP_WRITE_ACCESS_WITH_ECU_ONLY"    = 2,
+               "XCP_WRITE_ACCESS_DONT_CARE"        = 3
+             };
+             taggedstruct {
+               "INIT_SEGMENT" uchar; /* references segment that initialises this page */
+             };
+           })*;
+           (block "ADDRESS_MAPPING" struct {
+             ulong;   /* source address */
+             ulong;   /* destination address */
+             ulong;   /* length */
+           })*;
+           "PGM_VERIFY" ulong; /* verification value for PGM */
+         };
+       };
+       struct TCP_IP_Parameters {
+         uint;    /* XCP on TCP_IP version, currently 0x0100 */
+         uint;    /* PORT */
+         taggedunion {
+           "HOST_NAME" char[256];
+           "ADDRESS" char[15];
+         };
+       };
+       taggedstruct Common_Parameters {
+         block "PROTOCOL_LAYER" struct Protocol_Layer;
+         block "SEGMENT" struct Segment;
+         block "DAQ" struct Daq;
+         block "PAG" struct Pag;
+         block "PGM" struct Pgm;
+         block "DAQ_EVENT" taggedunion Daq_Event;
+       };
+       block "IF_DATA" taggedunion if_data {
+         /*********************************************************/
+         /*   XCP                                                 */
+         /*********************************************************/
+         "XCP" struct {
+           taggedstruct Common_Parameters ; /* default parameters */
+           taggedstruct {
+             block "XCP_ON_TCP_IP" struct {
+               struct TCP_IP_Parameters;         /* specific for TCP_IP */
+               taggedstruct Common_Parameters;   /* overruling of default */
+             };
+
+             block "XCP_ON_SIMULINK" struct {
+               struct {
+                 taggedstruct {
+                   "MODEL_NAME" char[64];
+                 };
+			   };
+             };
+           };
+         };
+         "CNP_CREATE_INI" taggedstruct {
+           block "TP_BLOB" struct {
+             uint;  /* version */
+             taggedstruct {
+               ("PARAMETER" struct {
+                 char[256];    /* file name */
+                 char[50];     /* Section - $CNP_DVC_SCTN$ defines the Device-Section entry */
+                 char[50];     /* parameter name */
+                 char[256];    /* parameter value */
+               })*;
+             };
+           };
+         };
+       };
+    /end A2ML
+
+    /* TBRe_Mod: protocol layer */
+    /begin IF_DATA XCP
+      /begin PROTOCOL_LAYER 
+        /* XCP protocol layer ver.  */	0x0100
+
+        /* T1 [ms]                  */	0x07D0
+        /* T2 [ms]                  */	0x00C8
+        /* T3 [ms]                  */	0
+        /* T4 [ms]                  */	0
+        /* T5 [ms]                  */	0
+        /* T6 [ms]                  */	0
+        /* T7 [ms]                  */	0
+
+        /* MAX_CTO                  */	0xFF
+        /* MAX_DTO                  */	0x00FF
+
+        BYTE_ORDER_MSB_LAST
+        ADDRESS_GRANULARITY_BYTE
+
+        /* Optional commands:       */
+        OPTIONAL_CMD ALLOC_ODT_ENTRY
+        OPTIONAL_CMD ALLOC_ODT
+        OPTIONAL_CMD ALLOC_DAQ
+        OPTIONAL_CMD FREE_DAQ
+        OPTIONAL_CMD GET_DAQ_RESOLUTION_INFO
+        OPTIONAL_CMD GET_DAQ_PROCESSOR_INFO
+        OPTIONAL_CMD GET_DAQ_CLOCK
+        OPTIONAL_CMD START_STOP_SYNCH
+        OPTIONAL_CMD START_STOP_DAQ_LIST
+        OPTIONAL_CMD GET_DAQ_LIST_MODE
+        OPTIONAL_CMD SET_DAQ_LIST_MODE
+        OPTIONAL_CMD WRITE_DAQ
+        OPTIONAL_CMD SET_DAQ_PTR
+        OPTIONAL_CMD CLEAR_DAQ_LIST
+        OPTIONAL_CMD DOWNLOAD
+        OPTIONAL_CMD SHORT_UPLOAD
+        OPTIONAL_CMD UPLOAD
+        OPTIONAL_CMD SET_MTA
+        OPTIONAL_CMD GET_COMM_MODE_INFO
+      /end PROTOCOL_LAYER 
+      /begin DAQ
+        /* DAQ_CONFIG_TYPE          */	DYNAMIC
+
+        /* MAX_DAQ                  */	0x0000
+        /* MAX_EVENT_CHANNEL        */	0x0004
+        /* MIN_DAQ                  */	0x00
+
+        OPTIMISATION_TYPE_DEFAULT
+        ADDRESS_EXTENSION_FREE
+        IDENTIFICATION_FIELD_TYPE_ABSOLUTE
+
+        GRANULARITY_ODT_ENTRY_SIZE_DAQ_BYTE
+        /* MAX_ODT_ENTRY_SIZE_DAQ   */	0xFE
+
+        NO_OVERLOAD_INDICATION
+        PRESCALER_SUPPORTED
+
+        /begin TIMESTAMP_SUPPORTED
+          /* TIMESTAMP_TICKS          */	0x0001
+          SIZE_DWORD
+          UNIT_10US
+          TIMESTAMP_FIXED
+        /end TIMESTAMP_SUPPORTED
+
+        /* Events: */
+        /begin EVENT
+          /* name                     */	"on TBRe_Mod calculated"
+          /* short name               */	"mdl_step"
+          /* EVENT_CHANNEL_NUMBER     */	0x0000
+          DAQ
+          /* MAX_DAQ_LIST             */	0xFF
+          /* TIME_CYCLE               */	0x00
+          /* TIME_UNIT                */	0x06
+          /* PRIORITY                 */	0x00
+        /end EVENT
+        /begin EVENT
+          /* name                     */	"stim TBRe_Mod"
+          /* short name               */	"mdl_stim"
+          /* EVENT_CHANNEL_NUMBER     */	0x0001
+          STIM
+          /* MAX_DAQ_LIST             */	0xFF
+          /* TIME_CYCLE               */	0x00
+          /* TIME_UNIT                */	0x06
+          /* PRIORITY                 */	0x00
+        /end EVENT
+        /begin EVENT
+          /* name                     */	"on 2nd TBRe_Mod step"
+          /* short name               */	"2ndstep"
+          /* EVENT_CHANNEL_NUMBER     */	0x0002
+          DAQ
+          /* MAX_DAQ_LIST             */	0xFF
+          /* TIME_CYCLE               */	0x00
+          /* TIME_UNIT                */	0x06
+          /* PRIORITY                 */	0x00
+        /end EVENT
+        /begin EVENT
+          /* name                     */	"on 10th TBRe_Mod step"
+          /* short name               */	"10thstep"
+          /* EVENT_CHANNEL_NUMBER     */	0x0003
+          DAQ
+          /* MAX_DAQ_LIST             */	0xFF
+          /* TIME_CYCLE               */	0x00
+          /* TIME_UNIT                */	0x06
+          /* PRIORITY                 */	0x00
+        /end EVENT
+        /begin EVENT
+          /* name                     */	"on 100th TBRe_Mod step"
+          /* short name               */	"100thstep"
+          /* EVENT_CHANNEL_NUMBER     */	0x0004
+          DAQ
+          /* MAX_DAQ_LIST             */	0xFF
+          /* TIME_CYCLE               */	0x00
+          /* TIME_UNIT                */	0x06
+          /* PRIORITY                 */	0x00
+        /end EVENT
+      /end DAQ
+      /begin XCP_ON_TCP_IP
+        /* XCP on TCP_IP version    */	0x0100
+        /* PORT                     */	5555
+        ADDRESS "localhost"
+      /end XCP_ON_TCP_IP
+    /end IF_DATA 
+
+    /* CANape configuration parameters: */
+    /begin IF_DATA CNP_CREATE_INI 
+      /begin TP_BLOB 
+        0x0100 
+        PARAMETER "canape.ini" "$CNP_DVC_SCTN$" "IGNORE_CTR_FAULTS" "1" 
+      /end TP_BLOB 
+    /end IF_DATA 
+    /begin IF_DATA CNP_CREATE_INI 
+      /begin TP_BLOB 
+        0x0100 
+        PARAMETER "canape.ini" "$CNP_DVC_SCTN$" "INIT_TIMEOUT" "10000" 
+      /end TP_BLOB 
+    /end IF_DATA 
+    /begin IF_DATA CNP_CREATE_INI 
+      /begin TP_BLOB 
+        0x0100 
+        PARAMETER "canape.ini" "$CNP_DVC_SCTN$" "ODT_ENTRY_ADDRESS_OPT_DISABLED" "1" 
+      /end TP_BLOB 
+    /end IF_DATA 
+    /begin IF_DATA CNP_CREATE_INI 
+      /begin TP_BLOB 
+        0x0100 
+        PARAMETER "canape.ini" "$CNP_DVC_SCTN$" "OVERRUN_HANDLING" "1" 
+      /end TP_BLOB 
+    /end IF_DATA 
+    /begin IF_DATA CNP_CREATE_INI 
+      /begin TP_BLOB 
+        0x0100 
+        PARAMETER "canape.ini" "$CNP_DVC_SCTN$" "POLLING_DISABLED" "1" 
+      /end TP_BLOB 
+    /end IF_DATA 
+    /begin IF_DATA CNP_CREATE_INI 
+      /begin TP_BLOB 
+        0x0100 
+        PARAMETER "canape.ini" "$CNP_DVC_SCTN$" "READBACK_DISABLED" "1" 
+      /end TP_BLOB 
+    /end IF_DATA 
+
+    /* Include additional ASAP2 database files here ... */
+    /* /include <filename> */
+
+    /* TBRe_Mod: conversion methods */
+    /begin COMPU_METHOD
+      /* Name                     */	SL_COMPU_METHOD
+      /* LongIdentifier           */	"Q = V"
+      /* ConversionType           */	RAT_FUNC
+      /* Format                   */	"%0.6f"
+      /* Unit                     */	""
+      COEFFS                        	0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /* TBRe_Mod: record layouts */
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X                    	1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X                    	1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_SBYTE_IEEE
+      AXIS_PTS_X                    	1 SBYTE INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_SLONG_IEEE
+      AXIS_PTS_X                    	1 SLONG INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_SWORD_IEEE
+      AXIS_PTS_X                    	1 SWORD INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_UBYTE_IEEE
+      AXIS_PTS_X                    	1 UBYTE INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_ULONG_IEEE
+      AXIS_PTS_X                    	1 ULONG INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Lookup2D_X_UWORD_IEEE
+      AXIS_PTS_X                    	1 UWORD INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	Scalar_FLOAT64_IEEE
+      FNC_VALUES                    	1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__A_INT64_S
+      FNC_VALUES                    	1 A_INT64 COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__A_UINT64_S
+      FNC_VALUES                    	1 A_UINT64 COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__FLOAT32_IEEE_S
+      FNC_VALUES                    	1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__SBYTE_S
+      FNC_VALUES                    	1 SBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__SLONG_S
+      FNC_VALUES                    	1 SLONG COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__SWORD_S
+      FNC_VALUES                    	1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__UBYTE_S
+      FNC_VALUES                    	1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__ULONG_S
+      FNC_VALUES                    	1 ULONG COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT
+      /* Name                     */	__UWORD_S
+      FNC_VALUES                    	1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /* TBRe_Mod: variable list */
+    /begin CHARACTERISTIC 
+      /* Name                     */	Brake_Active_Threshold
+      /* Long Identifier          */	"/Brake_Active_Threshold
+TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Bool Hysteresis/Brake_Active_Threshold"
+      /* Type                     */	VALUE
+      /* Memory Address           */	0
+      /* Record Layout            */	__UBYTE_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	0.000000
+      /* Upper Limit              */	255.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Brake_Active_Threshold
+
+      SYMBOL_LINK "Brake_Active_Threshold" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Brk1_OOR_High
+      /* Long Identifier          */	"/Brk1_OOR_High
+TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant/Brk1_OOR_High"
+      /* Type                     */	VALUE
+      /* Memory Address           */	1
+      /* Record Layout            */	__UWORD_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	0.000000
+      /* Upper Limit              */	65535.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Brk1_OOR_High
+
+      SYMBOL_LINK "Brk1_OOR_High" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Brk1_OOR_Low
+      /* Long Identifier          */	"/Brk1_OOR_Low
+TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant1/Brk1_OOR_Low"
+      /* Type                     */	VALUE
+      /* Memory Address           */	3
+      /* Record Layout            */	__UWORD_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	0.000000
+      /* Upper Limit              */	65535.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Brk1_OOR_Low
+
+      SYMBOL_LINK "Brk1_OOR_Low" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Brk2_OOR_High
+      /* Long Identifier          */	"/Brk2_OOR_High
+TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant2/Brk2_OOR_High"
+      /* Type                     */	VALUE
+      /* Memory Address           */	5
+      /* Record Layout            */	__UWORD_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	0.000000
+      /* Upper Limit              */	65535.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Brk2_OOR_High
+
+      SYMBOL_LINK "Brk2_OOR_High" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Brk2_OOR_Low
+      /* Long Identifier          */	"/Brk2_OOR_Low
+TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant3/Brk2_OOR_Low"
+      /* Type                     */	VALUE
+      /* Memory Address           */	7
+      /* Record Layout            */	__UWORD_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	0.000000
+      /* Upper Limit              */	65535.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Brk2_OOR_Low
+
+      SYMBOL_LINK "Brk2_OOR_Low" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	i
+      /* Long Identifier          */	"/i"
+      /* Type                     */	VALUE
+      /* Memory Address           */	222
+      /* Record Layout            */	Scalar_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	-2147483648.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	i
+
+      SYMBOL_LINK "i" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Motor_To_Road_Speed_Ratio
+      /* Long Identifier          */	"/Motor_To_Road_Speed_Ratio"
+      /* Type                     */	VALUE
+      /* Memory Address           */	9
+      /* Record Layout            */	__FLOAT32_IEEE_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	-2147483648.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Motor_To_Road_Speed_Ratio
+
+      SYMBOL_LINK "Motor_To_Road_Speed_Ratio" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin AXIS_PTS 
+      /* Name                     */	SOC_Calc_bPoint
+      /* Long Identifier          */	"/SOC_Calc_bPoint
+TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery/SOC_Calc/SOC_Calc_bPoint"
+      /* Address                  */	77
+      /* Input Quantity           */	NO_INPUT_QUANTITY
+      /* Record Layout            */	Lookup2D_X_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Max. Axis Points         */	8
+      /* Lower Limit              */	-2147483647.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	SOC_Calc_bPoint
+
+      SYMBOL_LINK "SOC_Calc_bPoint" 0 /* Address offset           */
+
+    /end AXIS_PTS 
+    /begin CHARACTERISTIC 
+      /* Name                     */	SOC_Calc_Data
+      /* Long Identifier          */	"/SOC_Calc_Data
+TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery/SOC_Calc/SOC_Calc_Data"
+      /* Type                     */	CURVE
+      /* Memory Address           */	13
+      /* Record Layout            */	Scalar_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	-2147483648.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	SOC_Calc_Data
+      /begin AXIS_DESCR 
+        /* Axis Type                */	COM_AXIS
+        /* Input Quantity reference */	NO_INPUT_QUANTITY
+        /* Conversion Method        */	SL_COMPU_METHOD
+        /* Max. Axis Points         */	8
+        /* Lower Limit              */	-2147483647.000000
+        /* Upper Limit              */	2147483647.000000
+        AXIS_PTS_REF                    SOC_Calc_bPoint
+      /end AXIS_DESCR 
+
+      SYMBOL_LINK "SOC_Calc_Data" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Throttle_Active_Threshold
+      /* Long Identifier          */	"/Throttle_Active_Threshold
+TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Throttle Bool Hysteresis/Throttle_Active_Threshold"
+      /* Type                     */	VALUE
+      /* Memory Address           */	141
+      /* Record Layout            */	__UBYTE_S
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	0.000000
+      /* Upper Limit              */	255.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Throttle_Active_Threshold
+
+      SYMBOL_LINK "Throttle_Active_Threshold" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin AXIS_PTS 
+      /* Name                     */	Throttle_Torque_Map__240Nm_bPoint
+      /* Long Identifier          */	"/Throttle_Torque_Map__240Nm_bPoint
+TBRe_Mod/MainTask/Vehicle_Functionality_Layer/Drive_Function/Throttle_Torque_Map_%_240Nm/Throttle_Torque_Map__240Nm_bPoint"
+      /* Address                  */	166
+      /* Input Quantity           */	NO_INPUT_QUANTITY
+      /* Record Layout            */	Lookup2D_X_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Max. Axis Points         */	3
+      /* Lower Limit              */	-2147483647.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Throttle_Torque_Map__240Nm_bPoint
+
+      SYMBOL_LINK "Throttle_Torque_Map__240Nm_bPoint" 0 /* Address offset           */
+
+    /end AXIS_PTS 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Throttle_Torque_Map__240Nm_Data
+      /* Long Identifier          */	"/Throttle_Torque_Map__240Nm_Data
+TBRe_Mod/MainTask/Vehicle_Functionality_Layer/Drive_Function/Throttle_Torque_Map_%_240Nm/Throttle_Torque_Map__240Nm_Data"
+      /* Type                     */	CURVE
+      /* Memory Address           */	142
+      /* Record Layout            */	Scalar_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	-2147483648.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Throttle_Torque_Map__240Nm_Data
+      /begin AXIS_DESCR 
+        /* Axis Type                */	COM_AXIS
+        /* Input Quantity reference */	NO_INPUT_QUANTITY
+        /* Conversion Method        */	SL_COMPU_METHOD
+        /* Max. Axis Points         */	3
+        /* Lower Limit              */	-2147483647.000000
+        /* Upper Limit              */	2147483647.000000
+        AXIS_PTS_REF                    Throttle_Torque_Map__240Nm_bPoint
+      /end AXIS_DESCR 
+
+      SYMBOL_LINK "Throttle_Torque_Map__240Nm_Data" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+    /begin AXIS_PTS 
+      /* Name                     */	Voltage_Act_bPoint
+      /* Long Identifier          */	"/Voltage_Act_bPoint
+TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery/Voltage_Act/Voltage_Act_bPoint"
+      /* Address                  */	206
+      /* Input Quantity           */	NO_INPUT_QUANTITY
+      /* Record Layout            */	Lookup2D_X_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Max. Axis Points         */	2
+      /* Lower Limit              */	-2147483647.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Voltage_Act_bPoint
+
+      SYMBOL_LINK "Voltage_Act_bPoint" 0 /* Address offset           */
+
+    /end AXIS_PTS 
+    /begin CHARACTERISTIC 
+      /* Name                     */	Voltage_Act_Data
+      /* Long Identifier          */	"/Voltage_Act_Data
+TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery/Voltage_Act/Voltage_Act_Data"
+      /* Type                     */	CURVE
+      /* Memory Address           */	190
+      /* Record Layout            */	Scalar_FLOAT64_IEEE
+      /* Maximum Difference       */	0.0
+      /* Conversion Method        */	SL_COMPU_METHOD
+      /* Lower Limit              */	-2147483648.000000
+      /* Upper Limit              */	2147483647.000000
+      /* Optional parameters      */
+      DISPLAY_IDENTIFIER            	Voltage_Act_Data
+      /begin AXIS_DESCR 
+        /* Axis Type                */	COM_AXIS
+        /* Input Quantity reference */	NO_INPUT_QUANTITY
+        /* Conversion Method        */	SL_COMPU_METHOD
+        /* Max. Axis Points         */	2
+        /* Lower Limit              */	-2147483647.000000
+        /* Upper Limit              */	2147483647.000000
+        AXIS_PTS_REF                    Voltage_Act_bPoint
+      /end AXIS_DESCR 
+
+      SYMBOL_LINK "Voltage_Act_Data" 0 /* Address offset           */
+
+    /end CHARACTERISTIC 
+
+    /* TBRe_Mod: function list */
+    /begin FUNCTION 
+      MainTask
+      "TBRe_Mod/MainTask"
+      /begin SUB_FUNCTION 
+        MainTask.Pre_Processing_Layer
+        MainTask.Vehicle_Functionality_Layer
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer
+      "TBRe_Mod/MainTask/Pre_Processing_Layer"
+      /begin SUB_FUNCTION 
+        MainTask.Pre_Processing_Layer.LV_Battery
+        MainTask.Pre_Processing_Layer.Pedal_Box
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.LV_Battery
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery"
+      /begin SUB_FUNCTION 
+        MainTask.Pre_Processing_Layer.LV_Battery.SOC_Calc
+        MainTask.Pre_Processing_Layer.LV_Battery.Voltage_Act
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.LV_Battery.SOC_Calc
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery/SOC_Calc"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        SOC_Calc_bPoint
+        SOC_Calc_Data
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.LV_Battery.Voltage_Act
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/LV_Battery/Voltage_Act"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Voltage_Act_bPoint
+        Voltage_Act_Data
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box"
+      /begin SUB_FUNCTION 
+        MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Bool_Hysteresis
+        MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check
+        MainTask.Pre_Processing_Layer.Pedal_Box.Throttle_Bool_Hysteresis
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Bool_Hysteresis
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Bool Hysteresis"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Brake_Active_Threshold
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check"
+      /begin SUB_FUNCTION 
+        MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant
+        MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant1
+        MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant2
+        MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant3
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Brk1_OOR_High
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant1
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant1"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Brk1_OOR_Low
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant2
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant2"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Brk2_OOR_High
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Brake_Out_Of_Range_Check.Compare_To_Constant3
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Brake Out Of Range Check/Compare To Constant3"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Brk2_OOR_Low
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Pre_Processing_Layer.Pedal_Box.Throttle_Bool_Hysteresis
+      "TBRe_Mod/MainTask/Pre_Processing_Layer/Pedal_Box/Throttle Bool Hysteresis"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Throttle_Active_Threshold
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Vehicle_Functionality_Layer
+      "TBRe_Mod/MainTask/Vehicle_Functionality_Layer"
+      /begin SUB_FUNCTION 
+        MainTask.Vehicle_Functionality_Layer.Drive_Function
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Vehicle_Functionality_Layer.Drive_Function
+      "TBRe_Mod/MainTask/Vehicle_Functionality_Layer/Drive_Function"
+      /begin SUB_FUNCTION 
+        MainTask.Vehicle_Functionality_Layer.Drive_Function.Throttle_Torque_Map___240Nm
+      /end SUB_FUNCTION 
+    /end FUNCTION 
+    /begin FUNCTION 
+      MainTask.Vehicle_Functionality_Layer.Drive_Function.Throttle_Torque_Map___240Nm
+      "TBRe_Mod/MainTask/Vehicle_Functionality_Layer/Drive_Function/Throttle_Torque_Map_%_240Nm"
+      /begin DEF_CHARACTERISTIC 
+      /end DEF_CHARACTERISTIC 
+      /begin REF_CHARACTERISTIC 
+        Throttle_Torque_Map__240Nm_bPoint
+        Throttle_Torque_Map__240Nm_Data
+      /end REF_CHARACTERISTIC 
+    /end FUNCTION 
+
+    /* TBRe_Mod: group list */
+    /begin GROUP _[Base.Workspace] "<base>"
+      ROOT 
+      /begin REF_CHARACTERISTIC 
+        Brake_Active_Threshold
+        Brk1_OOR_High
+        Brk1_OOR_Low
+        Brk2_OOR_High
+        Brk2_OOR_Low
+        i
+        Motor_To_Road_Speed_Ratio
+        SOC_Calc_bPoint
+        SOC_Calc_Data
+        Throttle_Active_Threshold
+        Throttle_Torque_Map__240Nm_bPoint
+        Throttle_Torque_Map__240Nm_Data
+        Voltage_Act_bPoint
+        Voltage_Act_Data
+      /end REF_CHARACTERISTIC 
+    /end GROUP 
+
+    /begin GROUP _[Model.Workspace] "<model>"
+      ROOT 
+    /end GROUP 
+
+  /end MODULE
+/end PROJECT
+/* Generated: 22-Apr-2022 12:21:59 */
+/* EOF TBRe_Mod.a2l */
