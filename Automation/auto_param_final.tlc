@@ -1,24 +1,6 @@
-%% File: read-guide-file.tlc   (This line is a TLC Comment, and will not print)
-%% 
-%% To execute this file, type: tlc -r guide.rtw read-guide-file.tlc
-%% Set format for displaying real values (default is "EXPONENTIAL")
 %realformat "CONCISE"
-%%
-%% -> Direct the next output line to console (STDOUT):
-%%
-%%*** Output being directed to file: guidetext.txt
-%%
-%% -> Open output stream "guidetext" to file named "guidetext.txt" now:
-%%
-/%
-Using TLC you can:
-* Directly access any field's value, e.g.
-%assign td = "%" + "<CompiledModel.Name>"
-  %<td> -- evaluates to:
-
 
 %% Using dot syntax and array indexing, we can narrow down the blocks in any model
-
 
 %% Below is an example of the implicit parameters of the model 
 %% i.e. not already defined in the model workspace by the user
@@ -68,9 +50,8 @@ Hello
     %%"V_NAME.RTWInfo.StorageClass = 'ExportedGlobal';
 
 %%THEN cross-reference BlockHierarchyMap name with Parameter identifier & update Value
-%/
-%openfile streamid ="guidetext.m" , "w"
 
+%openfile streamid ="guidetext.m" , "w" %%Open text file for writing
 %assign npar = "%<CompiledModel.ModelParameters.NumParameters>"
 %assign nsub = "%<CompiledModel.BlockHierarchyMap.NumSubsystems>"
 %foreach h = nsub
@@ -84,9 +65,9 @@ Hello
             %foreach k = npar
                 %assign i = "%" + "%<CompiledModel.ModelParameters.Parameter[k].Identifier>"
                 %assign v = "" + "%<CompiledModel.ModelParameters.Parameter[k].Value>"
-                %assign v = FEVAL("erase", v, "U")
-                %assign sub = FEVAL("contains", i, n)
-                %assign tab = FEVAL("contains", i, "tabl")
+                %assign v = FEVAL("erase", v, "U") %%Remove unit symbols
+                %assign sub = FEVAL("contains", i, n) %%Detect data
+                %assign tab = FEVAL("contains", i, "tabl") %%Detect breakpoint
                 %if sub
                     %if tab
             %%TABLE DATA
@@ -102,7 +83,7 @@ Hello
             %<n>_bPoint.RTWInfo.StorageClass = 'ExportedGlobal';
             %<n>_bPoint.Value =  %<v>;
             %assign CompiledModel.ModelParameters.Parameter[k].Value = n
-
+                        
                     %endif
                     
                 %endif
@@ -110,13 +91,8 @@ Hello
         %endif
     %endforeach
 %endforeach
-
-
-
-
-
 %%
-%% -> At end, close guidetext stream
+%% -> At end, close text stream
 %closefile streamid
 
 %%

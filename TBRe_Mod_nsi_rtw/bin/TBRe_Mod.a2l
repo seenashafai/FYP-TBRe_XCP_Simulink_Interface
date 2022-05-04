@@ -227,7 +227,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      SOC_Calc_Data
       /* Long Identifier        */      ""
       /* Characteristic Type    */      CURVE
-      /* ECU Address            */      0x0000 /* @ECU_Address@SOC_Calc_Data@ */
+      /* ECU Address            */      0x20000078
       /* Record Layout          */      Lookup1D_FLOAT64_IEEE
       /* Maxdiff                */      0
       /* Conversion Method      */      TBRe_Mod_CM_double
@@ -248,7 +248,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /begin AXIS_PTS
       /* Name                   */      SOC_Calc_Breakpoint
       /* Long Identifier        */      ""
-      /* ECU Address            */      0x0000 /* @ECU_Address@SOC_Calc_Breakpoint@ */
+      /* ECU Address            */      0x20000054
       /* Input Quantity         */      NO_INPUT_QUANTITY
       /* Record Layout          */      Lookup1D_X_UWORD
       /* Maximum Difference     */      0
@@ -262,7 +262,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      Voltage_Act_Data
       /* Long Identifier        */      ""
       /* Characteristic Type    */      CURVE
-      /* ECU Address            */      0x0000 /* @ECU_Address@Voltage_Act_Data@ */
+      /* ECU Address            */      0x20000068
       /* Record Layout          */      Lookup1D_FLOAT64_IEEE
       /* Maxdiff                */      0
       /* Conversion Method      */      TBRe_Mod_CM_double
@@ -283,7 +283,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /begin AXIS_PTS
       /* Name                   */      Voltage_Act_Breakpoint
       /* Long Identifier        */      ""
-      /* ECU Address            */      0x0000 /* @ECU_Address@Voltage_Act_Breakpoint@ */
+      /* ECU Address            */      0x20000050
       /* Input Quantity         */      NO_INPUT_QUANTITY
       /* Record Layout          */      Lookup1D_X_UWORD
       /* Maximum Difference     */      0
