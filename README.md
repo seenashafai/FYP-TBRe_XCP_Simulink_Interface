@@ -30,6 +30,5 @@ To generate an A2L file for your ECU model compatible with 3rd party calibration
 1. Download the project files from the latest release on this repo
 2. Move the 'Automation' folder into your project's root directory
 3. Open `main.m` in MATLAB from your project's directory
-4. Enable 'Generate ASAP2 File' from Simulink's compiler settings
-5. Run `main.m`
-6. Your new A2L file will be located in: project_name_rtw/src
+4. Run `main.m`
+5. Your new A2L file will be located in: project_name_rtw/src
